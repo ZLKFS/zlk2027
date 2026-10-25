@@ -1,7 +1,8 @@
 // Static site generator for zlk2027.latviesi.se
 // Reads content/recipes.json, writes public/. No dependencies: `node build.mjs`.
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync, rmSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, rmSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { createHash } from "node:crypto";
 
 const ROOT = new URL(".", import.meta.url).pathname;
 const OUT = join(ROOT, "public");
@@ -11,6 +12,12 @@ const LANGS = ["lv", "sv", "en"];
 // Adobe Fonts web project for Sabon LT Pro: put the kit id here (e.g. "abc1def") and the
 // stylesheet link is added to every page. Until then EB Garamond is the stand-in.
 const ADOBE_KIT = data.site.adobeKit || "";
+
+// Stylesheet and script carry a content hash in their file name, so every deploy brings the
+// matching version along with the page (the pages themselves are never cached, see _headers).
+const hashOf = (file) => createHash("md5").update(readFileSync(join(ROOT, file))).digest("hex").slice(0, 8);
+const STYLE = `style.${hashOf("src/style.css")}.css`;
+const APP = `app.${hashOf("src/app.js")}.js`;
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = (n) => String(n).padStart(2, "0");
@@ -45,7 +52,7 @@ ${image ? `<meta property="og:image" content="${ORIGIN}${image}">` : ""}
 <meta name="theme-color" content="#fdfbf2">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 ${fonts}
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/${STYLE}">
 <script>(function(){try{var l=localStorage.getItem("zlk-lang"),c=document.documentElement.lang,m=JSON.parse(document.documentElement.getAttribute("data-urls")||"{}");if(l&&l!==c&&m[l])location.replace(m[l])}catch(e){}})();</script>
 </head>
 <body class="${bodyClass || ""}">
@@ -59,7 +66,7 @@ ${body}
 <footer class="site-foot wrap">
   <p class="site-foot-line"><span>${esc(t.name)} 2027</span><a class="foot-logo" href="${base(lang)}" aria-label="${esc(t.home)}"><img src="/assets/skat.svg" alt="" width="33" height="18"></a></p>
 </footer>
-<script src="/assets/app.js" defer></script>
+<script src="/assets/${APP}" defer></script>
 </body>
 </html>
 `;
@@ -252,11 +259,12 @@ for (const lang of LANGS) {
   });
 }
 writeFileSync(join(OUT, "404.html"), notFound());
-copyFileSync(join(ROOT, "src/style.css"), join(OUT, "assets/style.css"));
-copyFileSync(join(ROOT, "src/app.js"), join(OUT, "assets/app.js"));
+for (const f of readdirSync(join(OUT, "assets"))) if (/^(style|app)\..*\.(css|js)$|^(style\.css|app\.js)$/.test(f)) rmSync(join(OUT, "assets", f));
+copyFileSync(join(ROOT, "src/style.css"), join(OUT, "assets", STYLE));
+copyFileSync(join(ROOT, "src/app.js"), join(OUT, "assets", APP));
 copyFileSync(join(ROOT, "src/favicon.svg"), join(OUT, "favicon.svg"));
 copyFileSync(join(ROOT, "src/skat.svg"), join(OUT, "assets/skat.svg"));
-writeFileSync(join(OUT, "_headers"), `/assets/*\n  Cache-Control: public, max-age=86400\n/img/*\n  Cache-Control: public, max-age=604800\n`);
+writeFileSync(join(OUT, "_headers"), `/assets/*\n  Cache-Control: public, max-age=86400\n/assets/${STYLE}\n  Cache-Control: public, max-age=31536000, immutable\n/assets/${APP}\n  Cache-Control: public, max-age=31536000, immutable\n/img/*\n  Cache-Control: public, max-age=604800\n`);
 for (const r of data.recipes) {
   if (r.image && !existsSync(join(OUT, "img", `${r.slug}.jpg`))) console.warn(`missing image: public/img/${r.slug}.jpg`);
 }
