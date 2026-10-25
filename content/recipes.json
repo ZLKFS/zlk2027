@@ -1,0 +1,798 @@
+{
+ "site": {
+  "lv": {
+   "name": "Zviedrijas latviešu kalendārs",
+   "short": "ZLK 2027",
+   "tagline": "Divpadsmit receptes no Zviedrijas latviešiem – katram mēnesim sava.",
+   "all": "Visas receptes",
+   "recipe": "Recepte",
+   "method": "Pagatavošana",
+   "prev": "Iepriekšējais mēnesis",
+   "next": "Nākamais mēnesis",
+   "coming": "Recepte sekos",
+   "read": "Lasīt recepti",
+   "lang": "Valoda",
+   "months": [
+    "Janvāris",
+    "Februāris",
+    "Marts",
+    "Aprīlis",
+    "Maijs",
+    "Jūnijs",
+    "Jūlijs",
+    "Augusts",
+    "Septembris",
+    "Oktobris",
+    "Novembris",
+    "Decembris"
+   ],
+   "notfound": "Šādas lapas nav.",
+   "home": "Uz sākumu"
+  },
+  "sv": {
+   "name": "Sverigeletternas kalender",
+   "short": "ZLK 2027",
+   "tagline": "Tolv recept från letter i Sverige – ett för varje månad.",
+   "all": "Alla recept",
+   "recipe": "Recept",
+   "method": "Gör så här",
+   "prev": "Föregående månad",
+   "next": "Nästa månad",
+   "coming": "Receptet kommer",
+   "read": "Läs receptet",
+   "lang": "Språk",
+   "months": [
+    "Januari",
+    "Februari",
+    "Mars",
+    "April",
+    "Maj",
+    "Juni",
+    "Juli",
+    "Augusti",
+    "September",
+    "Oktober",
+    "November",
+    "December"
+   ],
+   "notfound": "Sidan finns inte.",
+   "home": "Till startsidan"
+  }
+ },
+ "recipes": [
+  {
+   "month": 1,
+   "slug": "janvaris",
+   "image": false,
+   "lv": {
+    "title": "Biezpiena radziņi Smiltenes gaumē",
+    "credit": "Elīna Apsīte, Knīvsta",
+    "intro": "Šo recepti ir veidojusi Elīna Apsīte, kas dzīvo Knīvstā, Upsalas lēnī, bet nāk no Smiltenes. Tieši Smiltenes kafejnīcās nobaudīti biezpiena radziņi, kādus, šķiet, nepazīst nekur citur Latvijā! Elīna ilgi eksperimentēja, līdz tika pie īstās bērnības garšas. Viņai garšo viss, kam pievienots biezpiens – viņasprāt, īsts Latvijas superfood. Par laimi, viņas vietējā ICA veikala plauktā tagad ir atrodams biezpiens no Polijas. Ar biezpiena radziņiem Elīna cienā zviedru draugus un kolēģus un aizved kā cienastu uz Stokholmas latviešu skolu; viņas meita Emma tos tirgojusi skolas Miķeļdienas tirdziņā. Silti radziņi vienmēr pazūd zibenīgi!",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "200 g biezpiena",
+     "80 g sviesta",
+     "140 g miltu",
+     "1 tējkarote cepampulvera",
+     "šķipsniņa vaniļas pulvera",
+     "40 g cukura (var arī bez, ja cep mazuļiem)"
+    ],
+    "steps": [
+     "Bļodā liek biezpienu un mīkstu sviestu un ar dakšiņu rūpīgi saspaida un samaisa, līdz izveidojas viendabīga masa.",
+     "Pievieno miltus un cepampulveri un mīca ar rokām, līdz izveidojas mīksta, viendabīga mīkla.",
+     "Pārklāj ar dvielīti un ļauj mīklai atpūsties 10–15 minūtes.",
+     "Izrullē mīklu aptuveni 3–5 mm biezumā un vienmērīgi pārkaisa ar cukuru.",
+     "Sagriez mīklu trīsstūrīšos. To ērti paveikt, izgriežot mīklu apaļā formā un sagriežot kā picu. Trīsstūrīšu izmēru katrs izvēlas pēc savas gaumes.",
+     "Veido radziņus: katru mīklas trīsstūri sarullē no platākās malas virzienā uz smailo galu, izveidojot nelielu radziņu.",
+     "Ja vēlas saldākus un kraukšķīgākus cepumus, radziņus pirms cepšanas var apviļāt cukurā.",
+     "Izvieto radziņus uz cepamās plāts, kas pārklāta ar cepamo papīru, un cep iepriekš uzkarsētā cepeškrāsnī 180° C temperatūrā aptuveni 10–15 minūtes, līdz cepumi kļūst viegli zeltaini.",
+     "Ļauj cepumiem nedaudz atdzist un bauda tos kopā ar tēju, kafiju vai pienu."
+    ],
+    "tips": [
+     "Elīnas padomi: Ja biezpiens ir ļoti graudains, pirms mīklas gatavošanas to var izberzt caur sietu vai sablendēt, lai cepumi izdotos maigāki. Trīsstūrīšos var ietīt mazus marmelādes gabaliņus (ICA veikalā nopērkamā somu marmelāde atgādinās latviešu marmelādi)."
+    ]
+   },
+   "sv": {
+    "title": "Kvarghorn på Smiltene-vis",
+    "credit": "Elīna Apsīte, Knivsta",
+    "intro": "Receptet kommer från Elīna Apsīte, som bor i Knivsta i Uppsala län men kommer från Smiltene. Just på kaféerna i Smiltene fanns de här kvarghornen – biezpiena radziņi – som man knappt hittar någon annanstans i Lettland! Elīna experimenterade länge innan hon fick fram den äkta barndomssmaken. Hon gillar allt som innehåller biezpiens, den lettiska kvargen – enligt henne Lettlands riktiga superfood. Som tur är finns numera polsk kvarg på hyllan i hennes lokala ICA-butik. Elīna bjuder svenska vänner och kollegor på kvarghorn och tar med dem som fika till Lettiska skolan i Stockholm; hennes dotter Emma har sålt dem på skolans Mikaelimarknad. Varma horn försvinner alltid blixtsnabbt!",
+    "head": "Ingredienser",
+    "ingredients": [
+     "200 g kvarg (biezpiens, gärna polsk twaróg)",
+     "80 g smör",
+     "140 g vetemjöl",
+     "1 tsk bakpulver",
+     "en nypa vaniljpulver",
+     "40 g socker (kan uteslutas om du bakar till de minsta)"
+    ],
+    "steps": [
+     "Lägg kvargen och det mjuka smöret i en bunke, mosa och blanda noga med en gaffel till en jämn massa.",
+     "Tillsätt mjöl och bakpulver och knåda för hand till en mjuk, jämn deg.",
+     "Täck med en handduk och låt degen vila i 10–15 minuter.",
+     "Kavla ut degen till cirka 3–5 mm tjocklek och strö över socker jämnt.",
+     "Skär degen i trianglar. Enklast är att ta ut en rund kaka och skära den som en pizza. Storleken på trianglarna väljer var och en efter egen smak.",
+     "Forma hornen: rulla varje triangel från den breda sidan mot spetsen så att det blir ett litet horn.",
+     "Vill du ha sötare och knaprigare kakor kan du rulla hornen i socker före gräddningen.",
+     "Lägg hornen på en plåt med bakplåtspapper och grädda i förvärmd ugn på 180 °C i cirka 10–15 minuter, tills de är lätt gyllene.",
+     "Låt kakorna svalna något och njut av dem med te, kaffe eller mjölk."
+    ],
+    "tips": [
+     "Elīnas tips: Är kvargen mycket grynig kan du pressa den genom en sil eller mixa den innan du gör degen, så blir kakorna mjukare. I trianglarna kan du rulla in små bitar marmelad – den finska marmeladen som säljs på ICA påminner om den lettiska."
+    ]
+   }
+  },
+  {
+   "month": 2,
+   "slug": "februaris",
+   "image": true,
+   "lv": {
+    "title": "Latviešu skolas puravu biezzupa",
+    "credit": "Valdis Dzelzkalējs, Stokholma",
+    "intro": "Valdis Dzelzkalējs, stokholmietis no Ķekavas, šo recepti no zviedru piena kooperatīva Arla recepšu krājuma ir pielāgojis Stokholmas latviešu skolas vajadzībām un garšas izpratnei. Viņš saka: “Puravu biezzupu parasti ēd visi – arī tie, kam īpašas prasības pret ēdienu.”",
+    "head": "Sastāvdaļas 12 porcijām",
+    "ingredients": [
+     "1,5 kg kartupeļu",
+     "3 palieli puravi",
+     "3 ēdamkarotes sviesta",
+     "1,8 litri dārzeņu buljona vai ūdens un 4-5 buljona kubiņi, vēlams Knorr",
+     "1 litrs skābais krējums (vārāms), parastais vai bezlaktozes",
+     "sāls un pipari pēc garšas",
+     "§Piedevas:",
+     "zaļumi (pētersīļi, dilles – kas vien pieejams) un reducēts balzāmetiķis",
+     "viegli grauzdēta šķēle ierauga maizes ar sviestu, sieru vai kādu šķēli kūpinātas gaļas"
+    ],
+    "steps": [
+     "Nomizo kartupeļus un puravus, sasmalcina.",
+     "Lielā katlā izkausē sviestu un apcep puravus.",
+     "Pievieno kartupeļus un buljonu, vāra ap 10 min., līdz kartupeļi izvārīti.",
+     "Visu “sažļurā” ar mikseri viendabīgā masā.",
+     "Pievieno garšvielas un krējumu.",
+     "Uzvāra."
+    ],
+    "tips": [
+     "Gatavs!"
+    ]
+   },
+   "sv": {
+    "title": "Lettiska skolans purjolökssoppa",
+    "credit": "Valdis Dzelzkalējs, Stockholm",
+    "intro": "Valdis Dzelzkalējs, stockholmare från Ķekava, har anpassat det här receptet ur mejerikooperativet Arlas receptsamling till Lettiska skolan i Stockholm – efter skolans behov och smak. Han säger: ”Purjolökssoppan brukar alla äta – även de som har särskilda krav på maten.”",
+    "head": "Ingredienser till 12 portioner",
+    "ingredients": [
+     "1,5 kg potatis",
+     "3 stora purjolökar",
+     "3 msk smör",
+     "1,8 liter grönsaksbuljong, eller vatten och 4–5 buljongtärningar, helst Knorr",
+     "1 liter syrad grädde som tål kokning (t.ex. crème fraiche), vanlig eller laktosfri",
+     "salt och peppar efter smak",
+     "§Tillbehör:",
+     "örter (persilja, dill – det som finns) och reducerad balsamvinäger",
+     "en lätt rostad skiva surdegsbröd med smör, ost eller en skiva rökt kött"
+    ],
+    "steps": [
+     "Skala och hacka potatis och purjolök.",
+     "Smält smöret i en stor gryta och fräs purjolöken.",
+     "Tillsätt potatis och buljong och koka i cirka 10 minuter, tills potatisen är mjuk.",
+     "Mixa allt till en slät soppa med stavmixer.",
+     "Tillsätt kryddor och grädden.",
+     "Koka upp."
+    ],
+    "tips": [
+     "Klart!"
+    ]
+   }
+  },
+  {
+   "month": 3,
+   "slug": "marts",
+   "image": true,
+   "lv": {
+    "title": "Paska jeb Birziņas biezpiena maisījums Māras gaumē",
+    "credit": "Māra Krēsliņa, Stokholma",
+    "intro": "Māra Krēsliņa ir Ņujorkā augusi Stokholmas latviete. Viņas paska nāk no 1936. gadā izdotās H. Birziņas pavārgrāmatas, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Māra to ir papildinājusi un pielāgojusi Zviedrijas apstākļiem un sauc par pasku (zviedriski Lieldienas ir påsk). Pie gatavošanas jāķeras Zaļajā Ceturtdienā!",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "500 g biezpiena (ja nav, sagatavo no 1 l zviedru filmjölk vai 2 l rūgušpiena)",
+     "75 g sviesta",
+     "100 g cukura (1 un 1/4 dl)",
+     "½ pāksts vaniļas",
+     "50 g kapātu riekstu (zem 1 dl)",
+     "½ - ¾ gl. putukrējuma",
+     "rīvēta citrona miza",
+     "korintes un sukādes, lai nav pliekans"
+    ],
+    "steps": [
+     "Biezpienu izmaļ gaļas mašīnā un izberž caur sietiņu.",
+     "Ja nav biezpiena, lielā bļodā ielej 1 litru filmjölk un karsē mikroviļņu krāsnī apm. 4 minūtes.",
+     "Saputo sviestu, cukuru, garšvielas.",
+     "Pievieno un saputo pa vienai olai (var pievienot vēl dažus olu dzeltenumus).",
+     "Samaisa ar labi sasmalcinātu, caur sietiņu izberztu biezpienu un rupji sakapātiem riekstu kodoliem.",
+     "Iecilā putukrējumu.",
+     "Masu ietin drānā un liek zem sloga, līdzīgi kā Jāņu sieru.",
+     "Pasniedz kā saldo ēdienu, izgreznojot ar augļiem vai ogu mērci."
+    ],
+    "tips": [
+     "Māras krājumos ir arī Natas tantes pashas recepte, kurā 2 kg biezpiena pievieno 25 olu dzeltenumus un rozīnes."
+    ]
+   },
+   "sv": {
+    "title": "Paska – Birziņas kvargdessert på Māras vis",
+    "credit": "Māra Krēsliņa, Stockholm",
+    "intro": "Māra Krēsliņa är en Stockholmslettiska som växte upp i New York. Hennes paska kommer ur H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har kompletterat receptet och anpassat det till svenska förhållanden, och kallar det paska – efter svenskans påsk. Man sätter igång på skärtorsdagen!",
+    "head": "Ingredienser",
+    "ingredients": [
+     "500 g kvarg (finns ingen: gör egen av 1 liter filmjölk eller 2 liter surmjölk)",
+     "75 g smör",
+     "100 g socker (1 ¼ dl)",
+     "½ vaniljstång",
+     "50 g hackade nötter (knappt 1 dl)",
+     "½–¾ glas vispgrädde",
+     "rivet citronskal",
+     "korinter och sukat, så att det inte blir fadd"
+    ],
+    "steps": [
+     "Mal kvargen i köttkvarn och pressa den genom en sil.",
+     "Finns ingen kvarg: häll 1 liter filmjölk i en stor skål och värm i mikrovågsugn i cirka 4 minuter.",
+     "Vispa smör, socker och kryddor.",
+     "Tillsätt äggen ett i taget och vispa (det går att lägga till några extra äggulor).",
+     "Blanda med den finfördelade, silade kvargen och de grovhackade nötkärnorna.",
+     "Vänd ner vispgrädden.",
+     "Slå in massan i en duk och lägg under press, ungefär som en Jāņi-ost.",
+     "Servera som dessert, dekorerad med frukt eller bärsås."
+    ],
+    "tips": [
+     "I Māras samling finns också tant Natas pasharecept, där 2 kg kvarg får sällskap av 25 äggulor och russin."
+    ]
+   }
+  },
+  {
+   "month": 4,
+   "slug": "aprilis",
+   "image": false,
+   "lv": {
+    "title": "Kesellas biezpienkūka",
+    "credit": "Kristīne Dannenberga, Stokholma",
+    "intro": "Šo recepti iesūtīja Kristīne Dannenberga no Stokholmas. Lūk, receptes stāsts: ”Zviedrijas maizītes man vienmēr likušās pārāk saldas un treknas, tādēļ biju ļoti priecīga, kad reiz pamanīju labu pamatrecepti kūkai, kur galvenā sastāvdaļa ir svaigsiers Kesella jeb kvarg. Līdzīgu kūku turklāt biju nogaršojusi vienā jaukā maiznīcā Saltå kvarn. Atrasto recepti esmu mazliet pamainījusi, lai garša būtu līdzīgāka latviešu biezpienmaizei. Visas sastāvdaļas nopērkamas jebkurā pārtikas veikalā.",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "§Mīklai",
+     "3 dl kviešu miltu",
+     "150 g sviesta",
+     "1 ēdamkarote cukura",
+     "1 ola",
+     "§Pildījumam",
+     "4 olas",
+     "10 žāvētas aprikozes",
+     "500 g Kesella siera",
+     "1,5 dl rozīņu",
+     "1 dl cukura",
+     "1,5 ēdamkarote vaniļas cukura",
+     "3 ēdamkarotes mannas (mannagryn)",
+     "1 ēdamkarote kukurūzas cietes (Maizena)",
+     "rīvēta citrona miziņa (no viena citrona)",
+     "pūdercukurs pārkaisīšanai"
+    ],
+    "steps": [
+     "Virtuves kombainā ar ”nažiem” sakapā miltus kopā ar sviestu un cukuru, līdz veidojas drupataina masa. Tai pievieno olu un turpina sajaukšanu kombainā.",
+     "Mīklu ieklāj 24 cm diametra formā ar noņemamām malām, pārklājot arī malas. Kamēr gatavo pildījumu, veidni novieto saldētavā.",
+     "Pildījumam atdala olu dzeltenumus no baltumiem. Baltumus saputo stingrās putās.",
+     "Bļodā liek kesellu, olu dzeltenumus, sīki sagrieztas aprikozes, rozīnes, citrona miziņu, cukuru, kas sajaukts ar vaniļas cukuru, mannu un kukurūzas cieti. Ar mikseri visu rūpīgi samaisa. Pēc tam uzmanīgi iecilā saputotos olu baltumus.",
+     "Pildījumu lej formā ar mīklu un pārklāj ar alumīnija foliju.",
+     "Cep līdz 200 °C uzkarsētas cepeškrāsns apakšējā daļā 45 minūtes. Noņem foliju un cep vēl apmēram 20 minūtes, līdz kūka iegūst skaistu zeltainu krāsu.",
+     "Ļauj kūkai atdzist formā. Pirms pasniegšanas pārkaisa ar pūdercukuru. Pasniedz ar siltu ogu mērci."
+    ],
+    "tips": []
+   },
+   "sv": {
+    "title": "Kvargkaka på Kesella",
+    "credit": "Kristīne Dannenberga, Stockholm",
+    "intro": "Receptet skickades in av Kristīne Dannenberga från Stockholm. Så här berättar hon: ”Svenska bullar har alltid känts för söta och feta för mig, så jag blev väldigt glad när jag en gång hittade ett bra grundrecept på en kaka där huvudingrediensen är färskosten Kesella, alltså kvarg. En liknande kaka hade jag dessutom smakat på ett trevligt bageri vid Saltå kvarn. Receptet har jag ändrat lite för att smaken ska bli mer lik den lettiska biezpienmaize. Alla ingredienser finns i vilken matbutik som helst.”",
+    "head": "Ingredienser",
+    "ingredients": [
+     "§Deg",
+     "3 dl vetemjöl",
+     "150 g smör",
+     "1 msk socker",
+     "1 ägg",
+     "§Fyllning",
+     "4 ägg",
+     "10 torkade aprikoser",
+     "500 g Kesella",
+     "1,5 dl russin",
+     "1 dl socker",
+     "1,5 msk vaniljsocker",
+     "3 msk mannagryn",
+     "1 msk majsstärkelse (Maizena)",
+     "rivet skal av en citron",
+     "florsocker att pudra över"
+    ],
+    "steps": [
+     "Kör mjöl, smör och socker med knivarna i matberedaren tills det blir en smulig massa. Tillsätt ägget och fortsätt köra.",
+     "Tryck ut degen i en form med löstagbar kant, 24 cm i diameter, även upp längs kanterna. Ställ formen i frysen medan du gör fyllningen.",
+     "Separera äggulor och vitor till fyllningen. Vispa vitorna till hårt skum.",
+     "Lägg Kesella, äggulor, finhackade aprikoser, russin, citronskal, socker blandat med vaniljsocker, mannagryn och majsstärkelse i en bunke. Blanda noga med elvisp. Vänd sedan försiktigt ner äggvitorna.",
+     "Häll fyllningen i formen med degen och täck med aluminiumfolie.",
+     "Grädda i nedre delen av ugnen på 200 °C i 45 minuter. Ta bort folien och grädda ytterligare cirka 20 minuter, tills kakan fått en vacker gyllene färg.",
+     "Låt kakan svalna i formen. Pudra över florsocker före servering. Servera med varm bärsås."
+    ],
+    "tips": []
+   }
+  },
+  {
+   "month": 5,
+   "slug": "maijs",
+   "image": false,
+   "lv": {
+    "title": "Svaigi puķkāpostu salāti ar svaigām dillēm",
+    "credit": "Vineta Kalniņa",
+    "intro": "Recepte sekos.",
+    "head": "Sastāvdaļas",
+    "ingredients": [],
+    "steps": [],
+    "tips": []
+   },
+   "sv": {
+    "title": "Färsk blomkålssallad med dill",
+    "credit": "Vineta Kalniņa",
+    "intro": "Receptet kommer.",
+    "head": "Ingredienser",
+    "ingredients": [],
+    "steps": [],
+    "tips": []
+   }
+  },
+  {
+   "month": 6,
+   "slug": "junijs",
+   "image": false,
+   "lv": {
+    "title": "Īstais Jāņu siers",
+    "credit": "Šarlote Cērps, Stokholma",
+    "intro": "Šarlote Cērps ir stokholmiete, kuras dzimtas saknes ir Kuldīgā, Rīgā un Rūjienā. Šarlote iemācījās siet Jāņu sieru, viesojoties pie kādas ASV latviešu ģimenes, kas rīkoja Jāņus vietējiem latviešiem. Tomēr recepte ar 8 l piena neiedzīvojās viņas repertuārā. Šī ir pavisam jauna recepte, ko Šarlote pielāgojusi no 2026. gada “SestDienas”, kad svinēja Jāņus Latvijas laukos un visi sieri izrādījās izpirkti! Šarlotes sieru atzinīgi novērtēja arī Stokholmas latviešu koristi, kurus viņa ar sieru cienāja oktobrī. Jo ar šo gardumu var našķoties ikvienā gadalaikā!",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "1 litrs piena (3% tauku)",
+     "1 tējk. ķimeņu",
+     "½-1 tējk. čili pārslas (flakes) asumam, pēc garšas",
+     "2-3 dl crème fraiche vai skāba krējuma",
+     "1 ola",
+     "1 tējk. sāls (var vairāk, ja garšo sālīts)",
+     "1 ēd.k. sviesta"
+    ],
+    "steps": [
+     "Katla dibenā ielej nedaudz ūdens, lai nepiedeg, tad pievieno pienu un garšvielas.",
+     "Uzkarsē līdz vārīšanās brīdim, 80-85 C.",
+     "Kamēr silda pienu, bļodiņā sakuļ olu, 1 tējk. sāls un skābo krējumu. (Var lietot saldu krējumu un pievienot 1 tējk. galda etiķa.)",
+     "Kad piens uzkarsis, katlu noņem no plīts un pielej klāt olas un krējuma maisījumu.",
+     "Katlu atkal novieto uz plīts un turpina sildīt, kamēr piens sarecē un atdalās sūkalas. Tas notiek ātri, sasniedzot 80 C.",
+     "Noņem katlu no plīts un gaida apm. 5 minūtes.",
+     "Sietā ievieto pārlocītu marli un nokāš sūkalas; ļauj tām notecēt dažas minūtes.",
+     "Siera masā iemaisa sviestu un pēc garšas pievieno vēl sāli.",
+     "Vismaz 30 minūtes turpina notecināt.",
+     "Nospiež šķidrumu, cik iespējams, ar visu marli liek piemērotā traukā, uzliek slogu un atstāj dažas stundas vēsā vietā."
+    ],
+    "tips": [
+     "Šarlote iesaka sieru pasniegt ar Finncrisp cieto maizi un redīsiem. Siers sver apmēram 300 g, pietiks apmēram 18 Finncrisp šķēlītēm.",
+     "Viņa iesaka izmantot arī sūkalas – kā mēslojumu stādiem, kā šķidrumu maizes cepšanai, pagatavojot skandināvu sūkalu sviestu messmör vai kā šķidrumu aukstajai dārzeņu biezzupai jeb smūtijam. Bet tā ir jau cita recepte!"
+    ]
+   },
+   "sv": {
+    "title": "Äkta Jāņi-ost – lettisk midsommarost",
+    "credit": "Šarlote Cērps, Stockholm",
+    "intro": "Šarlote Cērps är stockholmare med släktrötter i Kuldīga, Riga och Rūjiena. Hon lärde sig göra Jāņi-ost – den lettiska midsommarosten med kummin – hos en lettisk familj i USA som ordnade midsommarfirande för letterna i trakten. Receptet med 8 liter mjölk fastnade dock aldrig i hennes repertoar. Det här är ett helt nytt recept som Šarlote anpassat från tidningen ”SestDiena” 2026, när hon firade midsommar på den lettiska landsbygden och alla ostar visade sig vara slutsålda! Šarlotes ost fick också beröm av Lettiska körens sångare i Stockholm, som hon bjöd på ost i oktober. För den här godsaken kan man njuta av året runt!",
+    "head": "Ingredienser",
+    "ingredients": [
+     "1 liter mjölk (3 % fett)",
+     "1 tsk kummin",
+     "½–1 tsk chiliflakes för hetta, efter smak",
+     "2–3 dl crème fraiche eller gräddfil",
+     "1 ägg",
+     "1 tsk salt (gärna mer om du gillar det salt)",
+     "1 msk smör"
+    ],
+    "steps": [
+     "Häll lite vatten i botten på en kastrull så att det inte bränner fast, tillsätt sedan mjölk och kryddor.",
+     "Värm till strax före kokpunkten, 80–85 °C.",
+     "Vispa under tiden ihop ägg, 1 tsk salt och crème fraiche i en skål. (Det går att använda vispgrädde och tillsätta 1 tsk ättika.)",
+     "När mjölken är varm, ta kastrullen från plattan och häll i ägg- och gräddblandningen.",
+     "Ställ tillbaka kastrullen på plattan och fortsätt värma tills mjölken skär sig och vasslen skiljer ut sig. Det går fort när temperaturen når 80 °C.",
+     "Ta kastrullen från plattan och vänta cirka 5 minuter.",
+     "Lägg en dubbelvikt silduk i en sil och sila av vasslen; låt rinna av några minuter.",
+     "Rör ner smöret i ostmassan och salta mer efter smak.",
+     "Låt rinna av i minst 30 minuter.",
+     "Pressa ur så mycket vätska som möjligt, lägg osten med silduken i ett lämpligt kärl, lägg på en tyngd och låt stå några timmar på ett svalt ställe."
+    ],
+    "tips": [
+     "Šarlote tipsar om att servera osten med Finn Crisp knäckebröd och rädisor. Osten väger cirka 300 g och räcker till ungefär 18 skivor Finn Crisp.",
+     "Hon föreslår också att ta vara på vasslen – som gödning till plantor, som vätska vid brödbak, till skandinaviskt messmör eller som bas i en kall grönsakssoppa eller smoothie. Men det är ett annat recept!"
+    ]
+   }
+  },
+  {
+   "month": 7,
+   "slug": "julijs",
+   "image": false,
+   "lv": {
+    "title": "Skrubas sentimentālie latviešu lapu salāti",
+    "credit": "Laine Lasmane Wikmark, Tēbija",
+    "intro": "Laine Lasmane Wikmark dzīvo Tēbijā (Täby), bet viņas ģimenes saknes meklējamas gan Apriķu pagastā Kurzemē, gan Siguldas laukos, gan Ukrainā. Laines iesniegtā recepte ir pavisam īsa un viegli pagatavojama, bet tai ir garš un skaists stāsts: “1960os gados ar māsām vasaras pavadījām Zviedrijas latviešu bērnu nometnē Skrubā (Skrubba), kas atrodas netālu no Stokholmas dienvidu virzienā. Bijām liels pulks bērnu – man atmiņā ap simtu. Virtuvē valdīja Šmitmaņkundze un Ķesterkundze kopā ar jauniešu izpalīgiem. Mums, meitenēm, īpaši mīļas bija izpalīdzes Vija, Dzintra un Astra. Viņām varējām izkratīt sirsniņu, ja bija vajadzība. Uz galda gandrīz katru dienu kā piedeva bija šie ļoti vienkāršie un garšīgie salāti. Laiks ritēja, un 1970os gados es biju izpalīdze latviešu bērnu nometnē – Lādvīkā, netālu no Vaksholmas. Virtuves “karaliene” bija Sausiņkundze, un es iemācījos gatavot šos salātus. Daudz vēlāk šos vienkāršos salātus gatavoju savai ģimenei un nosaucu par \"sentimentālajiem salātiem\". Bet Skrubas mīļās izpalīdzes joprojām tos sauc par ”latviešu salātiem”!",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "lapu salāti",
+     "svaigs gurķis",
+     "lociņi",
+     "dilles",
+     "gräddfil, zviedru krējumotais rūgušpiens",
+     "sāls"
+    ],
+    "steps": [
+     "Visu samaisa lielā bļodā!"
+    ],
+    "tips": [
+     "Laines padoms: Salāti, dilles un skābais krējums ir obligāti. Ja grib, piemaisa plāni sagrieztu gurķi un lociņus."
+    ]
+   },
+   "sv": {
+    "title": "Skrubbas sentimentala lettiska bladsallad",
+    "credit": "Laine Lasmane Wikmark, Täby",
+    "intro": "Laine Lasmane Wikmark bor i Täby, men hennes familjs rötter finns både i Apriķi socken i Kurland, på landsbygden kring Sigulda och i Ukraina. Receptet Laine skickat in är mycket kort och enkelt att göra, men det har en lång och vacker historia: ”På 1960-talet tillbringade jag och mina systrar somrarna på det lettiska barnlägret i Skrubba, strax söder om Stockholm. Vi var en stor skara barn – som jag minns det omkring hundra. I köket regerade fru Šmitmanis och fru Ķesteris tillsammans med ungdomar som hjälpte till. Vi flickor var särskilt förtjusta i medhjälparna Vija, Dzintra och Astra. Hos dem kunde vi lätta våra hjärtan när det behövdes. På bordet stod nästan varje dag den här mycket enkla och goda salladen som tillbehör. Tiden gick, och på 1970-talet var jag själv medhjälpare på ett lettiskt barnläger – i Ladvik nära Vaxholm. Kökets ”drottning” var fru Sausiņš, och jag lärde mig att göra salladen. Långt senare gjorde jag den enkla salladen till min egen familj och döpte den till ”den sentimentala salladen”. Men Skrubbas kära medhjälpare kallar den fortfarande ”den lettiska salladen”!”",
+    "head": "Ingredienser",
+    "ingredients": [
+     "bladsallad",
+     "färsk gurka",
+     "salladslök",
+     "dill",
+     "gräddfil",
+     "salt"
+    ],
+    "steps": [
+     "Blanda allt i en stor skål!"
+    ],
+    "tips": [
+     "Laines tips: Sallad, dill och gräddfil är obligatoriskt. Den som vill blandar i tunt skivad gurka och salladslök."
+    ]
+   }
+  },
+  {
+   "month": 8,
+   "slug": "augusts",
+   "image": false,
+   "lv": {
+    "title": "Benitas „kraupštīgā” karbonāde ar kartupeļiem un skābiem kāpostiem",
+    "credit": "Laila Strunke, Stokholma",
+    "intro": "Šo un citus savas mammas Benitas gatavotos ēdienus atceras Laila Strunke no Stokholmas: “Mammas ēdiens bija garšīgs, bet viņa nelietoja receptes. Gatavoja pēc atmiņas vai garšas.” Benita, meitas uzvārdā Lāce, izauga Ventspilī; viņas vecāki nāca no Alsungas un Jūrkalnes. Varbūt tieši Kurzemē cēlies apzīmējums “kraupštīgs”?",
+    "head": "Sastāvdaļas (daudzumu pielāgo ēdāju skaitam)",
+    "ingredients": [
+     "cūkgaļas karbonādes šķēles bez kaula (zviedriski fläskkotlett)",
+     "sāls un melnie pipari",
+     "milti",
+     "ola",
+     "rīvmaize",
+     "sviests un eļļa cepšanai"
+    ],
+    "steps": [
+     "Cūkgaļas šķēles kārtīgi izklapē no abām pusēm, apkaisa ar nedaudz sāls un melnajiem pipariem.",
+     "Katru šķēli apviļā miltos, tad sakultā olā un visbeidzot rīvmaizē.",
+     "Pannā izkausē sviestu, pievieno nedaudz eļļas un uzkarsē. Karstā pannā cep karbonādes no abām pusēm, līdz tās kļūst zeltaini brūnas un apvalks ir kraukšķīgs."
+    ],
+    "tips": [
+     "Pasniedz ar vārītiem miltainiem kartupeļiem vai sezonas jaunajiem kartupeļiem. Atkarībā no gadalaika piedevās izvēlas sautētus skābos kāpostus ar nedaudz cukura vai aukstos kāpostu salātus, kurus gatavo, sajaucot svaigus un skābētus kāpostus ar skābo krējumu, ķimenēm, sāli, melnajiem pipariem un šķipsniņu cukura.",
+     "Labu apetīti!"
+    ]
+   },
+   "sv": {
+    "title": "Benitas knapriga kotlett med potatis och surkål",
+    "credit": "Laila Strunke, Stockholm",
+    "intro": "Den här och andra rätter som hennes mamma Benita lagade minns Laila Strunke från Stockholm: ”Mammas mat var god, men hon använde inga recept. Hon lagade på minne och smak.” Benita, född Lāce, växte upp i Ventspils; hennes föräldrar kom från Alsunga och Jūrkalne. Kanske är det just i Kurland som ordet ”kraupštīgs” – knaprig – har sitt ursprung?",
+    "head": "Ingredienser (mängderna anpassas efter antalet gäster)",
+    "ingredients": [
+     "benfria fläskkotletter",
+     "salt och svartpeppar",
+     "vetemjöl",
+     "ägg",
+     "ströbröd",
+     "smör och olja till stekning"
+    ],
+    "steps": [
+     "Banka ut kotletterna ordentligt på båda sidor och krydda med lite salt och svartpeppar.",
+     "Vänd varje skiva först i mjöl, sedan i uppvispat ägg och till sist i ströbröd.",
+     "Smält smör i en stekpanna, tillsätt lite olja och hetta upp. Stek kotletterna i den heta pannan på båda sidor tills de är gyllenbruna och paneringen knaprig."
+    ],
+    "tips": [
+     "Servera med kokt mjölig potatis eller säsongens färskpotatis. Beroende på årstid väljs som tillbehör antingen stuvad surkål med lite socker eller en kall kålsallad, som görs genom att blanda färsk kål och surkål med gräddfil, kummin, salt, svartpeppar och en nypa socker.",
+     "Smaklig måltid!"
+    ]
+   }
+  },
+  {
+   "month": 9,
+   "slug": "septembris",
+   "image": true,
+   "lv": {
+    "title": "Bērzgales tiramisu",
+    "credit": "Sofija Ieva Otisone, Sigtuna",
+    "intro": "Recepti iesūtījusi Sofija Ieva Otisone no Sigtunas. Viņas mamma nāk no Kurzemes, tētis – no Vidzemes, bet tiramisu viņa slepeni pagaršoja Bērzgalē, Rēzeknes novadā, kad bija pavisam maziņa. Kopš tās reizes tiramisu ir Sofijas mīļākais ēdiens. To viņa gatavo kopā ar mammu, un tiramisu Sofijai atgādina Latviju.",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "500 g svaigā maskarpones siera",
+     "400 ml saldā krējuma",
+     "upeņu vai aroniju sula",
+     "5 olu dzeltenumi",
+     "2 ēdamkarotes nesaldināta kakao pulvera",
+     "100 g cukurs",
+     "70 g tumšā šokolāde",
+     "cepumi dāmu pirkstiņi",
+     "2 tējkarotes vaniļas cukura"
+    ],
+    "steps": [
+     "Katlā uzkarsē ūdeni, virs katla uz liek bļodiņu ar olu dzeltenumiem un 50 g cukura. Maisījumu kuļ a mikseri, kamēr cukurs ir izkusis. Kad olu dzeltenumi ir palikuši gaišāki, pievieno 1 tējkaroti vaniļas cukura.",
+     "Blodiņu noņem no plīts un iekuļ maskarponi.",
+     "Atsevišķā traukā saputo saldo krējumu ar cukuru stingrā putukrējumā.",
+     "Maskarpones masā iecilā putukrējumu.",
+     "Pagatavo upeņu sulu un pievieno 1 tējkaroti vaniļas cukura.",
+     "Paņem smuku stikla trauku ar augstām malām.",
+     "Katru cepumu iemērcē no vienas puses upeņu sulā un liek traukā rindās. Kad visa pamatne noklāta ar cepumiem, to pārklāj ar pagatavoto krēmu. Pāri baltajam krēmam pārsijā kakao un šokolādi.",
+     "Tad atkal liek dāmu pirkstiņus un turpina, līdz izveidotas trīs kārtas. Pēdējā ir bieza krēma kārta, kura ir pārkaisīta ar kakao un šokolādi.",
+     "Trauku liek ledusskapī apmēram uz 8 stundām.",
+     "Izbaudi!"
+    ],
+    "tips": [
+     "Atceries: Deserts būs visgaršīgākais, ja to pirms ēšanas turēs vismaz 8 stundas ledusskapī."
+    ]
+   },
+   "sv": {
+    "title": "Tiramisu från Bērzgale",
+    "credit": "Sofija Ieva Otisone, Sigtuna",
+    "intro": "Receptet har skickats in av Sofija Ieva Otisone från Sigtuna. Hennes mamma kommer från Kurland och pappa från Vidzeme, men tiramisun smakade hon i smyg i Bērzgale i Rēzekne kommun när hon var riktigt liten. Sedan dess är tiramisu Sofijas favoriträtt. Hon gör den tillsammans med sin mamma, och tiramisun påminner Sofija om Lettland.",
+    "head": "Ingredienser",
+    "ingredients": [
+     "500 g mascarpone",
+     "400 ml vispgrädde",
+     "svartvinbärs- eller aroniasaft",
+     "5 äggulor",
+     "2 msk osötat kakaopulver",
+     "100 g socker",
+     "70 g mörk choklad",
+     "savoiardikex (ladyfingers)",
+     "2 tsk vaniljsocker"
+    ],
+    "steps": [
+     "Värm vatten i en kastrull och sätt en skål med äggulor och 50 g socker över kastrullen. Vispa blandningen med elvisp tills sockret löst sig. När äggulorna blivit ljusare, tillsätt 1 tsk vaniljsocker.",
+     "Ta skålen från värmen och vispa ner mascarponen.",
+     "Vispa grädden med sockret till ett fast skum i en separat skål.",
+     "Vänd ner vispgrädden i mascarponemassan.",
+     "Gör i ordning svartvinbärssaften och tillsätt 1 tsk vaniljsocker.",
+     "Ta fram en fin glasskål med höga kanter.",
+     "Doppa varje kex på ena sidan i saften och lägg dem i rader i skålen. När hela botten är täckt med kex, bred över krämen. Sikta kakao och choklad över den vita krämen.",
+     "Lägg sedan ett nytt lager kex och fortsätt tills det blivit tre lager. Det sista är ett tjockt lager kräm, pudrat med kakao och choklad.",
+     "Ställ skålen i kylen i cirka 8 timmar.",
+     "Njut!"
+    ],
+    "tips": [
+     "Kom ihåg: Desserten blir som allra godast om den får stå minst 8 timmar i kylen innan den äts."
+    ]
+   }
+  },
+  {
+   "month": 10,
+   "slug": "oktobris",
+   "image": false,
+   "lv": {
+    "title": "Kurzemes sklandrauši Zviedrijā",
+    "credit": "Sanita Heinberga, Jerna, un Agnese Blaubārde, Stokholma",
+    "intro": "Tikai viena ēdiena recepti saņēmām divreiz – un tas ir Kurzemes sklandrausis! Sklandrauša receptes iesūtīja divas īpašas Zviedrijas kurzemnieces. Savulaik ventspilniece, Sanita Heinberga tagad dzīvo Jernā (Järna) pie Sēderteljes un ir profesionāla smalkmaizīšu beķere (pastry chef). Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu. Lūk, kā viņas skaidro savas attiecības ar sklandrausi! Sanita: “Kā īstai kurzemniecei, sklandraušu gatavošana man ir goda lieta un cieņas apliecinājums Latvijas vēsturei. Sklandrausis ar savu košo krāsu man atgādina sauli — tas iemieso siltumu, gaišumu un mīlestību pret savām saknēm.” Viņa atgādina, ka sklandrausi sauc arī par dižrausi un žograusi. Agnese: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "§Mīklas pamatnei:",
+     "600g vidēja vai rupja maluma rudzu miltu",
+     "50g kviešu miltu (Agnese neizmanto kviešu miltus)",
+     "60g sviesta (Agneses recepte ļauj izmantot arī cūku taukus)",
+     "250-300g ūdens",
+     "šķipsniņa sāls (Agneses receptē vesela tējkarote!)",
+     "§Kartupeļu pildījumam:",
+     "1kg kartupeļu",
+     "200g sviesta (Agneses receptē ir tikai 100 g sviesta, bet to  papildina ar 150 g pilnpiena biezpiena)",
+     "100g skāba krējuma",
+     "2gb. olas",
+     "šķipsniņa sāls (Agneses receptē pievieno arī ķimenes!)",
+     "§Burkānu pildījumam:",
+     "2kg burkānu",
+     "250g skāba krējuma (Agneses receptē 100 g sviesta un 4 ēdamkarotes saldā krējuma)",
+     "2gb. olas",
+     "cukurs pēc garšas (Agneses receptē 200 g cukura – tas nav maz!)",
+     "šķipsniņa sāls",
+     "§Pārsmērēšanai:",
+     "250g skāba krējuma",
+     "1gb. ola",
+     "cukurs pēc garšas",
+     "malts kanēlis vai ķimeņu sēklas pēc izvēles"
+    ],
+    "steps": [
+     "Siltā ūdenī pievieno sviestu un sāli, tad miltus un sajauc. Agnese iesaka ūdeni pievienot pamazām, lai nebūtu par daudz!",
+     "Mīklu izveltnē apmēram 2mm biezumā.",
+     "Izspiež apaļas formas pamatnes 10-15cm biezumā.",
+     "Malas uzloka uz augšu apmēram 2 cm augstumā, veidojot “žogu”.",
+     "Kartupeļus novāra un samaļ vai sarīvē viendabīgā masā. Mīcot pievieno izkausētu sviestu, krējumu, olas un sāli.",
+     "Burkānus novāra un samaļ vai sarīvē viendabīgā masā. Mīcot pievieno krējumu, olas, cukuru un sāli.",
+     "Pamatnēs vispirms klāj kartupeļu masu, tam pa virsu burkānu masu. Agnese pirms cepšanas apkaisa ar ķimenēm.",
+     "Cep krāsnī augstā temperatūrā 220-250°C apm. 15-30 minūtes (vai zemākā temperatūrā 200 °C apm. 40 minūtes!), līdz mīklas pamatne kļuvusi sausa.",
+     "Gatavu sklandrausi pārziež ar skābā krējuma, olas un cukura maisījumu. Agneses receptē pēc vēlēšanās uzliek katram rausim ēdamkaroti skābā krējuma un pārkaisa ar cukuru (bez olas!).",
+     "Sanitas receptē sklandraušus pārkaisa ar kanēli vai ķimenēm pēc izvēles."
+    ],
+    "tips": [
+     "Iesakām pārbaudīt abas receptes un veidot savus variantus!"
+    ]
+   },
+   "sv": {
+    "title": "Kurländska sklandrausis i Sverige",
+    "credit": "Sanita Heinberga, Järna, och Agnese Blaubārde, Stockholm",
+    "intro": "Bara ett recept fick vi in två gånger – och det var den kurländska sklandrausis! Recepten skickades in av två alldeles särskilda kurländskor i Sverige. Sanita Heinberga, ursprungligen från Ventspils, bor numera i Järna utanför Södertälje och är konditor till yrket. Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem. Så här beskriver de sin relation till sklandrausis. Sanita: ”Som äkta kurländska är det en hederssak för mig att baka sklandrausis – ett sätt att visa respekt för Lettlands historia. Med sin klara färg påminner sklandrausis mig om solen – den förkroppsligar värme, ljus och kärlek till mina rötter.” Hon påminner om att sklandrausis också kallas dižrausis och žograusis. Agnese: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”",
+    "head": "Ingredienser",
+    "ingredients": [
+     "§Degbotten:",
+     "600 g rågmjöl, medel- eller grovmalet",
+     "50 g vetemjöl (Agnese använder inget vetemjöl)",
+     "60 g smör (i Agneses recept går även ister bra)",
+     "250–300 g vatten",
+     "en nypa salt (i Agneses recept en hel tesked!)",
+     "§Potatisfyllning:",
+     "1 kg potatis",
+     "200 g smör (i Agneses recept bara 100 g smör, men kompletterat med 150 g kvarg av helmjölk)",
+     "100 g gräddfil",
+     "2 ägg",
+     "en nypa salt (Agnese tillsätter även kummin!)",
+     "§Morotsfyllning:",
+     "2 kg morötter",
+     "250 g gräddfil (i Agneses recept 100 g smör och 4 msk vispgrädde)",
+     "2 ägg",
+     "socker efter smak (i Agneses recept 200 g socker – det är inte lite!)",
+     "en nypa salt",
+     "§Till pensling:",
+     "250 g gräddfil",
+     "1 ägg",
+     "socker efter smak",
+     "malen kanel eller kummin efter önskemål"
+    ],
+    "steps": [
+     "Tillsätt smör och salt i varmt vatten, sedan mjölet, och blanda. Agnese tipsar om att tillsätta vattnet lite i taget, så att det inte blir för mycket!",
+     "Kavla ut degen till cirka 2 mm tjocklek.",
+     "Stansa ut runda bottnar, 10–15 cm i diameter.",
+     "Vik upp kanterna cirka 2 cm så att det bildas ett ”staket”.",
+     "Koka potatisen och mal eller riv den till en jämn massa. Arbeta in smält smör, gräddfil, ägg och salt.",
+     "Koka morötterna och mal eller riv dem till en jämn massa. Arbeta in gräddfil, ägg, socker och salt.",
+     "Bred först ut potatismassan i bottnarna och därefter morotsmassan ovanpå. Agnese strör över kummin före gräddningen.",
+     "Grädda i ugnen på hög värme, 220–250 °C, i cirka 15–30 minuter (eller på lägre värme, 200 °C, i cirka 40 minuter!), tills degbotten blivit torr.",
+     "Pensla de färdiga sklandrausis med en blandning av gräddfil, ägg och socker. I Agneses recept lägger man i stället, om man vill, en matsked gräddfil på varje kaka och strör över socker (utan ägg!).",
+     "I Sanitas recept strör man över kanel eller kummin efter önskemål."
+    ],
+    "tips": [
+     "Vi rekommenderar att prova båda recepten och skapa egna varianter!"
+    ]
+   }
+  },
+  {
+   "month": 11,
+   "slug": "novembris",
+   "image": false,
+   "lv": {
+    "title": "Speķa pīrāgi",
+    "credit": "Laila Strunke, Stokholma",
+    "intro": "Stokholmietes Lailas Strunkes mamma bijusi izcila pavāre. Iespējams, Laila tieši no viņas mantojusi ēdiena gatavošanas gēnu – bet ne receptes. Mamma savas svarīgās receptes zinājusi no galvas, turklāt, laikam ejot un mainot dzīvesvietas, paputējušas arī daudzās pavārgrāmatas. Lūk, kā Laila gatavo pīrāgus, pielāgojot santa.lv recepti zviedru apstākļiem.",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "2,5 dl piena",
+     "50 g rauga (saldām mīklām)",
+     "500-600 g miltu (es lietoju Manitoba Cream miltus)",
+     "150 g sviesta (”normalsaltat”)",
+     "2 ēdamkarotes cukura",
+     "pustējkarote sāls",
+     "250 g cauraugušas žāvētas gaļas (es lietoju žāvētus bekona gabaliņus)",
+     "1 sīpols",
+     "malti melnie pipari",
+     "1 ola pārsmērēšanai"
+    ],
+    "steps": [
+     "Uzraudzē raugu – sasmalcina to, pievieno tējkaroti cukura, nedaudz silta ūdens vai piena un apmēram ēdamkaroti miltu. Visu sajauc putriņā un noliek siltā vietā.",
+     "Katliņā ielej pienu, pieliek sviestu, cukuru, sāli un silda, nepārtraukti maisot, lai piens pārāk neuzkarstu.",
+     "Ja piens tomēr uzvārās, tas noteikti jāpadzesē, jo ieraugu nedrīkst likt karstā pienā.",
+     "Kad sviests izkusis, noņem katliņu no uguns, ielej lielā bļodā un caur sietiņu iesijā miltus. Ar koka karoti maisa, kamēr mīkla sasniegusi bieza krējuma konsistenci.",
+     "Pa šo laiku ir uzrūdzis raugs – iemaisa arī to un turpina mīklā sijāt miltus un maisīt.",
+     "Kad mīkla kļuvusi pietiekami bieza, turpina mīcīšanu ar rokām – tik ilgi, kamēr mīkla ir gluda, spīdīga un atlec gan no rokām, gan no bļodas. Jāmīca diezgan dūšīgi – gan ar delnu, gan ar dūri, gan jāapmet apkārt.",
+     "Kad mīkla izmīcīta, to nedaudz apkaisa ar miltiem, apsedz ar drāniņu un liek siltumā uzrūgt. Mīkla ir gatava, kad dubultojusies apjomā!",
+     "Kamēr mīkla rūgst, sagatavo pildījumu: gaļu un sīpolu smalki sagriež, vispirms nelielā daudzumā taukvielu apcep sīpola gabaliņus, kamēr tie kļūst zeltaini un caurspīdīgi, tad pievieno gaļu un apcep tikai mazliet – tā, lai gaļas gabaliņi vairs neliptu cits pie cita. Pievieno mazliet piparu un sāls.",
+     "Veido pīrādziņus. Paņem gabaliņu mīklas, plāni izveltnē vai izmīca, vidū saliek pildījumu, pārloka pāri otru mīklas pusi un ar glāzi izspiež pīrādziņu. Ar pirkstiem kārtīgi aizspiež pīrāga maliņas, saspiesto vietu kā vīlīti nolokot zem pīrādziņa – tā, lai tā ir pret pannu. Jāuzmanās, lai mīkla nav pārāk bieza!",
+     "Sakuļ olu un apziež pīrādziņus, lai tie būtu brūnāki un spīdīgāki.",
+     "Tūliņ liek cepeškrāsnī, lai neturpina rūgt un neatveras! Cep cepeškrāsns augšējā daļā diezgan lielā karstumā – 250 grādos 7–8 minūtes."
+    ],
+    "tips": [
+     "Lailas padoms: Šī mīkla noder arī plātsmaizēm un bulciņām."
+    ]
+   },
+   "sv": {
+    "title": "Speķa pīrāgi – lettiska baconpiroger",
+    "credit": "Laila Strunke, Stockholm",
+    "intro": "Stockholmaren Laila Strunkes mamma var en enastående kokerska. Kanske är det från henne Laila ärvt matlagningsgenen – men inte recepten. Mamman kunde sina viktiga recept utantill, och med åren och alla flyttar försvann också de många kokböckerna. Så här bakar Laila pīrāgi, med ett recept från santa.lv anpassat till svenska förhållanden.",
+    "head": "Ingredienser",
+    "ingredients": [
+     "2,5 dl mjölk",
+     "50 g jäst (för söta degar)",
+     "500–600 g vetemjöl (jag använder Manitoba Cream)",
+     "150 g smör (normalsaltat)",
+     "2 msk socker",
+     "½ tsk salt",
+     "250 g rökt sidfläsk (jag använder tärnat rökt bacon)",
+     "1 gul lök",
+     "malen svartpeppar",
+     "1 ägg till pensling"
+    ],
+    "steps": [
+     "Sätt jästen: smula den, tillsätt en tesked socker, lite ljummet vatten eller mjölk och ungefär en matsked mjöl. Rör ihop till en gröt och ställ varmt.",
+     "Häll mjölken i en kastrull, lägg i smör, socker och salt och värm under ständig omrörning, så att mjölken inte blir för varm.",
+     "Skulle mjölken ändå koka upp måste den kylas ner, för jästen får inte komma i het mjölk.",
+     "När smöret smält, ta kastrullen från värmen, häll över i en stor bunke och sikta ner mjöl. Rör med träslev tills degen fått konsistensen av tjock grädde.",
+     "Under tiden har jästen jäst upp – rör ner även den och fortsätt sikta ner mjöl och röra.",
+     "När degen blivit tillräckligt fast, fortsätt knåda för hand – så länge att degen är slät, blank och släpper både från händerna och från bunken. Det ska knådas ordentligt – med handflatan, med knytnäven och genom att slå degen i bunken.",
+     "När degen är färdigknådad, strö över lite mjöl, täck med en duk och ställ varmt att jäsa. Degen är klar när den dubblat sin volym!",
+     "Gör fyllningen medan degen jäser: finhacka kött och lök. Fräs först lökbitarna i lite fett tills de är gyllene och genomskinliga, tillsätt sedan köttet och fräs bara lite – så att bitarna inte längre klibbar ihop. Tillsätt lite peppar och salt.",
+     "Forma pirogerna. Ta en bit deg, kavla eller tryck ut den tunt, lägg fyllning i mitten, vik över den andra deghalvan och tryck ut pirogen med ett glas. Nyp ihop kanterna ordentligt med fingrarna och vik in skarven under pirogen – så att den ligger mot plåten. Se till att degen inte blir för tjock!",
+     "Vispa upp ägget och pensla pirogerna så att de blir brunare och blankare.",
+     "Sätt genast in i ugnen, så att de inte fortsätter jäsa och öppnar sig! Grädda i övre delen av ugnen på ganska hög värme – 250 °C i 7–8 minuter."
+    ],
+    "tips": [
+     "Lailas tips: Degen passar också till långpannekakor och bullar."
+    ]
+   }
+  },
+  {
+   "month": 12,
+   "slug": "decembris",
+   "image": false,
+   "lv": {
+    "title": "Ķūķu vakara ķūķis",
+    "credit": "Māra Krēsliņa, Stokholma",
+    "intro": "Māras Krēsliņas ķūķa receptes pamatā ir 1936. gadā izdotā H. Birziņas pavārgrāmata, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Recepti viņa pielāgojusi un izveidojusi arī veģetāro variantu. Māras ķūķis ir slavens – kādā “Globālais latvietis” pārraidē folklorists Austris Grasis atzīstas, ka sava izcilā ķūķa recepti saņēmis īsziņā no Māras Krēsliņas, dodoties ar kuģi no Stokholmas uz Rīgu. Viņš ķūķi vienmēr gatavojis Vecgada vakarā, ieliekot cepeškrāsnī uz 4 stundām, – un ap pusnakti gatavs!",
+    "head": "Sastāvdaļas",
+    "ingredients": [
+     "300 g grūbu (hela korngryn)",
+     "200 g žāvēta speķa (veģetārajā variantā aizvieto ar burkāniem, sīpoliem, selerijas sakni)",
+     "75 g sīpolu",
+     "2 l ūdens vai buljona (3 buljona kubiņi uz 2 l ūdens)",
+     "sāls pēc garšas"
+    ],
+    "steps": [
+     "Grūbas apgrauzdē pannā spilgti brūnas.",
+     "Sīki sagriež un apcep sīpolus un speķi.",
+     "Katlā vai “pīlē” pilda vairākās kārtās vispirms apgrauzdētās grūbas, tad apcepto speķi ar sīpoliem, tad atkal grūbas utt., līdz trauks pilns.",
+     "Uzlej buljonu.",
+     "Cep cepeškrāsnī apm. 3 stundas 200°C karstumā; nemaisa, bet pielej šķidrumu, ja nepieciešams."
+    ],
+    "tips": [
+     "Māra iesaka: “Kad varu, pērku speķi Latvijā, jo zviedru speķis nav ne tuvu tik labs. Nav verdziski jāpieturas pie samēriem, iznāk labi šā vai tā.”"
+    ]
+   },
+   "sv": {
+    "title": "Ķūķis – lettisk korngrynsgryta",
+    "credit": "Māra Krēsliņa, Stockholm",
+    "intro": "Grunden till Māra Krēsliņas ķūķis är H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har anpassat receptet och även gjort en vegetarisk variant. Māras ķūķis är berömd – i ett avsnitt av programmet ”Globālais latvietis” erkänner folkloristen Austris Grasis att han fått receptet på sin utmärkta ķūķis via sms från Māra Krēsliņa, på väg med båten från Stockholm till Riga. Han har alltid gjort ķūķis på nyårsafton – in i ugnen i 4 timmar, och vid midnatt är den klar!",
+    "head": "Ingredienser",
+    "ingredients": [
+     "300 g hela korngryn",
+     "200 g rökt sidfläsk (i den vegetariska varianten ersätts det med morötter, lök och rotselleri)",
+     "75 g lök",
+     "2 liter vatten eller buljong (3 buljongtärningar till 2 liter vatten)",
+     "salt efter smak"
+    ],
+    "steps": [
+     "Rosta korngrynen i en torr panna tills de är rejält bruna.",
+     "Finhacka och fräs lök och fläsk.",
+     "Varva i en gryta eller stekgryta: först rostade korngryn, sedan det stekta fläsket med lök, sedan korngryn igen och så vidare, tills grytan är full.",
+     "Häll över buljongen.",
+     "Laga i ugnen i cirka 3 timmar på 200 °C; rör inte, men fyll på med vätska om det behövs."
+    ],
+    "tips": [
+     "Māra tipsar: ”När jag kan köper jag fläsk i Lettland, för det svenska fläsket är inte alls lika bra. Man behöver inte slaviskt följa proportionerna, det blir bra ändå.”"
+    ]
+   }
+  }
+ ]
+}
