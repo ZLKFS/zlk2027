@@ -264,7 +264,7 @@ copyFileSync(join(ROOT, "src/style.css"), join(OUT, "assets", STYLE));
 copyFileSync(join(ROOT, "src/app.js"), join(OUT, "assets", APP));
 copyFileSync(join(ROOT, "src/favicon.svg"), join(OUT, "favicon.svg"));
 copyFileSync(join(ROOT, "src/skat.svg"), join(OUT, "assets/skat.svg"));
-writeFileSync(join(OUT, "_headers"), `/assets/*\n  Cache-Control: public, max-age=86400\n/assets/${STYLE}\n  Cache-Control: public, max-age=31536000, immutable\n/assets/${APP}\n  Cache-Control: public, max-age=31536000, immutable\n/img/*\n  Cache-Control: public, max-age=604800\n`);
+writeFileSync(join(OUT, "_headers"), `/assets/skat.svg\n  Cache-Control: public, max-age=86400\n/assets/${STYLE}\n  Cache-Control: public, max-age=31536000, immutable\n/assets/${APP}\n  Cache-Control: public, max-age=31536000, immutable\n/img/*\n  Cache-Control: public, max-age=604800\n`);
 for (const r of data.recipes) {
   if (r.image && !existsSync(join(OUT, "img", `${r.slug}.jpg`))) console.warn(`missing image: public/img/${r.slug}.jpg`);
 }
