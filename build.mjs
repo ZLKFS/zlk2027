@@ -7,20 +7,20 @@ const ROOT = new URL(".", import.meta.url).pathname;
 const OUT = join(ROOT, "public");
 const ORIGIN = "https://zlk2027.latviesi.se";
 const data = JSON.parse(readFileSync(join(ROOT, "content/recipes.json"), "utf8"));
-const LANGS = ["lv", "sv"];
+const LANGS = ["lv", "sv", "en"];
 // Adobe Fonts web project for Sabon LT Pro: put the kit id here (e.g. "abc1def") and the
 // stylesheet link is added to every page. Until then EB Garamond is the stand-in.
 const ADOBE_KIT = data.site.adobeKit || "";
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = (n) => String(n).padStart(2, "0");
-const base = (lang) => (lang === "lv" ? "/" : "/sv/");
+const base = (lang) => (lang === "lv" ? "/" : `/${lang}/`);
 const recipeUrl = (lang, slug) => `${base(lang)}${slug}/`;
-const other = (lang) => (lang === "lv" ? "sv" : "lv");
+const urlsFor = (slug) => Object.fromEntries(LANGS.map((l) => [l, slug ? recipeUrl(l, slug) : base(l)]));
 // "Februāris/Februari" — the calendar's bilingual month line, same in both languages
 const monthLine = (m) => `${data.site.lv.months[m - 1]}/${data.site.sv.months[m - 1]}`;
 
-function layout({ lang, title, description, path, altPath, image, body, bodyClass }) {
+function layout({ lang, title, description, path, urls, image, body, bodyClass }) {
   const t = data.site[lang];
   const google = ADOBE_KIT
     ? "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600"
@@ -29,15 +29,14 @@ function layout({ lang, title, description, path, altPath, image, body, bodyClas
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?${google}&display=swap" rel="stylesheet">`;
   return `<!doctype html>
-<html lang="${lang}" data-alt="${altPath}">
+<html lang="${lang}" data-urls="${esc(JSON.stringify(urls))}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${ORIGIN}${path}">
-<link rel="alternate" hreflang="lv" href="${ORIGIN}${lang === "lv" ? path : altPath}">
-<link rel="alternate" hreflang="sv" href="${ORIGIN}${lang === "sv" ? path : altPath}">
+${LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${ORIGIN}${urls[l]}">`).join("\n")}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="article">
@@ -47,13 +46,13 @@ ${image ? `<meta property="og:image" content="${ORIGIN}${image}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 ${fonts}
 <link rel="stylesheet" href="/assets/style.css">
-<script>(function(){try{var l=localStorage.getItem("zlk-lang"),c=document.documentElement.lang,a=document.documentElement.getAttribute("data-alt");if(l&&l!==c&&a)location.replace(a)}catch(e){}})();</script>
+<script>(function(){try{var l=localStorage.getItem("zlk-lang"),c=document.documentElement.lang,m=JSON.parse(document.documentElement.getAttribute("data-urls")||"{}");if(l&&l!==c&&m[l])location.replace(m[l])}catch(e){}})();</script>
 </head>
 <body class="${bodyClass || ""}">
 <header class="site-head wrap">
   <a class="brand" href="${base(lang)}" aria-label="${esc(t.name)} 2027"><img src="/assets/skat.svg" alt="" width="59" height="32"></a>
   <nav class="lang" aria-label="${esc(t.lang)}">
-    <a href="${lang === "lv" ? path : altPath}" hreflang="lv" lang="lv" data-lang="lv"${lang === "lv" ? ' class="is-active" aria-current="page"' : ""}>LV</a><span class="slash" aria-hidden="true">/</span><a href="${lang === "sv" ? path : altPath}" hreflang="sv" lang="sv" data-lang="sv"${lang === "sv" ? ' class="is-active" aria-current="page"' : ""}>SV</a>
+    ${LANGS.map((l) => `<a href="${urls[l]}" hreflang="${l}" lang="${l}" data-lang="${l}"${l === lang ? ' class="is-active" aria-current="page"' : ""}>${l.toUpperCase()}</a>`).join("")}
   </nav>
 </header>
 ${body}
@@ -101,7 +100,7 @@ function homePage(lang) {
 ${data.recipes.map((r) => card(lang, r)).join("\n")}
   </section>
 </main>`;
-  return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, altPath: base(other(lang)), image: "/img/marts.jpg", body, bodyClass: "page-home" });
+  return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, urls: urlsFor(null), image: "/img/marts.jpg", body, bodyClass: "page-home" });
 }
 
 // Leading quantity of an ingredient line ("1,5 kg …", "500-600 g …", "½ - ¾ gl. …") becomes a
@@ -138,7 +137,6 @@ function recipePage(lang, r, i) {
   const t = data.site[lang];
   const c = r[lang];
   const path = recipeUrl(lang, r.slug);
-  const altPath = recipeUrl(other(lang), r.slug);
   const prev = data.recipes[(i + 11) % 12];
   const next = data.recipes[(i + 1) % 12];
   const empty = c.steps.length === 0;
@@ -211,17 +209,17 @@ ${stepList(c.steps)}
   <p class="all-link"><a href="${base(lang)}">${esc(t.all)}</a></p>
 </main>`;
   const description = c.intro.length > 160 ? c.intro.slice(0, 157).replace(/\s+\S*$/, "") + "…" : c.intro;
-  return layout({ lang, title: `${c.title} – ${t.short}`, description, path, altPath, image: r.image ? `/img/${r.slug}.jpg` : null, body, bodyClass: "page-recipe" });
+  return layout({ lang, title: `${c.title} – ${t.short}`, description, path, urls: urlsFor(r.slug), image: r.image ? `/img/${r.slug}.jpg` : null, body, bodyClass: "page-recipe" });
 }
 
 function notFound() {
-  const lv = data.site.lv, sv = data.site.sv;
+  const lv = data.site.lv, sv = data.site.sv, en = data.site.en;
   const body = `<main class="wrap notfound">
   <p class="year">404</p>
-  <h1 class="month">${esc(lv.notfound)}<br><span lang="sv">${esc(sv.notfound)}</span></h1>
-  <p class="lede"><a href="/">${esc(lv.home)}</a> · <a href="/sv/" lang="sv">${esc(sv.home)}</a></p>
+  <h1 class="month">${esc(lv.notfound)}<br><span lang="sv">${esc(sv.notfound)}</span><br><span lang="en">${esc(en.notfound)}</span></h1>
+  <p class="lede"><a href="/">${esc(lv.home)}</a> · <a href="/sv/" lang="sv">${esc(sv.home)}</a> · <a href="/en/" lang="en">${esc(en.home)}</a></p>
 </main>`;
-  return layout({ lang: "lv", title: `404 – ${lv.short}`, description: lv.notfound, path: "/404.html", altPath: "/sv/", body, bodyClass: "page-404" });
+  return layout({ lang: "lv", title: `404 – ${lv.short}`, description: lv.notfound, path: "/404.html", urls: urlsFor(null), body, bodyClass: "page-404" });
 }
 
 // ---- write ----

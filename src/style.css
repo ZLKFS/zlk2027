@@ -201,11 +201,11 @@ body.is-cooking { overflow: hidden; }
 
 /* hover only where a pointer can hover: touch screens keep :hover stuck after a tap */
 @media (hover: hover) {
-  .lang a:hover { color: var(--ink); }
+  .lang a:not(.is-active):hover { color: var(--ink); }
   .btn:hover { background: var(--ink); color: var(--paper); }
   .btn--primary:hover { background: #000; color: var(--paper); }
   .btn--text:hover { background: none; color: var(--ink); text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 0.12em; }
-  .mult button:hover { color: var(--ink); }
+  .mult button:not(.is-active):hover { color: var(--ink); }
   .chip:hover { border-color: var(--ink); }
   .steps li:hover .num { border-color: var(--ink); }
   .card:hover .visual img { opacity: 0.92; }

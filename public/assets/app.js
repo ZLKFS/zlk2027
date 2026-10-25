@@ -10,6 +10,8 @@ const main = document.querySelector("main[data-slug]");
 const stepsEl = document.querySelector(".steps");
 if (main && stepsEl) {
   const slug = main.dataset.slug;
+  const LANG = document.documentElement.lang;
+  const DEC = LANG === "en" ? "." : ",";
   const i18n = JSON.parse(document.getElementById("i18n").textContent);
   const store = {
     get(k, d) { try { const v = localStorage.getItem(`zlk:${k}:${slug}`); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -55,7 +57,7 @@ if (main && stepsEl) {
     const w = Math.floor(v), f = +(v - w).toFixed(2);
     if (FR[f]) return (w ? w : "") + FR[f];
     const r = Math.round(v * 100) / 100;
-    return String(r).replace(".", ",");
+    return String(r).replace(".", DEC);
   };
   const qs = [...document.querySelectorAll(".q")];
   const PRESETS = [0.5, 1, 2];
@@ -155,16 +157,18 @@ if (main && stepsEl) {
   // --- amounts inside the step text (cooking mode) ---
   // Each ingredient line = quantity [unit] name…; the name's content words become stems that are
   // looked up in the step text, and the current (scaled) amount is written after the first hit.
-  const UNITS = new Set(["g","kg","dl","l","ml","cl","litrs","litri","litru","liter","liters","ēdamkarote","ēdamkarotes","ēd.k.","ēd","k","tējkarote","tējkarotes","tējk","tējk.","pustējkarote","msk","tsk","gb","gb.","st","glāze","gl","gl.","pāksts","krm","ēdamkarotes"]);
+  const UNITS = new Set(["g","kg","dl","l","ml","cl","litrs","litri","litru","liter","liters","ēdamkarote","ēdamkarotes","ēd.k.","ēd","k","tējkarote","tējkarotes","tējk","tējk.","pustējkarote","msk","tsk","gb","gb.","st","glāze","gl","gl.","pāksts","krm","ēdamkarotes","tbsp","tsp","litre","litres","glass","cup","cups"]);
   const STOP = new Set(("un vai pēc garšas garšai ar bez no uz kas vien pieejams vēlams var arī ja ko lai kā jeb par pie zem vēl tikai nav ir tas tā " +
     "parastais parastā bezlaktozes svaigs svaiga svaigi svaigu liels liela lieli palieli palielus mazs maza sīki smalki rupji vidēja maluma kapātu kapāta kapāti sagrieztu sasmalcinātu žāvētas žāvēta žāvēts " +
     "šķēle šķēles šķēlītes cepšanai pārsmērēšanai pārkaisīšanai pildījumam mīklai pamatnei piedevas nedaudz apmēram apm cik daudz receptē recepte zviedriski zviedru latviešu " +
     "och eller efter smak en ett till för av med gärna helst vanlig vanliga laktosfri stora stor små liten färsk färska finhackad finhackade hackade hackad rivet riven malen malet torkade torkad osötat hela hel " +
-    "det som finns lite cirka ca ungefär nypa skiva skivor bitar pensling fyllning deg degbotten tillbehör vispad kan uteslutas om du bakar de minsta polsk svenska lettisk lettiska").split(" "));
-  const LANG = document.documentElement.lang;
+    "det som finns lite cirka ca ungefär nypa skiva skivor bitar pensling fyllning deg degbotten tillbehör vispad kan uteslutas om du bakar de minsta polsk svenska lettisk lettiska " +
+    "the and for with into until plus large small fresh chopped grated dried ground sliced diced smoked whole plain boneless unsweetened dark fine finely coarse coarsely little some taste serve glazing dusting frying base filling pastry regular lactose free ideally preferably such that can boiled just under one pinch").split(" "));
   const words = (s) => [...s.toLowerCase().matchAll(/[\p{L}\p{M}]+/gu)];
   // strip the usual inflection endings so "kartupeļus" ~ "kartupeļu", "mjölken" ~ "mjölk"
-  const norm = (w) => (LANG === "sv" ? w.replace(/(arna|erna|orna|en|et|na|ar|er|or|e)$/, "") : w.replace(/(iem|ām|ēm|ās|ēs|os|us|is|as|es|ai|ei|u|a|e|i|s|ā|ē|ī|ū)$/, ""));
+  const norm = (w) => (LANG === "sv" ? w.replace(/(arna|erna|orna|en|et|na|ar|er|or|e)$/, "")
+    : LANG === "en" ? w.replace(/ies$/, "y").replace(/oes$/, "o").replace(/(sh|ch|x|z|ss)es$/, "$1").replace(/s$/, "")
+    : w.replace(/(iem|ām|ēm|ās|ēs|os|us|is|as|es|ai|ei|u|a|e|i|s|ā|ē|ī|ū)$/, ""));
   // step word a vs ingredient key b: equal, or the ingredient is a compound ending in the step word
   // (vetemjöl ~ mjöl), or both long and one extends the other
   const same = (a, b, strict) => a === b || (!strict && a.length >= 4 && b.length >= 4 && b.endsWith(a)) || (a.length >= 6 && b.length >= 6 && (a.startsWith(b) || b.startsWith(a)));
@@ -189,7 +193,7 @@ if (main && stepsEl) {
     return ings;
   };
   const escH = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const QUANTIFIED = /(\d|[½¼¾]|\b(en|ett|lite|tesked|matsked|tsk|msk|dl|g|kg|ml|liter|nypa|nedaudz|mazliet|pāris|šķipsniņ\w*|tējkarot\w*|ēdamkarot\w*|puse|pusi))\s*\p{L}*\s*$/iu;
+  const QUANTIFIED = /(\d|[½¼¾]|\b(en|ett|lite|tesked|matsked|tsk|msk|dl|g|kg|ml|liter|nypa|nedaudz|mazliet|pāris|šķipsniņ\w*|tējkarot\w*|ēdamkarot\w*|puse|pusi|a|an|some|teaspoon|tablespoon|tbsp|tsp|pinch|cup|little)\b)\s*\p{L}*\s*$/iu;
   // For every step: which ingredient's amount goes after which word. Decided once per cooking
   // session so a name shared by two lines (1 ola / 4 olas) goes to the first unused line.
   function planAmounts() {
@@ -235,7 +239,7 @@ if (main && stepsEl) {
   }
 
   // --- cooking mode ---
-  const TIME = /(\d+)(?:\s*[–-]\s*(\d+))?\s*(min|stund|timm)/i;
+  const TIME = /(\d+)(?:\s*[–-]\s*(\d+))?\s*(min|stund|timm|hour|hr)/i;
   let cook, cur = 0, timer = null, wake = null;
   const t = (s, n, m) => s.replace("{n}", n).replace("{m}", m);
 
@@ -268,7 +272,7 @@ if (main && stepsEl) {
     if (m) {
       const unit = m[3].toLowerCase();
       const n = +m[1] * (unit.startsWith("min") ? 1 : 60);
-      tb.dataset.seconds = n * 60; tb.textContent = `${i18n.timer} ${n} ${i18n.min}`; tb.parentElement.hidden = false;
+      tb.dataset.seconds = n * 60; tb.textContent = `${i18n.timer} ${n >= 60 && n % 60 === 0 ? `${n / 60} h` : `${n} ${i18n.min}`}`; tb.parentElement.hidden = false;
     } else tb.parentElement.hidden = true;
     cook.querySelector(".cook-body").scrollTop = 0;
   }

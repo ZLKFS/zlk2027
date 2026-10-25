@@ -115,6 +115,64 @@
    "tomorrow": "I morgon",
    "saturday": "Lördag",
    "sunday": "Söndag"
+  },
+  "en": {
+   "name": "Latvian Calendar in Sweden",
+   "short": "ZLK 2027",
+   "tagline": "Twelve recipes from Latvians in Sweden – one for every month.",
+   "all": "All recipes",
+   "recipe": "Recipe",
+   "method": "Method",
+   "prev": "Previous month",
+   "nextMonth": "Next month",
+   "coming": "Recipe to follow",
+   "read": "Read the recipe",
+   "lang": "Language",
+   "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+   ],
+   "notfound": "No such page.",
+   "home": "Home",
+   "cook": "Start cooking",
+   "stepOf": "Step {n} of {m}",
+   "next": "Next",
+   "back": "Back",
+   "finish": "Done",
+   "close": "Close",
+   "timer": "Timer",
+   "min": "min",
+   "timerDone": "Time's up!",
+   "reset": "Clear ticks",
+   "amount": "Amount",
+   "custom": "Other",
+   "addCal": "When shall we cook?",
+   "when": "Book an evening in the kitchen",
+   "calGo": "Add to calendar",
+   "date": "Date",
+   "time": "Time",
+   "duration": "Length",
+   "ics": "Apple / Outlook",
+   "google": "Google Calendar",
+   "eventDesc": "Recipe online:",
+   "about": "≈",
+   "share": "Share",
+   "copied": "Link copied",
+   "shareText": "Recipe from the Latvian Calendar in Sweden 2027",
+   "today": "Today",
+   "tomorrow": "Tomorrow",
+   "saturday": "Saturday",
+   "sunday": "Sunday"
   }
  },
  "recipes": [
@@ -178,7 +236,35 @@
      "Elīnas tips: Är kvargen mycket grynig kan du pressa den genom en sil eller mixa den innan du gör degen, så blir kakorna mjukare. I trianglarna kan du rulla in små bitar marmelad – den finska marmeladen som säljs på ICA påminner om den lettiska."
     ]
    },
-   "minutes": 50
+   "minutes": 50,
+   "en": {
+    "title": "Curd cheese crescents, Smiltene style",
+    "credit": "Elīna Apsīte, Knivsta",
+    "intro": "This recipe comes from Elīna Apsīte, who lives in Knivsta in Uppsala County but comes from Smiltene. The cafés of Smiltene served these curd cheese crescents – biezpiena radziņi – which you will hardly find anywhere else in Latvia! Elīna experimented for a long time before she found the true taste of her childhood. She loves anything with biezpiens, the Latvian curd cheese – in her view Latvia's real superfood. Luckily her local ICA now stocks curd cheese from Poland. Elīna treats Swedish friends and colleagues to the crescents and brings them to the Latvian School in Stockholm; her daughter Emma has sold them at the school's Michaelmas fair. Warm crescents always vanish in a flash!",
+    "head": "Ingredients",
+    "ingredients": [
+     "200 g curd cheese (quark, ideally Polish twaróg)",
+     "80 g butter",
+     "140 g plain flour",
+     "1 tsp baking powder",
+     "a pinch of vanilla powder",
+     "40 g sugar (leave it out if baking for the little ones)"
+    ],
+    "steps": [
+     "Put the curd cheese and soft butter in a bowl and mash and mix thoroughly with a fork until smooth.",
+     "Add the flour and baking powder and knead by hand into a soft, even dough.",
+     "Cover with a tea towel and let the dough rest for 10–15 minutes.",
+     "Roll the dough out to about 3–5 mm and sprinkle evenly with sugar.",
+     "Cut the dough into triangles. The easy way is to cut out a round and slice it like a pizza. Make the triangles whatever size you like.",
+     "Shape the crescents: roll each triangle from the wide edge towards the point into a little horn.",
+     "For sweeter, crunchier biscuits, roll the crescents in sugar before baking.",
+     "Place on a baking tray lined with baking paper and bake in an oven preheated to 180 °C for about 10–15 minutes, until lightly golden.",
+     "Let them cool a little and enjoy with tea, coffee or milk."
+    ],
+    "tips": [
+     "Elīna's tips: If the curd cheese is very grainy, press it through a sieve or blend it before making the dough, for softer biscuits. You can roll small pieces of fruit jelly into the triangles – the Finnish marmalade sold at ICA is close to the Latvian kind."
+    ]
+   }
   },
   {
    "month": 2,
@@ -240,7 +326,35 @@
      "Klart!"
     ]
    },
-   "minutes": 40
+   "minutes": 40,
+   "en": {
+    "title": "Latvian School leek soup",
+    "credit": "Valdis Dzelzkalējs, Stockholm",
+    "intro": "Valdis Dzelzkalējs, a Stockholmer from Ķekava, adapted this recipe from the recipe collection of the Swedish dairy cooperative Arla for the Latvian School in Stockholm – to the school's needs and taste. He says: “Everyone usually eats the leek soup – even those who are particular about food.”",
+    "head": "Ingredients for 12 servings",
+    "ingredients": [
+     "1.5 kg potatoes",
+     "3 large leeks",
+     "3 tbsp butter",
+     "1.8 litres vegetable stock, or water and 4–5 stock cubes, preferably Knorr",
+     "1 litre soured cream that can be boiled (such as crème fraîche), regular or lactose-free",
+     "salt and pepper to taste",
+     "§To serve:",
+     "herbs (parsley, dill – whatever is at hand) and reduced balsamic vinegar",
+     "a lightly toasted slice of sourdough bread with butter, cheese or a slice of smoked meat"
+    ],
+    "steps": [
+     "Peel and chop the potatoes and leeks.",
+     "Melt the butter in a large pot and sauté the leeks.",
+     "Add the potatoes and stock and cook for about 10 minutes, until the potatoes are soft.",
+     "Blend everything into a smooth soup with a hand blender.",
+     "Add the seasoning and the cream.",
+     "Bring to the boil."
+    ],
+    "tips": [
+     "Done!"
+    ]
+   }
   },
   {
    "month": 3,
@@ -304,7 +418,36 @@
      "I Māras samling finns också tant Natas pasharecept, där 2 kg kvarg får sällskap av 25 äggulor och russin."
     ]
    },
-   "minutes": 60
+   "minutes": 60,
+   "en": {
+    "title": "Paska – Birziņa's curd cheese dessert, Māra's way",
+    "credit": "Māra Krēsliņa, Stockholm",
+    "intro": "Māra Krēsliņa is a Stockholm Latvian who grew up in New York. Her paska comes from H. Birziņa's cookbook of 1936, which Māra's sister Zuze once copied in the library of the Latvian Gymnasium in Münster. Māra has added to the recipe and adapted it to Swedish conditions, and calls it paska – after the Swedish påsk, Easter. Work starts on Maundy Thursday!",
+    "head": "Ingredients",
+    "ingredients": [
+     "500 g curd cheese (if none is to be had, make your own from 1 litre of Swedish filmjölk or 2 litres of soured milk)",
+     "75 g butter",
+     "100 g sugar (1¼ dl)",
+     "½ vanilla pod",
+     "50 g chopped nuts (just under 1 dl)",
+     "½–¾ glass whipping cream",
+     "grated lemon zest",
+     "currants and candied peel, so it is not bland"
+    ],
+    "steps": [
+     "Pass the curd cheese through a mincer and press it through a sieve.",
+     "If there is no curd cheese, pour 1 litre of filmjölk into a large bowl and heat in the microwave for about 4 minutes.",
+     "Beat the butter, sugar and flavourings.",
+     "Add the eggs one at a time, beating (you can add a few extra yolks).",
+     "Mix with the finely worked, sieved curd cheese and the coarsely chopped nuts.",
+     "Fold in the whipped cream.",
+     "Wrap the mass in a cloth and put it under a weight, much like Jāņi cheese.",
+     "Serve as a dessert, decorated with fruit or a berry sauce."
+    ],
+    "tips": [
+     "Māra's collection also holds Aunt Nata's pasha recipe, in which 2 kg of curd cheese meet 25 egg yolks and raisins."
+    ]
+   }
   },
   {
    "month": 4,
@@ -378,7 +521,41 @@
     ],
     "tips": []
    },
-   "minutes": 100
+   "minutes": 100,
+   "en": {
+    "title": "Kesella quark cake",
+    "credit": "Kristīne Dannenberga, Stockholm",
+    "intro": "This recipe was sent in by Kristīne Dannenberga from Stockholm. Here is its story: “Swedish buns have always seemed too sweet and too rich to me, so I was very glad when I once came across a good basic recipe for a cake whose main ingredient is the fresh cheese Kesella, that is, quark. I had also tasted a similar cake at a lovely bakery at Saltå kvarn. I have changed the recipe a little so the taste comes closer to the Latvian biezpienmaize, curd cheese cake. All the ingredients can be found in any grocery shop.”",
+    "head": "Ingredients",
+    "ingredients": [
+     "§Pastry",
+     "3 dl plain flour",
+     "150 g butter",
+     "1 tbsp sugar",
+     "1 egg",
+     "§Filling",
+     "4 eggs",
+     "10 dried apricots",
+     "500 g Kesella (quark)",
+     "1.5 dl raisins",
+     "1 dl sugar",
+     "1.5 tbsp vanilla sugar",
+     "3 tbsp semolina",
+     "1 tbsp cornflour (Maizena)",
+     "grated zest of one lemon",
+     "icing sugar for dusting"
+    ],
+    "steps": [
+     "In a food processor with the blade, pulse the flour with the butter and sugar until crumbly. Add the egg and keep mixing.",
+     "Press the pastry into a 24 cm springform tin, up the sides as well. Put the tin in the freezer while you make the filling.",
+     "For the filling, separate the eggs. Whisk the whites until stiff.",
+     "Put the Kesella, egg yolks, finely chopped apricots, raisins, lemon zest, the sugar mixed with the vanilla sugar, semolina and cornflour in a bowl. Mix thoroughly with an electric whisk. Then carefully fold in the whisked egg whites.",
+     "Pour the filling into the pastry case and cover with aluminium foil.",
+     "Bake in the lower part of an oven heated to 200 °C for 45 minutes. Remove the foil and bake for about 20 minutes more, until the cake is a lovely golden colour.",
+     "Let the cake cool in the tin. Dust with icing sugar before serving. Serve with warm berry sauce."
+    ],
+    "tips": []
+   }
   },
   {
    "month": 5,
@@ -398,6 +575,15 @@
     "credit": "Vineta Kalniņa",
     "intro": "Receptet kommer.",
     "head": "Ingredienser",
+    "ingredients": [],
+    "steps": [],
+    "tips": []
+   },
+   "en": {
+    "title": "Fresh cauliflower salad with dill",
+    "credit": "Vineta Kalniņa",
+    "intro": "Recipe to follow.",
+    "head": "Ingredients",
     "ingredients": [],
     "steps": [],
     "tips": []
@@ -469,7 +655,38 @@
      "Hon föreslår också att ta vara på vasslen – som gödning till plantor, som vätska vid brödbak, till skandinaviskt messmör eller som bas i en kall grönsakssoppa eller smoothie. Men det är ett annat recept!"
     ]
    },
-   "minutes": 60
+   "minutes": 60,
+   "en": {
+    "title": "Real Jāņi cheese – Latvian midsummer cheese",
+    "credit": "Šarlote Cērps, Stockholm",
+    "intro": "Šarlote Cērps is a Stockholmer with family roots in Kuldīga, Riga and Rūjiena. She learned to make Jāņi cheese – the Latvian midsummer cheese with caraway – while visiting a Latvian family in the USA who hosted the midsummer celebration for the local Latvians. The recipe with 8 litres of milk never made it into her repertoire, though. This is a brand-new recipe that Šarlote adapted from the 2026 “SestDiena” magazine, when she celebrated midsummer in the Latvian countryside and every cheese turned out to be sold out! Šarlote's cheese was also praised by the singers of the Latvian choir in Stockholm, whom she treated to it in October. Because this treat can be enjoyed in any season!",
+    "head": "Ingredients",
+    "ingredients": [
+     "1 litre milk (3% fat)",
+     "1 tsp caraway seeds",
+     "½–1 tsp chilli flakes for heat, to taste",
+     "2–3 dl crème fraîche or soured cream",
+     "1 egg",
+     "1 tsp salt (more if you like it salty)",
+     "1 tbsp butter"
+    ],
+    "steps": [
+     "Pour a little water into the bottom of a pot so nothing catches, then add the milk and spices.",
+     "Heat to just below boiling, 80–85 °C.",
+     "While the milk heats, beat the egg, 1 tsp salt and the soured cream in a bowl. (You can use whipping cream and add 1 tsp of vinegar.)",
+     "When the milk is hot, take the pot off the heat and pour in the egg and cream mixture.",
+     "Return the pot to the heat and keep heating until the milk curdles and the whey separates. This happens quickly once it reaches 80 °C.",
+     "Take the pot off the heat and wait about 5 minutes.",
+     "Line a sieve with a double layer of cheesecloth and drain off the whey; let it drip for a few minutes.",
+     "Stir the butter into the curds and add more salt to taste.",
+     "Keep draining for at least 30 minutes.",
+     "Squeeze out as much liquid as you can, put the cheese, cloth and all, in a suitable dish, weigh it down and leave for a few hours in a cool place."
+    ],
+    "tips": [
+     "Šarlote recommends serving the cheese with Finn Crisp crispbread and radishes. The cheese weighs about 300 g, enough for roughly 18 slices of Finn Crisp.",
+     "She also suggests using the whey – as fertiliser for plants, as the liquid in bread baking, for Scandinavian whey butter, messmör, or as the base of a cold vegetable soup or smoothie. But that is another recipe!"
+    ]
+   }
   },
   {
    "month": 7,
@@ -515,7 +732,27 @@
      "Laines tips: Sallad, dill och gräddfil är obligatoriskt. Den som vill blandar i tunt skivad gurka och salladslök."
     ]
    },
-   "minutes": 10
+   "minutes": 10,
+   "en": {
+    "title": "Skrubba's sentimental Latvian leaf salad",
+    "credit": "Laine Lasmane Wikmark, Täby",
+    "intro": "Laine Lasmane Wikmark lives in Täby, but her family's roots are in Apriķi parish in Courland, in the countryside around Sigulda and in Ukraine. The recipe Laine sent in is very short and easy to make, but it has a long and beautiful story: “In the 1960s my sisters and I spent our summers at the Latvian children's camp at Skrubba, just south of Stockholm. We were a big crowd of children – around a hundred, as I remember it. The kitchen was ruled by Mrs Šmitmanis and Mrs Ķesteris, together with young helpers. We girls were especially fond of the helpers Vija, Dzintra and Astra. We could pour our hearts out to them when we needed to. Almost every day this very simple and tasty salad was on the table as a side dish. Time passed, and in the 1970s I was a helper myself at a Latvian children's camp – at Ladvik near Vaxholm. The ‘queen’ of the kitchen was Mrs Sausiņš, and I learned to make the salad. Much later I made this simple salad for my own family and named it the ‘sentimental salad’. But Skrubba's dear helpers still call it ‘the Latvian salad’!”",
+    "head": "Ingredients",
+    "ingredients": [
+     "leaf lettuce",
+     "fresh cucumber",
+     "spring onions",
+     "dill",
+     "gräddfil, Swedish soured cream",
+     "salt"
+    ],
+    "steps": [
+     "Mix everything in a big bowl!"
+    ],
+    "tips": [
+     "Laine's tip: Lettuce, dill and soured cream are a must. Add thinly sliced cucumber and spring onions if you like."
+    ]
+   }
   },
   {
    "month": 8,
@@ -567,7 +804,30 @@
      "Smaklig måltid!"
     ]
    },
-   "minutes": 40
+   "minutes": 40,
+   "en": {
+    "title": "Benita's crispy pork chop with potatoes and sauerkraut",
+    "credit": "Laila Strunke, Stockholm",
+    "intro": "Laila Strunke from Stockholm remembers this and other dishes her mother Benita cooked: “Mum's food was delicious, but she never used recipes. She cooked from memory and by taste.” Benita, née Lāce, grew up in Ventspils; her parents came from Alsunga and Jūrkalne. Perhaps the word “kraupštīgs” – crispy – comes from Courland?",
+    "head": "Ingredients (adjust the amounts to the number of eaters)",
+    "ingredients": [
+     "boneless pork chops",
+     "salt and black pepper",
+     "plain flour",
+     "egg",
+     "breadcrumbs",
+     "butter and oil for frying"
+    ],
+    "steps": [
+     "Beat the chops out well on both sides and season with a little salt and black pepper.",
+     "Coat each slice in flour, then beaten egg and finally breadcrumbs.",
+     "Melt butter in a frying pan, add a little oil and heat. Fry the chops in the hot pan on both sides until golden brown and the coating is crisp."
+    ],
+    "tips": [
+     "Serve with boiled floury potatoes or the season's new potatoes. Depending on the time of year, choose braised sauerkraut with a little sugar, or a cold cabbage salad made by mixing fresh cabbage and sauerkraut with soured cream, caraway, salt, black pepper and a pinch of sugar.",
+     "Enjoy your meal!"
+    ]
+   }
   },
   {
    "month": 9,
@@ -637,7 +897,39 @@
      "Kom ihåg: Desserten blir som allra godast om den får stå minst 8 timmar i kylen innan den äts."
     ]
    },
-   "minutes": 45
+   "minutes": 45,
+   "en": {
+    "title": "Tiramisu from Bērzgale",
+    "credit": "Sofija Ieva Otisone, Sigtuna",
+    "intro": "The recipe was sent in by Sofija Ieva Otisone from Sigtuna. Her mother comes from Courland and her father from Vidzeme, but she secretly tasted tiramisu in Bērzgale, in Rēzekne municipality, when she was very small. Ever since, tiramisu has been Sofija's favourite dish. She makes it with her mum, and tiramisu reminds Sofija of Latvia.",
+    "head": "Ingredients",
+    "ingredients": [
+     "500 g mascarpone",
+     "400 ml whipping cream",
+     "blackcurrant or chokeberry juice",
+     "5 egg yolks",
+     "2 tbsp unsweetened cocoa powder",
+     "100 g sugar",
+     "70 g dark chocolate",
+     "savoiardi biscuits (ladyfingers)",
+     "2 tsp vanilla sugar"
+    ],
+    "steps": [
+     "Heat water in a pot and set a bowl with the egg yolks and 50 g of sugar over it. Beat the mixture with an electric whisk until the sugar has dissolved. When the yolks have turned paler, add 1 tsp of vanilla sugar.",
+     "Take the bowl off the heat and whisk in the mascarpone.",
+     "In a separate bowl, whip the cream with the sugar until stiff.",
+     "Fold the whipped cream into the mascarpone mixture.",
+     "Prepare the blackcurrant juice and add 1 tsp of vanilla sugar.",
+     "Take a nice glass dish with high sides.",
+     "Dip each biscuit on one side in the juice and lay them in rows in the dish. When the whole base is covered with biscuits, spread the cream over them. Sift cocoa and chocolate over the white cream.",
+     "Add another layer of ladyfingers and continue until you have three layers. The last is a thick layer of cream, dusted with cocoa and chocolate.",
+     "Put the dish in the fridge for about 8 hours.",
+     "Enjoy!"
+    ],
+    "tips": [
+     "Remember: the dessert tastes best if it rests in the fridge for at least 8 hours before eating."
+    ]
+   }
   },
   {
    "month": 10,
@@ -735,7 +1027,53 @@
      "Vi rekommenderar att prova båda recepten och skapa egna varianter!"
     ]
    },
-   "minutes": 150
+   "minutes": 150,
+   "en": {
+    "title": "Courland sklandrausis in Sweden",
+    "credit": "Sanita Heinberga, Järna, and Agnese Blaubārde, Stockholm",
+    "intro": "Only one recipe reached us twice – and that was the Courland sklandrausis! The recipes were sent in by two very special Courlanders in Sweden. Sanita Heinberga, originally from Ventspils, now lives in Järna near Södertälje and is a professional pastry chef. Designer Agnese Blaubārde comes from Pāvilosta but calls Stockholm and the Latvian School in Stockholm home. Here is how they describe their relationship with sklandrausis. Sanita: “As a true Courlander, baking sklandrausis is a matter of honour for me and a mark of respect for Latvia's history. With its bright colour, sklandrausis reminds me of the sun – it embodies warmth, light and love for my roots.” She reminds us that sklandrausis is also called dižrausis and žograusis. Agnese: “I chose this recipe as a Courlander out in the world. Alsunga sklandrausis were always baked by my grandmother Ruta. For me they belong with her and with home. That taste I want to keep and pass on.”",
+    "head": "Ingredients",
+    "ingredients": [
+     "§Pastry base:",
+     "600 g medium or coarse rye flour",
+     "50 g plain flour (Agnese uses no wheat flour)",
+     "60 g butter (Agnese's recipe allows lard too)",
+     "250–300 g water",
+     "a pinch of salt (a whole teaspoon in Agnese's recipe!)",
+     "§Potato filling:",
+     "1 kg potatoes",
+     "200 g butter (Agnese's recipe has only 100 g of butter, topped up with 150 g of whole-milk curd cheese)",
+     "100 g soured cream",
+     "2 eggs",
+     "a pinch of salt (Agnese adds caraway too!)",
+     "§Carrot filling:",
+     "2 kg carrots",
+     "250 g soured cream (in Agnese's recipe 100 g butter and 4 tbsp whipping cream)",
+     "2 eggs",
+     "sugar to taste (200 g in Agnese's recipe – no small amount!)",
+     "a pinch of salt",
+     "§For glazing:",
+     "250 g soured cream",
+     "1 egg",
+     "sugar to taste",
+     "ground cinnamon or caraway seeds, as you like"
+    ],
+    "steps": [
+     "Add the butter and salt to warm water, then the flour, and mix. Agnese advises adding the water little by little so there is not too much!",
+     "Roll the dough out to about 2 mm.",
+     "Cut out round bases 10–15 cm across.",
+     "Fold the edges up about 2 cm to form a “fence”.",
+     "Boil the potatoes and mash or grate them smooth. Work in the melted butter, soured cream, eggs and salt.",
+     "Boil the carrots and mash or grate them smooth. Work in the soured cream, eggs, sugar and salt.",
+     "Spread the potato mixture in the bases first, then the carrot mixture on top. Agnese sprinkles caraway over before baking.",
+     "Bake in a hot oven, 220–250 °C, for about 15–30 minutes (or at a lower 200 °C for about 40 minutes!), until the pastry base is dry.",
+     "Brush the finished sklandrausis with a mixture of soured cream, egg and sugar. In Agnese's recipe you may instead put a tablespoon of soured cream on each one and sprinkle with sugar (no egg!).",
+     "In Sanita's recipe the sklandrausis are sprinkled with cinnamon or caraway, as you prefer."
+    ],
+    "tips": [
+     "We suggest trying both recipes and making your own versions!"
+    ]
+   }
   },
   {
    "month": 11,
@@ -809,7 +1147,41 @@
      "Lailas tips: Degen passar också till långpannekakor och bullar."
     ]
    },
-   "minutes": 150
+   "minutes": 150,
+   "en": {
+    "title": "Speķa pīrāgi – Latvian bacon buns",
+    "credit": "Laila Strunke, Stockholm",
+    "intro": "Stockholmer Laila Strunke's mother was an outstanding cook. Laila may well have inherited the cooking gene from her – but not the recipes. Her mother knew her important recipes by heart, and over the years and the moves the many cookbooks were lost too. Here is how Laila bakes pīrāgi, adapting a recipe from santa.lv to Swedish conditions.",
+    "head": "Ingredients",
+    "ingredients": [
+     "2.5 dl milk",
+     "50 g fresh yeast (for sweet doughs)",
+     "500–600 g plain flour (I use Manitoba Cream)",
+     "150 g butter (normally salted)",
+     "2 tbsp sugar",
+     "½ tsp salt",
+     "250 g smoked streaky bacon (I use diced smoked bacon)",
+     "1 onion",
+     "ground black pepper",
+     "1 egg for glazing"
+    ],
+    "steps": [
+     "Start the yeast: crumble it, add a teaspoon of sugar, a little warm water or milk and about a tablespoon of flour. Mix to a paste and set in a warm place.",
+     "Pour the milk into a pan, add the butter, sugar and salt and heat, stirring all the time so the milk does not get too hot.",
+     "If the milk does boil, it must be cooled, because the yeast must not go into hot milk.",
+     "When the butter has melted, take the pan off the heat, pour into a large bowl and sift in flour. Stir with a wooden spoon until the dough has the consistency of thick cream.",
+     "By now the yeast has risen – stir it in too and keep sifting in flour and stirring.",
+     "When the dough is thick enough, continue kneading by hand – until it is smooth, glossy and comes away from your hands and the bowl. Knead it hard – with the palm, with the fist, and by slapping it around.",
+     "When the dough is kneaded, dust it lightly with flour, cover with a cloth and leave in a warm place to rise. It is ready when it has doubled in size!",
+     "While the dough rises, make the filling: chop the meat and onion finely. Fry the onion first in a little fat until golden and translucent, then add the meat and fry only briefly – just until the pieces no longer stick together. Add a little pepper and salt.",
+     "Shape the buns. Take a piece of dough, roll or press it thin, put filling in the middle, fold the other half over and press the bun out with a glass. Pinch the edges firmly with your fingers and tuck the seam under the bun – so it sits against the tray. Mind the dough is not too thick!",
+     "Beat the egg and brush the buns so they come out browner and shinier.",
+     "Put them in the oven at once, so they do not keep rising and open up! Bake in the upper part of the oven at a high heat – 250 °C for 7–8 minutes."
+    ],
+    "tips": [
+     "Laila's tip: This dough also works for tray bakes and buns."
+    ]
+   }
   },
   {
    "month": 12,
@@ -861,7 +1233,30 @@
      "Māra tipsar: ”När jag kan köper jag fläsk i Lettland, för det svenska fläsket är inte alls lika bra. Man behöver inte slaviskt följa proportionerna, det blir bra ändå.”"
     ]
    },
-   "minutes": 210
+   "minutes": 210,
+   "en": {
+    "title": "Ķūķis – Latvian barley stew",
+    "credit": "Māra Krēsliņa, Stockholm",
+    "intro": "Māra Krēsliņa's ķūķis is based on H. Birziņa's cookbook of 1936, which Māra's sister Zuze once copied in the library of the Latvian Gymnasium in Münster. Māra has adapted the recipe and made a vegetarian version too. Māra's ķūķis is famous – in an episode of the programme “Globālais latvietis”, folklorist Austris Grasis admits he received the recipe for his excellent ķūķis by text message from Māra Krēsliņa, on the ferry from Stockholm to Riga. He has always made ķūķis on New Year's Eve – four hours in the oven, and it is ready around midnight!",
+    "head": "Ingredients",
+    "ingredients": [
+     "300 g whole barley groats",
+     "200 g smoked pork belly (in the vegetarian version replaced with carrots, onions and celeriac)",
+     "75 g onions",
+     "2 litres water or stock (3 stock cubes to 2 litres of water)",
+     "salt to taste"
+    ],
+    "steps": [
+     "Toast the barley in a dry pan until well browned.",
+     "Finely chop and fry the onions and pork.",
+     "Layer in a pot or casserole: first the toasted barley, then the fried pork with onions, then barley again and so on, until the pot is full.",
+     "Pour over the stock.",
+     "Cook in the oven for about 3 hours at 200 °C; do not stir, but top up with liquid if needed."
+    ],
+    "tips": [
+     "Māra's advice: “When I can, I buy the pork in Latvia, because Swedish pork is nowhere near as good. No need to stick slavishly to the proportions, it turns out well either way.”"
+    ]
+   }
   }
  ]
 }
