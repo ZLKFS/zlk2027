@@ -3,7 +3,7 @@
    Sabon LT Pro is used when available (locally activated Adobe font, or an Adobe Fonts
    web project kit); EB Garamond stands in otherwise. */
 :root {
-  --paper: #fcf7e8;           /* swatch #fcf7e8 */
+  --paper: #fefcf7;           /* swatch #fefcf7: 35% from white toward #fcf7e8, same as the calendar masters */
   --ink: #1e1e1e;             /* swatch #1e1e1e */
   --grey: #b3b1ad;            /* swatch dates_extra, other-month dates */
   --hair: rgba(30, 30, 30, 0.28);

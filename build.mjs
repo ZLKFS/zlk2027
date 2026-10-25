@@ -43,7 +43,7 @@ function layout({ lang, title, description, path, altPath, image, body, bodyClas
 <meta property="og:type" content="article">
 <meta property="og:url" content="${ORIGIN}${path}">
 ${image ? `<meta property="og:image" content="${ORIGIN}${image}">` : ""}
-<meta name="theme-color" content="#fcf7e8">
+<meta name="theme-color" content="#fefcf7">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 ${fonts}
 <link rel="stylesheet" href="/assets/style.css">
