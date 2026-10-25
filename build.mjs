@@ -123,7 +123,7 @@ function ingredientList(items) {
     .map((it) =>
       it.startsWith("§")
         ? `<li class="group">${esc(it.slice(1).replace(/:$/, ""))}</li>`
-        : `<li><label><input type="checkbox" data-i="${i++}"><span class="txt">${qtySpan(it)}</span></label></li>`
+        : `<li><label><input type="checkbox" data-i="${i++}"><span class="box" aria-hidden="true"></span><span class="txt">${qtySpan(it)}</span></label></li>`
     )
     .join("\n");
 }
