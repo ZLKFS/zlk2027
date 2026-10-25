@@ -51,7 +51,7 @@ ${fonts}
 </head>
 <body class="${bodyClass || ""}">
 <header class="site-head wrap">
-  <a class="brand" href="${base(lang)}"><span class="brand-name">${esc(t.name)} </span><span class="brand-year">2027</span></a>
+  <a class="brand" href="${base(lang)}" aria-label="${esc(t.name)} 2027"><img src="/assets/skat.svg" alt="" width="59" height="32"></a>
   <nav class="lang" aria-label="${esc(t.lang)}">
     <a href="${lang === "lv" ? path : altPath}" hreflang="lv" lang="lv" data-lang="lv"${lang === "lv" ? ' class="is-active" aria-current="page"' : ""}>LV</a><span class="slash" aria-hidden="true">/</span><a href="${lang === "sv" ? path : altPath}" hreflang="sv" lang="sv" data-lang="sv"${lang === "sv" ? ' class="is-active" aria-current="page"' : ""}>SV</a>
   </nav>
@@ -241,6 +241,7 @@ writeFileSync(join(OUT, "404.html"), notFound());
 copyFileSync(join(ROOT, "src/style.css"), join(OUT, "assets/style.css"));
 copyFileSync(join(ROOT, "src/app.js"), join(OUT, "assets/app.js"));
 copyFileSync(join(ROOT, "src/favicon.svg"), join(OUT, "favicon.svg"));
+copyFileSync(join(ROOT, "src/skat.svg"), join(OUT, "assets/skat.svg"));
 writeFileSync(join(OUT, "_headers"), `/assets/*\n  Cache-Control: public, max-age=86400\n/img/*\n  Cache-Control: public, max-age=604800\n`);
 for (const r of data.recipes) {
   if (r.image && !existsSync(join(OUT, "img", `${r.slug}.jpg`))) console.warn(`missing image: public/img/${r.slug}.jpg`);

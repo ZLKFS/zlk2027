@@ -42,8 +42,8 @@ main { flex: 1 0 auto; width: 100%; }
 
 /* top bar */
 .site-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: calc(var(--m) * 0.6); }
-.brand { font-family: var(--serif); font-size: 1.05em; }
-.brand-year { font-style: italic; }
+.brand { display: block; line-height: 0; }
+.brand img { height: 32px; width: auto; display: block; }
 .lang { display: inline-flex; gap: 2px; border: 1px solid var(--hair); border-radius: 999px; padding: 3px; align-self: center; }
 .lang a { font-size: 0.8125em; font-weight: 500; letter-spacing: 0.06em; padding: 6px 13px; border-radius: 999px; color: var(--muted); line-height: 1.2; }
 .lang a:hover { color: var(--ink); }
@@ -199,7 +199,6 @@ body.is-cooking { overflow: hidden; }
 
 @media (max-width: 560px) {
   :root { --fs-date: 28px; }
-  .brand-name { display: none; }
   .section-head { flex-wrap: wrap; }
   .month-nav { grid-template-columns: 1fr; }
   .month-nav a.next { text-align: left; }
