@@ -25,7 +25,7 @@ const base = (lang) => (lang === "lv" ? "/" : `/${lang}/`);
 const recipeUrl = (lang, slug) => `${base(lang)}${slug}/`;
 const urlsFor = (slug) => Object.fromEntries(LANGS.map((l) => [l, slug ? recipeUrl(l, slug) : base(l)]));
 // "Februāris/Februari" — the calendar's bilingual month line, same in both languages
-const monthLine = (m) => `${data.site.lv.months[m - 1]}/${data.site.sv.months[m - 1]}`;
+const monthLine = (lang, m) => data.site[lang].months[m - 1];
 
 function layout({ lang, title, description, path, urls, image, body, bodyClass }) {
   const t = data.site[lang];
@@ -88,7 +88,7 @@ function card(lang, r) {
   const empty = c.steps.length === 0;
   return `<a class="card${empty ? " card--coming" : ""}" href="${recipeUrl(lang, r.slug)}">
   ${visual(r, c.title, { sizes: "(min-width: 1000px) 360px, (min-width: 560px) 50vw, 100vw" })}
-  <p class="month-line">${esc(monthLine(r.month))}</p>
+  <p class="month-line">${esc(monthLine(lang, r.month))}</p>
   <h2 class="recipe-title">${esc(c.title)}</h2>
   <p class="credit">${esc(empty ? t.coming : c.credit)}</p>
 </a>`;
@@ -213,7 +213,7 @@ ${stepList(c.steps)}
   const body = `<main class="recipe wrap" data-slug="${r.slug}">
   <header class="month-head">
     <p class="year">2027</p>
-    <p class="month">${esc(monthLine(r.month))}</p>
+    <p class="month">${esc(monthLine(lang, r.month))}</p>
   </header>
   ${r.image ? visual(r, c.title, { eager: true, sizes: "(min-width: 1200px) 1120px, 100vw" }) : ""}
   <section class="band${empty ? " band--plain" : ""}">
@@ -221,8 +221,8 @@ ${stepList(c.steps)}
     ${col2}
   </section>
   <nav class="month-nav" aria-label="${esc(t.all)}">
-    <a class="prev" href="${recipeUrl(lang, prev.slug)}" rel="prev"><span class="nav-label">${esc(monthLine(prev.month))}</span><span class="nav-title">${esc(prev[lang].title)}</span></a>
-    <a class="next" href="${recipeUrl(lang, next.slug)}" rel="next"><span class="nav-label">${esc(monthLine(next.month))}</span><span class="nav-title">${esc(next[lang].title)}</span></a>
+    <a class="prev" href="${recipeUrl(lang, prev.slug)}" rel="prev"><span class="nav-label">${esc(monthLine(lang, prev.month))}</span><span class="nav-title">${esc(prev[lang].title)}</span></a>
+    <a class="next" href="${recipeUrl(lang, next.slug)}" rel="next"><span class="nav-label">${esc(monthLine(lang, next.month))}</span><span class="nav-title">${esc(next[lang].title)}</span></a>
   </nav>
   <p class="all-link"><a href="${base(lang)}">${esc(t.all)}</a></p>
 </main>`;
