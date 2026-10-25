@@ -38,7 +38,8 @@
    "timerDone": "Laiks!",
    "reset": "Notīrīt atzīmes",
    "amount": "Daudzums",
-   "nextMonth": "Nākamais mēnesis"
+   "nextMonth": "Nākamais mēnesis",
+   "custom": "Cits"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -78,7 +79,8 @@
    "timerDone": "Tiden är ute!",
    "reset": "Rensa bockar",
    "amount": "Mängd",
-   "nextMonth": "Nästa månad"
+   "nextMonth": "Nästa månad",
+   "custom": "Annat"
   }
  },
  "recipes": [

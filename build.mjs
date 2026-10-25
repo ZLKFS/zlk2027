@@ -152,7 +152,7 @@ function recipePage(lang, r, i) {
   const col2 = empty ? "" : `<div class="col col-2">
       <div class="section-head">
         <h2 class="head">${headSpan(c.head)}</h2>
-        <div class="mult" role="group" aria-label="${esc(t.amount)}"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+        <div class="mult" role="group" aria-label="${esc(t.amount)}"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button><button type="button" data-mult="custom">${esc(t.custom)}</button><label class="mult-custom" hidden><input type="text" inputmode="decimal" autocomplete="off" maxlength="5" aria-label="${esc(t.amount)}">×</label></div>
       </div>
       <ul class="ingredients">
 ${ingredientList(c.ingredients)}

@@ -120,6 +120,11 @@ main { flex: 1 0 auto; width: 100%; }
 .mult button:hover { color: var(--ink); }
 .mult button.is-active { background: var(--ink); color: var(--paper); }
 .mult button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.mult-custom { display: inline-flex; align-items: center; gap: 0.15em; background: var(--ink); color: var(--paper); border-radius: 999px; padding: 0 11px 0 6px; font-size: 0.8125em; font-weight: 500; line-height: 1.2; }
+.mult-custom[hidden] { display: none; }
+.mult-custom input { font: inherit; width: 3.4em; padding: 5px 0 5px 6px; margin: 0; border: 0; background: none; color: var(--paper); text-align: right; outline: none; }
+.mult-custom input::-webkit-outer-spin-button, .mult-custom input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.mult-custom input::selection { background: var(--paper); color: var(--ink); }
 
 /* cooking mode: one step at a time */
 .cook { position: fixed; inset: 0; background: var(--paper); color: var(--ink); display: none; flex-direction: column; z-index: 10; }

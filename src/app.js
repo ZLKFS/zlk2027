@@ -58,15 +58,27 @@ if (main && stepsEl) {
     return String(r).replace(".", ",");
   };
   const qs = [...document.querySelectorAll(".q")];
-  const applyMult = (m) => {
+  const PRESETS = [0.5, 1, 2];
+  const customBtn = document.querySelector("[data-mult='custom']");
+  const customWrap = document.querySelector(".mult-custom");
+  const customInput = customWrap?.querySelector("input");
+  const applyMult = (m, viaCustom) => {
+    if (!(m > 0)) return;
     qs.forEach((q) => {
       const parts = q.dataset.base.split(";").map(Number);
       q.textContent = parts.map((v) => fmt(v * m)).join("–");
     });
-    document.querySelectorAll("[data-mult]").forEach((b) => b.classList.toggle("is-active", +b.dataset.mult === m));
+    const isCustom = viaCustom || !PRESETS.includes(m);
+    document.querySelectorAll("[data-mult]").forEach((b) => b.classList.toggle("is-active", b.dataset.mult === "custom" ? isCustom : +b.dataset.mult === m));
+    if (customWrap) { customWrap.hidden = !isCustom; customBtn.hidden = isCustom; if (isCustom && customInput.value === "") customInput.value = String(m).replace(".", ","); }
     store.set("mult", m);
   };
-  document.querySelectorAll("[data-mult]").forEach((b) => b.addEventListener("click", () => applyMult(+b.dataset.mult)));
+  document.querySelectorAll("[data-mult]").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.mult === "custom") { applyMult(store.get("mult", 1), true); customInput.focus(); customInput.select(); }
+    else { if (customInput) customInput.value = ""; applyMult(+b.dataset.mult); }
+  }));
+  customInput?.addEventListener("input", () => { const v = parseFloat(customInput.value.replace(",", ".")); if (v > 0) applyMult(v, true); });
+  customInput?.addEventListener("keydown", (e) => { if (e.key === "Enter") customInput.blur(); });
   const savedMult = store.get("mult", 1);
   if (savedMult !== 1) applyMult(savedMult);
 
