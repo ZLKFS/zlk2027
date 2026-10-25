@@ -58,7 +58,7 @@ ${fonts}
 </header>
 ${body}
 <footer class="site-foot wrap">
-  <p class="site-foot-line">${esc(t.name)} 2027 · <a href="${ORIGIN}">zlk2027.latviesi.se</a></p>
+  <p class="site-foot-line"><span>${esc(t.name)} 2027</span><a class="foot-logo" href="${base(lang)}" aria-label="${esc(t.home)}"><img src="/assets/skat.svg" alt="" width="33" height="18"></a></p>
 </footer>
 <script src="/assets/app.js" defer></script>
 </body>

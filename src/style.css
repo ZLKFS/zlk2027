@@ -189,7 +189,10 @@ body.is-cooking { overflow: hidden; }
 
 /* foot */
 .site-foot { text-align: center; padding: 0 0 calc(var(--m) * 0.8); font-size: 0.8125em; color: var(--muted); }
-.site-foot .site-foot-line { border-top: 0.5px solid var(--hair); padding-top: 1.2em; }
+.site-foot .site-foot-line { border-top: 0.5px solid var(--hair); padding-top: 1.2em; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.foot-logo { display: block; line-height: 0; opacity: 0.8; }
+.foot-logo:hover { opacity: 1; }
+.foot-logo img { height: 18px; width: auto; display: block; }
 
 /* 404 */
 .notfound { text-align: center; padding: clamp(48px, 10vw, 120px) 0; }
