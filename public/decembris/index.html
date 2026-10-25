@@ -37,8 +37,25 @@
   <section class="band">
     <div class="col col-1">
       <h1 class="recipe-title">Ķūķu vakara ķūķis</h1>
-      <p class="credit">Recepte: Māra Krēsliņa, Stokholma</p>
+      <p class="credit">Recepte: Māra Krēsliņa, Stokholma · ≈ 3 h 30 min</p>
       <div class="body"><p>Māras Krēsliņas ķūķa receptes pamatā ir 1936. gadā izdotā H. Birziņas pavārgrāmata, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Recepti viņa pielāgojusi un izveidojusi arī veģetāro variantu. Māras ķūķis ir slavens – kādā “Globālais latvietis” pārraidē folklorists Austris Grasis atzīstas, ka sava izcilā ķūķa recepti saņēmis īsziņā no Māras Krēsliņas, dodoties ar kuģi no Stokholmas uz Rīgu. Viņš ķūķi vienmēr gatavojis Vecgada vakarā, ieliekot cepeškrāsnī uz 4 stundām, – un ap pusnakti gatavs!</p></div>
+      <p class="actions"><button type="button" class="btn" data-cal>Pievienot kalendāram</button></p>
+      <dialog class="cal" aria-labelledby="cal-title">
+        <form method="dialog" class="cal-form">
+          <p class="head" id="cal-title">Kad gatavosi?</p>
+          <p class="cal-recipe">Ķūķu vakara ķūķis</p>
+          <div class="cal-fields">
+            <label><span>Datums</span><input type="date" name="date" required></label>
+            <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
+            <label><span>Ilgums</span><span class="cal-dur"><input type="text" inputmode="numeric" name="minutes" value="210" maxlength="3"> min</span></label>
+          </div>
+          <div class="cal-actions">
+            <button type="button" class="btn btn--primary" data-cal-ics>Apple / Outlook</button>
+            <a class="btn" data-cal-google href="#" target="_blank" rel="noopener">Google kalendārs</a>
+            <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
+          </div>
+        </form>
+      </dialog>
     </div>
     <div class="col col-2">
       <div class="section-head">
@@ -65,7 +82,7 @@
       </ol>
       <div class="tips"><p class="tip">Māra iesaka: “Kad varu, pērku speķi Latvijā, jo zviedru speķis nav ne tuvu tik labs. Nav verdziski jāpieturas pie samēriem, iznāk labi šā vai tā.”</p></div>
       <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
-      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Ķūķu vakara ķūķis"}</script>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Ķūķu vakara ķūķis","minutes":210,"eventDesc":"Recepte tīmeklī:","url":"https://zlk2027.latviesi.se/decembris/"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

@@ -142,13 +142,32 @@ function recipePage(lang, r, i) {
   const prev = data.recipes[(i + 11) % 12];
   const next = data.recipes[(i + 1) % 12];
   const empty = c.steps.length === 0;
+  const dur = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} ${t.min}` : ""}` : `${m} ${t.min}`);
 
+  const i18n = { stepOf: t.stepOf, next: t.next, back: t.back, finish: t.finish, close: t.close, timer: t.timer, min: t.min, timerDone: t.timerDone, title: c.title, minutes: r.minutes || 60, eventDesc: t.eventDesc, url: `${ORIGIN}${path}` };
+  const calendar = empty ? "" : `<p class="actions"><button type="button" class="btn" data-cal>${esc(t.addCal)}</button></p>
+      <dialog class="cal" aria-labelledby="cal-title">
+        <form method="dialog" class="cal-form">
+          <p class="head" id="cal-title">${esc(t.when)}</p>
+          <p class="cal-recipe">${esc(c.title)}</p>
+          <div class="cal-fields">
+            <label><span>${esc(t.date)}</span><input type="date" name="date" required></label>
+            <label><span>${esc(t.time)}</span><input type="time" name="time" value="17:00" required></label>
+            <label><span>${esc(t.duration)}</span><span class="cal-dur"><input type="text" inputmode="numeric" name="minutes" value="${r.minutes || 60}" maxlength="3"> ${esc(t.min)}</span></label>
+          </div>
+          <div class="cal-actions">
+            <button type="button" class="btn btn--primary" data-cal-ics>${esc(t.ics)}</button>
+            <a class="btn" data-cal-google href="#" target="_blank" rel="noopener">${esc(t.google)}</a>
+            <button type="button" class="btn btn--text" data-cal-close>${esc(t.close)}</button>
+          </div>
+        </form>
+      </dialog>`;
   const col1 = `<div class="col col-1">
       <h1 class="recipe-title">${esc(c.title)}</h1>
-      <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}</p>
+      <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}${r.minutes && !empty ? ` · ${t.about} ${dur(r.minutes)}` : ""}</p>
       <div class="body">${c.intro.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
+      ${calendar}
     </div>`;
-  const i18n = { stepOf: t.stepOf, next: t.next, back: t.back, finish: t.finish, close: t.close, timer: t.timer, min: t.min, timerDone: t.timerDone, title: c.title };
   const col2 = empty ? "" : `<div class="col col-2">
       <div class="section-head">
         <h2 class="head">${headSpan(c.head)}</h2>

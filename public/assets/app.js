@@ -82,6 +82,52 @@ if (main && stepsEl) {
   const savedMult = store.get("mult", 1);
   if (savedMult !== 1) applyMult(savedMult);
 
+  // --- add to calendar (.ics download or Google Calendar link) ---
+  const cal = document.querySelector("dialog.cal");
+  if (cal && typeof cal.showModal === "function") {
+    const form = cal.querySelector("form");
+    const google = cal.querySelector("[data-cal-google]");
+    const p2 = (n) => String(n).padStart(2, "0");
+    const local = (d) => `${d.getFullYear()}${p2(d.getMonth() + 1)}${p2(d.getDate())}T${p2(d.getHours())}${p2(d.getMinutes())}00`;
+    const read = () => {
+      const [y, m, d] = (form.date.value || "").split("-").map(Number);
+      const [hh, mm] = (form.time.value || "17:00").split(":").map(Number);
+      if (!y) return null;
+      const mins = Math.max(5, parseInt(form.minutes.value, 10) || i18n.minutes);
+      const start = new Date(y, m - 1, d, hh || 0, mm || 0);
+      return { start, end: new Date(start.getTime() + mins * 60000) };
+    };
+    const details = `${i18n.eventDesc} ${i18n.url}`;
+    const updateGoogle = () => {
+      const r = read(); if (!r) return;
+      google.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(i18n.title)}&dates=${local(r.start)}/${local(r.end)}&details=${encodeURIComponent(details)}`;
+    };
+    const escI = (s) => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+    const fold = (line) => { const out = []; while (line.length > 72) { out.push(line.slice(0, 72)); line = " " + line.slice(72); } out.push(line); return out.join("\r\n"); };
+    const ics = () => {
+      const r = read(); if (!r) { form.reportValidity(); return; }
+      const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+      const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ZLK 2027//Receptes//LV", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "BEGIN:VEVENT",
+        `UID:${slug}-${stamp}@zlk2027.latviesi.se`, `DTSTAMP:${stamp}`, `DTSTART:${local(r.start)}`, `DTEND:${local(r.end)}`,
+        `SUMMARY:${escI(i18n.title)}`, `DESCRIPTION:${escI(details)}`, `URL:${i18n.url}`,
+        "BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${escI(i18n.title)}`, "TRIGGER:-P1D", "END:VALARM",
+        "BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${escI(i18n.title)}`, "TRIGGER:-PT1H", "END:VALARM",
+        "END:VEVENT", "END:VCALENDAR"];
+      const blob = new Blob([lines.map(fold).join("\r\n") + "\r\n"], { type: "text/calendar;charset=utf-8" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `${slug}.ics`; document.body.appendChild(a); a.click();
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+    };
+    document.querySelector("[data-cal]")?.addEventListener("click", () => {
+      if (!form.date.value) { const d = new Date(); d.setDate(d.getDate() + 1); form.date.value = `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}`; }
+      updateGoogle(); cal.showModal();
+    });
+    form.addEventListener("input", updateGoogle);
+    google.addEventListener("click", (e) => { if (!read()) { e.preventDefault(); form.reportValidity(); } });
+    cal.querySelector("[data-cal-ics]").addEventListener("click", ics);
+    cal.querySelector("[data-cal-close]").addEventListener("click", () => cal.close());
+    cal.addEventListener("click", (e) => { if (e.target === cal) cal.close(); });
+  }
+
   // --- cooking mode ---
   const TIME = /(\d+)(?:\s*[–-]\s*(\d+))?\s*(min|stund|timm)/i;
   let cook, cur = 0, timer = null, wake = null;

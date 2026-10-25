@@ -39,7 +39,16 @@
    "reset": "Notīrīt atzīmes",
    "amount": "Daudzums",
    "nextMonth": "Nākamais mēnesis",
-   "custom": "Cits"
+   "custom": "Cits",
+   "addCal": "Pievienot kalendāram",
+   "when": "Kad gatavosi?",
+   "date": "Datums",
+   "time": "Laiks",
+   "duration": "Ilgums",
+   "ics": "Apple / Outlook",
+   "google": "Google kalendārs",
+   "eventDesc": "Recepte tīmeklī:",
+   "about": "≈"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -80,7 +89,16 @@
    "reset": "Rensa bockar",
    "amount": "Mängd",
    "nextMonth": "Nästa månad",
-   "custom": "Annat"
+   "custom": "Annat",
+   "addCal": "Lägg till i kalendern",
+   "when": "När lagar du?",
+   "date": "Datum",
+   "time": "Tid",
+   "duration": "Längd",
+   "ics": "Apple / Outlook",
+   "google": "Google Kalender",
+   "eventDesc": "Receptet på webben:",
+   "about": "≈"
   }
  },
  "recipes": [
@@ -143,7 +161,8 @@
     "tips": [
      "Elīnas tips: Är kvargen mycket grynig kan du pressa den genom en sil eller mixa den innan du gör degen, så blir kakorna mjukare. I trianglarna kan du rulla in små bitar marmelad – den finska marmeladen som säljs på ICA påminner om den lettiska."
     ]
-   }
+   },
+   "minutes": 50
   },
   {
    "month": 2,
@@ -204,7 +223,8 @@
     "tips": [
      "Klart!"
     ]
-   }
+   },
+   "minutes": 40
   },
   {
    "month": 3,
@@ -267,7 +287,8 @@
     "tips": [
      "I Māras samling finns också tant Natas pasharecept, där 2 kg kvarg får sällskap av 25 äggulor och russin."
     ]
-   }
+   },
+   "minutes": 60
   },
   {
    "month": 4,
@@ -340,7 +361,8 @@
      "Låt kakan svalna i formen. Pudra över florsocker före servering. Servera med varm bärsås."
     ],
     "tips": []
-   }
+   },
+   "minutes": 100
   },
   {
    "month": 5,
@@ -430,7 +452,8 @@
      "Šarlote tipsar om att servera osten med Finn Crisp knäckebröd och rädisor. Osten väger cirka 300 g och räcker till ungefär 18 skivor Finn Crisp.",
      "Hon föreslår också att ta vara på vasslen – som gödning till plantor, som vätska vid brödbak, till skandinaviskt messmör eller som bas i en kall grönsakssoppa eller smoothie. Men det är ett annat recept!"
     ]
-   }
+   },
+   "minutes": 60
   },
   {
    "month": 7,
@@ -475,7 +498,8 @@
     "tips": [
      "Laines tips: Sallad, dill och gräddfil är obligatoriskt. Den som vill blandar i tunt skivad gurka och salladslök."
     ]
-   }
+   },
+   "minutes": 10
   },
   {
    "month": 8,
@@ -526,7 +550,8 @@
      "Servera med kokt mjölig potatis eller säsongens färskpotatis. Beroende på årstid väljs som tillbehör antingen stuvad surkål med lite socker eller en kall kålsallad, som görs genom att blanda färsk kål och surkål med gräddfil, kummin, salt, svartpeppar och en nypa socker.",
      "Smaklig måltid!"
     ]
-   }
+   },
+   "minutes": 40
   },
   {
    "month": 9,
@@ -595,7 +620,8 @@
     "tips": [
      "Kom ihåg: Desserten blir som allra godast om den får stå minst 8 timmar i kylen innan den äts."
     ]
-   }
+   },
+   "minutes": 45
   },
   {
    "month": 10,
@@ -692,7 +718,8 @@
     "tips": [
      "Vi rekommenderar att prova båda recepten och skapa egna varianter!"
     ]
-   }
+   },
+   "minutes": 150
   },
   {
    "month": 11,
@@ -765,7 +792,8 @@
     "tips": [
      "Lailas tips: Degen passar också till långpannekakor och bullar."
     ]
-   }
+   },
+   "minutes": 150
   },
   {
    "month": 12,
@@ -816,7 +844,8 @@
     "tips": [
      "Māra tipsar: ”När jag kan köper jag fläsk i Lettland, för det svenska fläsket är inte alls lika bra. Man behöver inte slaviskt följa proportionerna, det blir bra ändå.”"
     ]
-   }
+   },
+   "minutes": 210
   }
  ]
 }

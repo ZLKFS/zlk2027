@@ -37,8 +37,25 @@
   <section class="band">
     <div class="col col-1">
       <h1 class="recipe-title">Kesellas biezpienkūka</h1>
-      <p class="credit">Recepte: Kristīne Dannenberga, Stokholma</p>
+      <p class="credit">Recepte: Kristīne Dannenberga, Stokholma · ≈ 1 h 40 min</p>
       <div class="body"><p>Šo recepti iesūtīja Kristīne Dannenberga no Stokholmas. Lūk, receptes stāsts: ”Zviedrijas maizītes man vienmēr likušās pārāk saldas un treknas, tādēļ biju ļoti priecīga, kad reiz pamanīju labu pamatrecepti kūkai, kur galvenā sastāvdaļa ir svaigsiers Kesella jeb kvarg. Līdzīgu kūku turklāt biju nogaršojusi vienā jaukā maiznīcā Saltå kvarn. Atrasto recepti esmu mazliet pamainījusi, lai garša būtu līdzīgāka latviešu biezpienmaizei. Visas sastāvdaļas nopērkamas jebkurā pārtikas veikalā.</p></div>
+      <p class="actions"><button type="button" class="btn" data-cal>Pievienot kalendāram</button></p>
+      <dialog class="cal" aria-labelledby="cal-title">
+        <form method="dialog" class="cal-form">
+          <p class="head" id="cal-title">Kad gatavosi?</p>
+          <p class="cal-recipe">Kesellas biezpienkūka</p>
+          <div class="cal-fields">
+            <label><span>Datums</span><input type="date" name="date" required></label>
+            <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
+            <label><span>Ilgums</span><span class="cal-dur"><input type="text" inputmode="numeric" name="minutes" value="100" maxlength="3"> min</span></label>
+          </div>
+          <div class="cal-actions">
+            <button type="button" class="btn btn--primary" data-cal-ics>Apple / Outlook</button>
+            <a class="btn" data-cal-google href="#" target="_blank" rel="noopener">Google kalendārs</a>
+            <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
+          </div>
+        </form>
+      </dialog>
     </div>
     <div class="col col-2">
       <div class="section-head">
@@ -78,7 +95,7 @@
       </ol>
       
       <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
-      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Kesellas biezpienkūka"}</script>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Kesellas biezpienkūka","minutes":100,"eventDesc":"Recepte tīmeklī:","url":"https://zlk2027.latviesi.se/aprilis/"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

@@ -37,8 +37,25 @@
   <section class="band">
     <div class="col col-1">
       <h1 class="recipe-title">Speķa pīrāgi – lettiska baconpiroger</h1>
-      <p class="credit">Recept: Laila Strunke, Stockholm</p>
+      <p class="credit">Recept: Laila Strunke, Stockholm · ≈ 2 h 30 min</p>
       <div class="body"><p>Stockholmaren Laila Strunkes mamma var en enastående kokerska. Kanske är det från henne Laila ärvt matlagningsgenen – men inte recepten. Mamman kunde sina viktiga recept utantill, och med åren och alla flyttar försvann också de många kokböckerna. Så här bakar Laila pīrāgi, med ett recept från santa.lv anpassat till svenska förhållanden.</p></div>
+      <p class="actions"><button type="button" class="btn" data-cal>Lägg till i kalendern</button></p>
+      <dialog class="cal" aria-labelledby="cal-title">
+        <form method="dialog" class="cal-form">
+          <p class="head" id="cal-title">När lagar du?</p>
+          <p class="cal-recipe">Speķa pīrāgi – lettiska baconpiroger</p>
+          <div class="cal-fields">
+            <label><span>Datum</span><input type="date" name="date" required></label>
+            <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
+            <label><span>Längd</span><span class="cal-dur"><input type="text" inputmode="numeric" name="minutes" value="150" maxlength="3"> min</span></label>
+          </div>
+          <div class="cal-actions">
+            <button type="button" class="btn btn--primary" data-cal-ics>Apple / Outlook</button>
+            <a class="btn" data-cal-google href="#" target="_blank" rel="noopener">Google Kalender</a>
+            <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
+          </div>
+        </form>
+      </dialog>
     </div>
     <div class="col col-2">
       <div class="section-head">
@@ -76,7 +93,7 @@
       </ol>
       <div class="tips"><p class="tip">Lailas tips: Degen passar också till långpannekakor och bullar.</p></div>
       <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
-      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Speķa pīrāgi – lettiska baconpiroger"}</script>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Speķa pīrāgi – lettiska baconpiroger","minutes":150,"eventDesc":"Receptet på webben:","url":"https://zlk2027.latviesi.se/sv/novembris/"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">
