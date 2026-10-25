@@ -7,7 +7,9 @@
   --ink: #1e1e1e;             /* swatch #1e1e1e */
   --grey: #b3b1ad;            /* swatch dates_extra, other-month dates */
   --hair: rgba(30, 30, 30, 0.28);
-  --serif: "Sabon LT Pro", "sabon-lt-pro", "EB Garamond", Garamond, Georgia, serif;
+  --serif: "Sabon LT Pro", "sabon-lt-pro", "EB Garamond", Garamond, Georgia, serif;   /* brand: titles and short subheads */
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;                   /* everything else */
+  --muted: #6f6a63;
   --max: 1120px;
   --m: clamp(16px, 3.4vw, 40px);      /* 10 mm of a 297 mm page */
   --fs: 16px;                          /* recipe body 7.5 pt */
@@ -23,10 +25,10 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: var(--fs);
-  line-height: 1.4;
-  font-feature-settings: "liga", "kern";
+  line-height: 1.5;
+  font-feature-settings: "liga", "kern", "cv11";
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
@@ -40,19 +42,19 @@ main { flex: 1 0 auto; width: 100%; }
 
 /* top bar */
 .site-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: calc(var(--m) * 0.6); }
-.brand { font-size: 1em; }
+.brand { font-family: var(--serif); font-size: 1.05em; }
 .brand-year { font-style: italic; }
 .lang { display: inline-flex; gap: 2px; border: 1px solid var(--hair); border-radius: 999px; padding: 3px; align-self: center; }
-.lang a { font-size: 0.875em; letter-spacing: 0.06em; padding: 5px 13px; border-radius: 999px; color: var(--grey); line-height: 1.2; }
+.lang a { font-size: 0.8125em; font-weight: 500; letter-spacing: 0.06em; padding: 6px 13px; border-radius: 999px; color: var(--muted); line-height: 1.2; }
 .lang a:hover { color: var(--ink); }
 .lang a.is-active { background: var(--ink); color: var(--paper); }
 .lang .slash { display: none; }
 
 /* calendar page header: year italic, month roman, centred */
 .month-head { text-align: center; padding: clamp(40px, 6vw, 80px) 0 clamp(24px, 4vw, 48px); }
-.year { font-style: italic; font-size: var(--fs-year); line-height: 1.1; }
-.month { font-weight: 400; font-size: var(--fs-month); line-height: 1.05; letter-spacing: -0.005em; text-wrap: balance; }
-.lede { font-style: italic; margin-top: 1em; }
+.year { font-family: var(--serif); font-style: italic; font-size: var(--fs-year); line-height: 1.1; }
+.month { font-family: var(--serif); font-weight: 400; font-size: var(--fs-month); line-height: 1.05; letter-spacing: -0.005em; text-wrap: balance; }
+.lede { font-family: var(--serif); font-style: italic; font-size: 1.2em; margin-top: 0.8em; }
 
 /* visual frame 277 × 147.5 mm, square corners */
 .visual { margin: 0; width: 100%; aspect-ratio: 277 / 147.5; overflow: hidden; }
@@ -71,12 +73,13 @@ main { flex: 1 0 auto; width: 100%; }
 .section-head .head { margin-bottom: 0; }
 .section-head--spaced { margin-top: 1.6em; }
 
-.recipe-title { font-weight: 700; font-size: var(--fs-title); line-height: 1.2; margin-bottom: 0.2em; text-wrap: balance; }   /* sa 0.5 mm */
-.credit { font-style: italic; margin-bottom: 0.65em; }                                                                          /* sa 1.5 mm */
-.body p + p { margin-top: 0.6em; }
-.head { font-weight: 700; font-size: 1em; line-height: 1.4; margin-bottom: 0.15em; }                                            /* recipe head */
+.recipe-title { font-family: var(--serif); font-weight: 700; font-size: 1.6em; line-height: 1.15; margin-bottom: 0.25em; text-wrap: balance; }
+.credit { font-size: 0.875em; color: var(--muted); margin-bottom: 1em; }
+.body { max-width: 56ch; }
+.body p + p { margin-top: 0.7em; }
+.head { font-family: var(--serif); font-weight: 700; font-size: 1.25em; line-height: 1.3; margin-bottom: 0.2em; }
 .head--spaced { margin-top: 1.2em; }                                                                                             /* sb 3.175 mm */
-.group { font-weight: 700; margin-top: 0.4em; margin-bottom: 0.1em; list-style: none; }                                           /* recipe group */
+.group { font-weight: 600; font-size: 0.875em; margin-top: 0.6em; margin-bottom: 0.1em; list-style: none; }
 
 .ingredients { list-style: none; padding: 0; margin: 0; max-width: 48ch; }
 .ingredients li + li:not(.group) { border-top: 0.5px solid var(--hair); }
@@ -93,18 +96,18 @@ main { flex: 1 0 auto; width: 100%; }
 .steps li { display: flex; gap: 0.75em; padding: 0.6em 0; cursor: pointer; border-top: 0.5px solid var(--hair); }
 .steps li:first-child { border-top: 0; }
 .steps li:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 6px; }
-.steps .num { flex: 0 0 1.6em; height: 1.6em; display: inline-grid; place-items: center; border: 1px solid var(--hair); border-radius: 999px; font-size: 0.875em; line-height: 1; margin-top: 0.1em; transition: background 0.15s; }
+.steps .num { flex: 0 0 1.7em; height: 1.7em; display: inline-grid; place-items: center; border: 1px solid var(--hair); border-radius: 999px; font-size: 0.8125em; font-weight: 500; line-height: 1; margin-top: 0.2em; transition: background 0.15s; }
 .steps li:hover .num { border-color: var(--ink); }
 .steps li.is-done { color: var(--grey); }
 .steps li.is-done .num { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .reset { margin-top: 1em; }
 
-.tip { font-style: italic; margin-top: 0.4em; }                                                                                  /* recipe tip sb 1 mm */
+.tip { font-style: italic; margin-top: 0.4em; max-width: 58ch; }
 .tip + .tip { margin-top: 0.6em; }
 .tips { margin-top: 0.8em; }
 
 /* controls: text, hairline, square — nothing the calendar would not print */
-.btn { font: inherit; color: var(--ink); background: none; border: 1px solid var(--ink); border-radius: 999px; padding: 0.4em 1.1em; cursor: pointer; line-height: 1.3; white-space: nowrap; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+.btn { font: inherit; font-size: 0.875em; font-weight: 500; color: var(--ink); background: none; border: 1px solid var(--ink); border-radius: 999px; padding: 0.5em 1.2em; cursor: pointer; line-height: 1.3; white-space: nowrap; transition: background 0.15s, color 0.15s, border-color 0.15s; }
 .btn:hover { background: var(--ink); color: var(--paper); }
 .btn:disabled { color: var(--grey); border-color: var(--hair); background: none; cursor: default; }
 .btn--primary { background: var(--ink); color: var(--paper); }
@@ -113,7 +116,7 @@ main { flex: 1 0 auto; width: 100%; }
 .btn--text:hover { background: none; color: var(--ink); text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 0.12em; }
 .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .mult { display: inline-flex; gap: 2px; border: 1px solid var(--hair); border-radius: 999px; padding: 3px; }
-.mult button { font: inherit; font-size: 0.875em; background: none; border: 0; border-radius: 999px; padding: 3px 11px; color: var(--grey); cursor: pointer; line-height: 1.2; }
+.mult button { font: inherit; font-size: 0.8125em; font-weight: 500; background: none; border: 0; border-radius: 999px; padding: 5px 11px; color: var(--muted); cursor: pointer; line-height: 1.2; }
 .mult button:hover { color: var(--ink); }
 .mult button.is-active { background: var(--ink); color: var(--paper); }
 .mult button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
@@ -124,12 +127,11 @@ main { flex: 1 0 auto; width: 100%; }
 body.is-cooking { overflow: hidden; }
 .cook-bar { height: 3px; background: var(--hair); flex: none; }
 .cook-progress { display: block; height: 3px; background: var(--ink); width: 0; transition: width 0.3s; border-radius: 0 2px 2px 0; }
-.cook-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: calc(var(--m) * 0.8); font-style: italic; flex: none; }
-.cook-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cook-head .btn--text { font-style: normal; }
+.cook-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: calc(var(--m) * 0.8); flex: none; font-size: 0.875em; color: var(--muted); }
+.cook-title { font-family: var(--serif); font-size: 1.15em; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cook-body { flex: 1 1 auto; overflow: auto; display: flex; flex-direction: column; justify-content: center; padding-top: 24px; padding-bottom: 24px; }
-.cook-step { font-style: italic; font-size: var(--fs-year); line-height: 1.1; margin-bottom: 0.4em; }
-.cook-text { font-size: clamp(24px, 3.2vw, 38px); line-height: 1.25; max-width: 30ch; text-wrap: pretty; }
+.cook-step { font-family: var(--serif); font-style: italic; font-size: var(--fs-year); line-height: 1.1; margin-bottom: 0.5em; }
+.cook-text { font-size: clamp(22px, 2.8vw, 32px); line-height: 1.35; max-width: 34ch; text-wrap: pretty; letter-spacing: -0.005em; }
 .cook-timer { margin-top: 1.2em; }
 .cook-timer .btn.is-running { font-variant-numeric: tabular-nums; min-width: 6em; text-align: center; }
 .cook-timer .btn.is-done { background: var(--ink); color: var(--paper); }
@@ -144,29 +146,30 @@ body.is-cooking { overflow: hidden; }
 .card .visual { margin-bottom: 0.75em; }
 .card .visual img { transition: opacity 0.3s; }
 .card:hover .visual img { opacity: 0.92; }
-.card .month-line { margin-bottom: 0.15em; }
-.card .recipe-title { margin-bottom: 0.15em; }
+.card .month-line { font-size: 0.875em; color: var(--muted); margin-bottom: 0.2em; }
+.card .recipe-title { font-size: 1.35em; margin-bottom: 0.2em; }
 .card:hover .recipe-title { text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 0.12em; }
-.card .credit { margin-bottom: 0; }
+.card .credit { margin-bottom: 0; font-size: 0.875em; }
 .card--coming .recipe-title { color: var(--grey); }
 
 /* month to month */
 .month-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 0.5px solid var(--hair); padding: 1.2em 0 0; }
 .month-nav a { display: block; }
-.month-nav .nav-label { font-style: italic; display: block; }
-.month-nav .nav-title { display: block; }
+.month-nav .nav-label { display: block; font-size: 0.875em; color: var(--muted); margin-bottom: 0.15em; }
+.month-nav .nav-title { display: block; font-family: var(--serif); font-size: 1.2em; }
 .month-nav a:hover .nav-title { text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 0.12em; }
 .month-nav a.next { text-align: right; }
-.all-link { padding: 1.6em 0 clamp(48px, 7vw, 96px); }
+.all-link { padding: 1.6em 0 clamp(48px, 7vw, 96px); font-size: 0.9375em; }
 .all-link a:hover { text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 0.12em; }
 
 /* foot */
-.site-foot { text-align: center; padding: 0 0 calc(var(--m) * 0.8); font-size: 0.875em; }
+.site-foot { text-align: center; padding: 0 0 calc(var(--m) * 0.8); font-size: 0.8125em; color: var(--muted); }
 .site-foot .site-foot-line { border-top: 0.5px solid var(--hair); padding-top: 1.2em; }
 
 /* 404 */
 .notfound { text-align: center; padding: clamp(48px, 10vw, 120px) 0; }
 .notfound .month { font-size: var(--fs-year); font-style: normal; }
+.notfound .lede { font-family: var(--sans); font-style: normal; font-size: 1em; }
 .notfound .lede a:hover { text-decoration: underline; }
 
 @media (max-width: 560px) {

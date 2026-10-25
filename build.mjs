@@ -22,11 +22,12 @@ const monthLine = (m) => `${data.site.lv.months[m - 1]}/${data.site.sv.months[m 
 
 function layout({ lang, title, description, path, altPath, image, body, bodyClass }) {
   const t = data.site[lang];
-  const fonts = ADOBE_KIT
-    ? `<link rel="stylesheet" href="https://use.typekit.net/${ADOBE_KIT}.css">`
-    : `<link rel="preconnect" href="https://fonts.googleapis.com">
+  const google = ADOBE_KIT
+    ? "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600"
+    : "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700";
+  const fonts = `${ADOBE_KIT ? `<link rel="stylesheet" href="https://use.typekit.net/${ADOBE_KIT}.css">\n` : ""}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">`;
+<link href="https://fonts.googleapis.com/css2?${google}&display=swap" rel="stylesheet">`;
   return `<!doctype html>
 <html lang="${lang}" data-alt="${altPath}">
 <head>
