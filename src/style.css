@@ -126,7 +126,8 @@ main { flex: 1 0 auto; width: 100%; }
 .mult-custom input::-webkit-outer-spin-button, .mult-custom input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .mult-custom input::selection { background: var(--paper); color: var(--ink); }
 
-.actions { margin-top: 1.2em; }
+.actions { margin-top: 1.2em; display: flex; flex-wrap: wrap; gap: 8px; }
+.actions .btn.is-done { background: var(--ink); color: var(--paper); }
 
 /* add to calendar dialog */
 .cal { border: 0; border-radius: 16px; padding: 0; background: var(--paper); color: var(--ink); max-width: min(92vw, 420px); width: 100%; box-shadow: 0 24px 60px rgba(30, 30, 30, 0.18); }
@@ -142,7 +143,7 @@ main { flex: 1 0 auto; width: 100%; }
 .cal-dur { display: flex; align-items: center; gap: 0.5em; }
 .cal-dur input { width: 5em; text-align: right; }
 .cal-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; }
-.cal-actions .btn--text { margin-left: auto; }
+.cal-actions [data-cal-close] { margin-left: auto; }
 
 /* cooking mode: one step at a time */
 .cook { position: fixed; inset: 0; background: var(--paper); color: var(--ink); display: none; flex-direction: column; z-index: 10; }
@@ -155,6 +156,7 @@ body.is-cooking { overflow: hidden; }
 .cook-body { flex: 1 1 auto; overflow: auto; display: flex; flex-direction: column; justify-content: center; padding-top: 24px; padding-bottom: 24px; }
 .cook-step { font-family: var(--serif); font-style: italic; font-size: var(--fs-year); line-height: 1.1; margin-bottom: 0.5em; }
 .cook-text { font-size: clamp(22px, 2.8vw, 32px); line-height: 1.35; max-width: 34ch; text-wrap: pretty; letter-spacing: -0.005em; }
+.cook-text .amt { color: var(--muted); font-size: 0.72em; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap; }
 .cook-timer { margin-top: 1.2em; }
 .cook-timer .btn.is-running { font-variant-numeric: tabular-nums; min-width: 6em; text-align: center; }
 .cook-timer .btn.is-done { background: var(--ink); color: var(--paper); }

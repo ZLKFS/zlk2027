@@ -40,15 +40,19 @@
    "amount": "Daudzums",
    "nextMonth": "Nākamais mēnesis",
    "custom": "Cits",
-   "addCal": "Pievienot kalendāram",
-   "when": "Kad gatavosi?",
+   "addCal": "Kad gatavosim?",
+   "when": "Rezervē vakaru virtuvē",
    "date": "Datums",
    "time": "Laiks",
    "duration": "Ilgums",
    "ics": "Apple / Outlook",
    "google": "Google kalendārs",
    "eventDesc": "Recepte tīmeklī:",
-   "about": "≈"
+   "about": "≈",
+   "share": "Dalīties",
+   "copied": "Saite nokopēta",
+   "shareText": "Recepte no Zviedrijas latviešu kalendāra 2027",
+   "calGo": "Ielikt kalendārā"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -90,15 +94,19 @@
    "amount": "Mängd",
    "nextMonth": "Nästa månad",
    "custom": "Annat",
-   "addCal": "Lägg till i kalendern",
-   "when": "När lagar du?",
+   "addCal": "När lagar vi?",
+   "when": "Boka en kväll i köket",
    "date": "Datum",
    "time": "Tid",
    "duration": "Längd",
    "ics": "Apple / Outlook",
    "google": "Google Kalender",
    "eventDesc": "Receptet på webben:",
-   "about": "≈"
+   "about": "≈",
+   "share": "Dela",
+   "copied": "Länken kopierad",
+   "shareText": "Recept ur Sverigeletternas kalender 2027",
+   "calGo": "Lägg i kalendern"
   }
  },
  "recipes": [

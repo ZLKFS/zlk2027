@@ -128,6 +128,102 @@ if (main && stepsEl) {
     cal.addEventListener("click", (e) => { if (e.target === cal) cal.close(); });
   }
 
+  // --- share: native sheet where available, otherwise copy the link ---
+  const shareBtn = document.querySelector("[data-share]");
+  shareBtn?.addEventListener("click", async () => {
+    const data = { title: i18n.title, text: i18n.shareText, url: i18n.url };
+    try {
+      if (navigator.share && (!navigator.canShare || navigator.canShare(data))) { await navigator.share(data); return; }
+    } catch (e) { if (e && e.name === "AbortError") return; }
+    try { await navigator.clipboard.writeText(i18n.url); } catch (e) {
+      const ta = document.createElement("textarea"); ta.value = i18n.url; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e2) {} ta.remove();
+    }
+    const label = shareBtn.textContent; shareBtn.textContent = i18n.copied; shareBtn.classList.add("is-done");
+    setTimeout(() => { shareBtn.textContent = label; shareBtn.classList.remove("is-done"); }, 2000);
+  });
+
+  // --- amounts inside the step text (cooking mode) ---
+  // Each ingredient line = quantity [unit] name…; the name's content words become stems that are
+  // looked up in the step text, and the current (scaled) amount is written after the first hit.
+  const UNITS = new Set(["g","kg","dl","l","ml","cl","litrs","litri","litru","liter","liters","ēdamkarote","ēdamkarotes","ēd.k.","ēd","k","tējkarote","tējkarotes","tējk","tējk.","pustējkarote","msk","tsk","gb","gb.","st","glāze","gl","gl.","pāksts","krm","ēdamkarotes"]);
+  const STOP = new Set(("un vai pēc garšas garšai ar bez no uz kas vien pieejams vēlams var arī ja ko lai kā jeb par pie zem vēl tikai nav ir tas tā " +
+    "parastais parastā bezlaktozes svaigs svaiga svaigi svaigu liels liela lieli palieli palielus mazs maza sīki smalki rupji vidēja maluma kapātu kapāta kapāti sagrieztu sasmalcinātu žāvētas žāvēta žāvēts " +
+    "šķēle šķēles šķēlītes cepšanai pārsmērēšanai pārkaisīšanai pildījumam mīklai pamatnei piedevas nedaudz apmēram apm cik daudz receptē recepte zviedriski zviedru latviešu " +
+    "och eller efter smak en ett till för av med gärna helst vanlig vanliga laktosfri stora stor små liten färsk färska finhackad finhackade hackade hackad rivet riven malen malet torkade torkad osötat hela hel " +
+    "det som finns lite cirka ca ungefär nypa skiva skivor bitar pensling fyllning deg degbotten tillbehör vispad kan uteslutas om du bakar de minsta polsk svenska lettisk lettiska").split(" "));
+  const LANG = document.documentElement.lang;
+  const words = (s) => [...s.toLowerCase().matchAll(/[\p{L}\p{M}]+/gu)];
+  // strip the usual inflection endings so "kartupeļus" ~ "kartupeļu", "mjölken" ~ "mjölk"
+  const norm = (w) => (LANG === "sv" ? w.replace(/(arna|erna|orna|en|et|na|ar|er|or|e)$/, "") : w.replace(/(iem|ām|ēm|ās|ēs|os|us|is|as|es|ai|ei|u|a|e|i|s|ā|ē|ī|ū)$/, ""));
+  // step word a vs ingredient key b: equal, or the ingredient is a compound ending in the step word
+  // (vetemjöl ~ mjöl), or both long and one extends the other
+  const same = (a, b, strict) => a === b || (!strict && a.length >= 4 && b.length >= 4 && b.endsWith(a)) || (a.length >= 6 && b.length >= 6 && (a.startsWith(b) || b.startsWith(a)));
+  const ingredientsInfo = () => {
+    const list = [...document.querySelectorAll(".ingredients li:not(.group) .txt")].map((txt) => {
+      const q = txt.querySelector(".q");
+      if (!q) return null;
+      const rest = txt.textContent.slice(q.textContent.length).replace(/\([^)]*\)/g, " ").replace(/,.*$/, "").trim();
+      const toks = rest.split(/\s+/);
+      let unit = "", nameStart = 0;
+      if (toks[0] && UNITS.has(toks[0].toLowerCase())) { unit = toks[0]; nameStart = 1; }
+      const keys = words(toks.slice(nameStart).join(" ")).map((m) => m[0]).filter((w) => w.length >= 3 && !STOP.has(w) && !UNITS.has(w)).map(norm);
+      return keys.length ? { amount: unit ? `${q.textContent} ${unit}` : q.textContent, keys, need: 1, strict: false } : null;
+    });
+    const ings = list.filter(Boolean);
+    // a specific line (vaniļas cukura, vaniljsocker) must not take a generic twin's hits (cukura, socker)
+    for (const B of ings) for (const A of ings) {
+      if (A === B) continue;
+      if (A.keys.length < B.keys.length && A.keys.every((k) => B.keys.includes(k))) B.need = 2;
+      if (A.keys.length === 1 && B.keys.length === 1 && B.keys[0] !== A.keys[0] && B.keys[0].endsWith(A.keys[0])) B.strict = true;
+    }
+    return ings;
+  };
+  const escH = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const QUANTIFIED = /(\d|[½¼¾]|\b(en|ett|lite|tesked|matsked|tsk|msk|dl|g|kg|ml|liter|nypa|nedaudz|mazliet|pāris|šķipsniņ\w*|tējkarot\w*|ēdamkarot\w*|puse|pusi))\s*\p{L}*\s*$/iu;
+  // For every step: which ingredient's amount goes after which word. Decided once per cooking
+  // session so a name shared by two lines (1 ola / 4 olas) goes to the first unused line.
+  function planAmounts() {
+    const ings = ingredientsInfo();
+    const used = new Map();
+    return steps.map((text, si) => {
+      const toks = words(text).map((m) => ({ w: norm(m[0]), start: m.index, end: m.index + m[0].length }));
+      const cands = new Map();
+      ings.forEach((ing, ii) => {
+        for (let j = 0; j < toks.length; j++) {
+          const k0 = ing.keys.findIndex((k) => same(toks[j].w, k, ing.strict));
+          if (k0 < 0) continue;
+          let end = toks[j].end, hits = 1;
+          for (let m = j + 1; m < Math.min(toks.length, j + 3); m++) {
+            if (ing.keys.some((k, idx) => idx !== k0 && same(toks[m].w, k, ing.strict))) { end = toks[m].end; hits++; }
+          }
+          if (hits < ing.need) continue;
+          if (QUANTIFIED.test(text.slice(Math.max(0, toks[j].start - 24), toks[j].start))) break; // the step states its own amount
+          cands.set(end, [...(cands.get(end) || []), ii]);
+          break;
+        }
+      });
+      const plan = [];
+      for (const [end, list] of [...cands.entries()].sort((x, y) => x[0] - y[0])) {
+        let pick = list.find((ii) => !used.has(ii));
+        if (pick === undefined) pick = list.reduce((best, ii) => (used.get(ii) > used.get(best) ? ii : best), list[0]);
+        used.set(pick, si);
+        plan.push({ end, ii: pick });
+      }
+      return plan;
+    });
+  }
+  let amountPlan = null;
+  function withAmounts(text, plan) {
+    if (!plan || !plan.length) return escH(text);
+    const ings = ingredientsInfo();
+    let out = "", last = 0;
+    for (const { end, ii } of plan) {
+      out += escH(text.slice(last, end)) + ` <span class="amt">(${escH(ings[ii].amount)})</span>`;
+      last = end;
+    }
+    return out + escH(text.slice(last));
+  }
+
   // --- cooking mode ---
   const TIME = /(\d+)(?:\s*[–-]\s*(\d+))?\s*(min|stund|timm)/i;
   let cook, cur = 0, timer = null, wake = null;
@@ -153,7 +249,7 @@ if (main && stepsEl) {
     if (i < 0 || i >= steps.length) return;
     cur = i; stopTimer();
     cook.querySelector(".cook-step").textContent = t(i18n.stepOf, i + 1, steps.length);
-    cook.querySelector(".cook-text").textContent = steps[i];
+    cook.querySelector(".cook-text").innerHTML = withAmounts(steps[i], amountPlan && amountPlan[i]);
     cook.querySelector(".cook-progress").style.width = `${((i + 1) / steps.length) * 100}%`;
     cook.querySelector("[data-back]").disabled = i === 0;
     cook.querySelector("[data-next]").textContent = i === steps.length - 1 ? i18n.finish : i18n.next;
@@ -187,6 +283,7 @@ if (main && stepsEl) {
   function open(i) {
     if (!cook) build();
     cook.classList.add("is-open"); document.body.classList.add("is-cooking");
+    amountPlan = planAmounts();
     go(i); lock();
     cook.querySelector("[data-next]").focus();
   }
