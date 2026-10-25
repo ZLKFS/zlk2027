@@ -130,10 +130,14 @@ main { flex: 1 0 auto; width: 100%; }
 .actions .btn.is-done { background: var(--ink); color: var(--paper); }
 
 /* add to calendar dialog */
-.cal { border: 0; border-radius: 16px; padding: 0; background: var(--paper); color: var(--ink); max-width: min(92vw, 420px); width: 100%; box-shadow: 0 24px 60px rgba(30, 30, 30, 0.18); }
-.cal::backdrop { background: rgba(30, 30, 30, 0.35); }
-.cal-form { padding: 24px 24px 20px; }
-.cal-recipe { color: var(--muted); font-size: 0.9375em; margin: 0.2em 0 1.2em; }
+.cal { border: 1px solid var(--hair); border-radius: 16px; background: var(--paper); color: var(--ink); max-width: 440px; margin-top: 14px; }
+.cal[hidden] { display: none; }
+.cal-form { padding: 20px 20px 18px; }
+.cal-quick { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.6em 0 1em; }
+.chip { font: inherit; font-size: 0.8125em; font-weight: 500; color: var(--ink); background: none; border: 1px solid var(--hair); border-radius: 999px; padding: 0.4em 0.9em; cursor: pointer; line-height: 1.3; }
+.chip:hover { border-color: var(--ink); }
+.chip.is-active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chip:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .cal-fields { display: grid; gap: 12px; }
 .cal-fields label { display: grid; grid-template-columns: 5.5em 1fr; align-items: center; gap: 12px; font-size: 0.9375em; }
 .cal-fields label > span:first-child { color: var(--muted); }

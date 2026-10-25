@@ -83,8 +83,11 @@ if (main && stepsEl) {
   if (savedMult !== 1) applyMult(savedMult);
 
   // --- add to calendar (.ics download or Google Calendar link) ---
-  const cal = document.querySelector("dialog.cal");
-  if (cal && typeof cal.showModal === "function") {
+  const cal = document.querySelector(".cal");
+  if (cal) {
+    const calBtn = document.querySelector("[data-cal]");
+    const isoDate = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const dayFor = (what) => { const d = new Date(); d.setHours(12, 0, 0, 0); if (what === "0" || what === "1") d.setDate(d.getDate() + +what); else { const target = what === "sat" ? 6 : 0; let add = (target - d.getDay() + 7) % 7; if (add === 0) add = 7; d.setDate(d.getDate() + add); } return d; };
     const form = cal.querySelector("form");
     const google = cal.querySelector("[data-cal-google]");
     const p2 = (n) => String(n).padStart(2, "0");
@@ -117,15 +120,22 @@ if (main && stepsEl) {
       const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `${slug}.ics`; document.body.appendChild(a); a.click();
       setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
     };
-    document.querySelector("[data-cal]")?.addEventListener("click", () => {
-      if (!form.date.value) { const d = new Date(); d.setDate(d.getDate() + 1); form.date.value = `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}`; }
-      updateGoogle(); cal.showModal();
-    });
-    form.addEventListener("input", updateGoogle);
+    const chips = [...cal.querySelectorAll("[data-day]")];
+    const paintChips = () => chips.forEach((c) => c.classList.toggle("is-active", form.date.value === isoDate(dayFor(c.dataset.day))));
+    const openCal = () => {
+      if (!form.date.value) form.date.value = isoDate(dayFor("1"));
+      paintChips(); updateGoogle(); cal.hidden = false; calBtn.setAttribute("aria-expanded", "true");
+      cal.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    };
+    const closeCal = () => { cal.hidden = true; calBtn.setAttribute("aria-expanded", "false"); calBtn.focus(); };
+    calBtn?.addEventListener("click", () => (cal.hidden ? openCal() : closeCal()));
+    chips.forEach((c) => c.addEventListener("click", () => { form.date.value = isoDate(dayFor(c.dataset.day)); paintChips(); updateGoogle(); }));
+    form.addEventListener("input", () => { paintChips(); updateGoogle(); });
+    form.addEventListener("submit", (e) => e.preventDefault());
     google.addEventListener("click", (e) => { if (!read()) { e.preventDefault(); form.reportValidity(); } });
     cal.querySelector("[data-cal-ics]").addEventListener("click", ics);
-    cal.querySelector("[data-cal-close]").addEventListener("click", () => cal.close());
-    cal.addEventListener("click", (e) => { if (e.target === cal) cal.close(); });
+    cal.querySelector("[data-cal-close]").addEventListener("click", closeCal);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !cal.hidden && !document.querySelector(".cook.is-open")) closeCal(); });
   }
 
   // --- share: native sheet where available, otherwise copy the link ---

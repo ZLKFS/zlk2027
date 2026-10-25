@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Äkta Jāņi-ost – lettisk midsommarost</h1>
       <p class="credit">Recept: Šarlote Cērps, Stockholm · ≈ 1 h</p>
       <div class="body"><p>Šarlote Cērps är stockholmare med släktrötter i Kuldīga, Riga och Rūjiena. Hon lärde sig göra Jāņi-ost – den lettiska midsommarosten med kummin – hos en lettisk familj i USA som ordnade midsommarfirande för letterna i trakten. Receptet med 8 liter mjölk fastnade dock aldrig i hennes repertoar. Det här är ett helt nytt recept som Šarlote anpassat från tidningen ”SestDiena” 2026, när hon firade midsommar på den lettiska landsbygden och alla ostar visade sig vara slutsålda! Šarlotes ost fick också beröm av Lettiska körens sångare i Stockholm, som hon bjöd på ost i oktober. För den här godsaken kan man njuta av året runt!</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Boka en kväll i köket</p>
-          <p class="cal-recipe">Äkta Jāņi-ost – lettisk midsommarost</p>
+          <div class="cal-quick" role="group" aria-label="Datum">
+            <button type="button" class="chip" data-day="0">I dag</button>
+            <button type="button" class="chip" data-day="1">I morgon</button>
+            <button type="button" class="chip" data-day="sat">Lördag</button>
+            <button type="button" class="chip" data-day="sun">Söndag</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datum</span><input type="date" name="date" required></label>
             <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

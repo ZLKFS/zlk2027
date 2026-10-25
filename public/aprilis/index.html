@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Kesellas biezpienkūka</h1>
       <p class="credit">Recepte: Kristīne Dannenberga, Stokholma · ≈ 1 h 40 min</p>
       <div class="body"><p>Šo recepti iesūtīja Kristīne Dannenberga no Stokholmas. Lūk, receptes stāsts: ”Zviedrijas maizītes man vienmēr likušās pārāk saldas un treknas, tādēļ biju ļoti priecīga, kad reiz pamanīju labu pamatrecepti kūkai, kur galvenā sastāvdaļa ir svaigsiers Kesella jeb kvarg. Līdzīgu kūku turklāt biju nogaršojusi vienā jaukā maiznīcā Saltå kvarn. Atrasto recepti esmu mazliet pamainījusi, lai garša būtu līdzīgāka latviešu biezpienmaizei. Visas sastāvdaļas nopērkamas jebkurā pārtikas veikalā.</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Rezervē vakaru virtuvē</p>
-          <p class="cal-recipe">Kesellas biezpienkūka</p>
+          <div class="cal-quick" role="group" aria-label="Datums">
+            <button type="button" class="chip" data-day="0">Šodien</button>
+            <button type="button" class="chip" data-day="1">Rīt</button>
+            <button type="button" class="chip" data-day="sat">Sestdien</button>
+            <button type="button" class="chip" data-day="sun">Svētdien</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datums</span><input type="date" name="date" required></label>
             <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

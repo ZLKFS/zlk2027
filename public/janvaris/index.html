@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Biezpiena radziņi Smiltenes gaumē</h1>
       <p class="credit">Recepte: Elīna Apsīte, Knīvsta · ≈ 50 min</p>
       <div class="body"><p>Šo recepti ir veidojusi Elīna Apsīte, kas dzīvo Knīvstā, Upsalas lēnī, bet nāk no Smiltenes. Tieši Smiltenes kafejnīcās nobaudīti biezpiena radziņi, kādus, šķiet, nepazīst nekur citur Latvijā! Elīna ilgi eksperimentēja, līdz tika pie īstās bērnības garšas. Viņai garšo viss, kam pievienots biezpiens – viņasprāt, īsts Latvijas superfood. Par laimi, viņas vietējā ICA veikala plauktā tagad ir atrodams biezpiens no Polijas. Ar biezpiena radziņiem Elīna cienā zviedru draugus un kolēģus un aizved kā cienastu uz Stokholmas latviešu skolu; viņas meita Emma tos tirgojusi skolas Miķeļdienas tirdziņā. Silti radziņi vienmēr pazūd zibenīgi!</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Rezervē vakaru virtuvē</p>
-          <p class="cal-recipe">Biezpiena radziņi Smiltenes gaumē</p>
+          <div class="cal-quick" role="group" aria-label="Datums">
+            <button type="button" class="chip" data-day="0">Šodien</button>
+            <button type="button" class="chip" data-day="1">Rīt</button>
+            <button type="button" class="chip" data-day="sat">Sestdien</button>
+            <button type="button" class="chip" data-day="sun">Svētdien</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datums</span><input type="date" name="date" required></label>
             <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

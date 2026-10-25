@@ -145,11 +145,16 @@ function recipePage(lang, r, i) {
   const dur = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} ${t.min}` : ""}` : `${m} ${t.min}`);
 
   const i18n = { stepOf: t.stepOf, next: t.next, back: t.back, finish: t.finish, close: t.close, timer: t.timer, min: t.min, timerDone: t.timerDone, title: c.title, minutes: r.minutes || 60, eventDesc: t.eventDesc, url: `${ORIGIN}${path}`, share: t.share, copied: t.copied, shareText: t.shareText };
-  const calendar = empty ? "" : `<p class="actions"><button type="button" class="btn" data-cal>${esc(t.addCal)}</button> <button type="button" class="btn" data-share>${esc(t.share)}</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+  const calendar = empty ? "" : `<p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">${esc(t.addCal)}</button> <button type="button" class="btn" data-share>${esc(t.share)}</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">${esc(t.when)}</p>
-          <p class="cal-recipe">${esc(c.title)}</p>
+          <div class="cal-quick" role="group" aria-label="${esc(t.date)}">
+            <button type="button" class="chip" data-day="0">${esc(t.today)}</button>
+            <button type="button" class="chip" data-day="1">${esc(t.tomorrow)}</button>
+            <button type="button" class="chip" data-day="sat">${esc(t.saturday)}</button>
+            <button type="button" class="chip" data-day="sun">${esc(t.sunday)}</button>
+          </div>
           <div class="cal-fields">
             <label><span>${esc(t.date)}</span><input type="date" name="date" required></label>
             <label><span>${esc(t.time)}</span><input type="time" name="time" value="17:00" required></label>
@@ -161,7 +166,7 @@ function recipePage(lang, r, i) {
             <button type="button" class="btn btn--text" data-cal-close>${esc(t.close)}</button>
           </div>
         </form>
-      </dialog>`;
+      </div>`;
   const col1 = `<div class="col col-1">
       <h1 class="recipe-title">${esc(c.title)}</h1>
       <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}${r.minutes && !empty ? ` · ${t.about} ${dur(r.minutes)}` : ""}</p>

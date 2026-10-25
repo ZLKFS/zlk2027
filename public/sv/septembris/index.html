@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Tiramisu från Bērzgale</h1>
       <p class="credit">Recept: Sofija Ieva Otisone, Sigtuna · ≈ 45 min</p>
       <div class="body"><p>Receptet har skickats in av Sofija Ieva Otisone från Sigtuna. Hennes mamma kommer från Kurland och pappa från Vidzeme, men tiramisun smakade hon i smyg i Bērzgale i Rēzekne kommun när hon var riktigt liten. Sedan dess är tiramisu Sofijas favoriträtt. Hon gör den tillsammans med sin mamma, och tiramisun påminner Sofija om Lettland.</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Boka en kväll i köket</p>
-          <p class="cal-recipe">Tiramisu från Bērzgale</p>
+          <div class="cal-quick" role="group" aria-label="Datum">
+            <button type="button" class="chip" data-day="0">I dag</button>
+            <button type="button" class="chip" data-day="1">I morgon</button>
+            <button type="button" class="chip" data-day="sat">Lördag</button>
+            <button type="button" class="chip" data-day="sun">Söndag</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datum</span><input type="date" name="date" required></label>
             <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

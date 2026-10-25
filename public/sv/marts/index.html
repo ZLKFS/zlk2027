@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Paska – Birziņas kvargdessert på Māras vis</h1>
       <p class="credit">Recept: Māra Krēsliņa, Stockholm · ≈ 1 h</p>
       <div class="body"><p>Māra Krēsliņa är en Stockholmslettiska som växte upp i New York. Hennes paska kommer ur H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har kompletterat receptet och anpassat det till svenska förhållanden, och kallar det paska – efter svenskans påsk. Man sätter igång på skärtorsdagen!</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Boka en kväll i köket</p>
-          <p class="cal-recipe">Paska – Birziņas kvargdessert på Māras vis</p>
+          <div class="cal-quick" role="group" aria-label="Datum">
+            <button type="button" class="chip" data-day="0">I dag</button>
+            <button type="button" class="chip" data-day="1">I morgon</button>
+            <button type="button" class="chip" data-day="sat">Lördag</button>
+            <button type="button" class="chip" data-day="sun">Söndag</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datum</span><input type="date" name="date" required></label>
             <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Kvargkaka på Kesella</h1>
       <p class="credit">Recept: Kristīne Dannenberga, Stockholm · ≈ 1 h 40 min</p>
       <div class="body"><p>Receptet skickades in av Kristīne Dannenberga från Stockholm. Så här berättar hon: ”Svenska bullar har alltid känts för söta och feta för mig, så jag blev väldigt glad när jag en gång hittade ett bra grundrecept på en kaka där huvudingrediensen är färskosten Kesella, alltså kvarg. En liknande kaka hade jag dessutom smakat på ett trevligt bageri vid Saltå kvarn. Receptet har jag ändrat lite för att smaken ska bli mer lik den lettiska biezpienmaize. Alla ingredienser finns i vilken matbutik som helst.”</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Boka en kväll i köket</p>
-          <p class="cal-recipe">Kvargkaka på Kesella</p>
+          <div class="cal-quick" role="group" aria-label="Datum">
+            <button type="button" class="chip" data-day="0">I dag</button>
+            <button type="button" class="chip" data-day="1">I morgon</button>
+            <button type="button" class="chip" data-day="sat">Lördag</button>
+            <button type="button" class="chip" data-day="sun">Söndag</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datum</span><input type="date" name="date" required></label>
             <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

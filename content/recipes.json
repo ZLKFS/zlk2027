@@ -52,7 +52,11 @@
    "share": "Dalīties",
    "copied": "Saite nokopēta",
    "shareText": "Recepte no Zviedrijas latviešu kalendāra 2027",
-   "calGo": "Ielikt kalendārā"
+   "calGo": "Ielikt kalendārā",
+   "today": "Šodien",
+   "tomorrow": "Rīt",
+   "saturday": "Sestdien",
+   "sunday": "Svētdien"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -106,7 +110,11 @@
    "share": "Dela",
    "copied": "Länken kopierad",
    "shareText": "Recept ur Sverigeletternas kalender 2027",
-   "calGo": "Lägg i kalendern"
+   "calGo": "Lägg i kalendern",
+   "today": "I dag",
+   "tomorrow": "I morgon",
+   "saturday": "Lördag",
+   "sunday": "Söndag"
   }
  },
  "recipes": [

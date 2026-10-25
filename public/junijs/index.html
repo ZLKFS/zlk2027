@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Īstais Jāņu siers</h1>
       <p class="credit">Recepte: Šarlote Cērps, Stokholma · ≈ 1 h</p>
       <div class="body"><p>Šarlote Cērps ir stokholmiete, kuras dzimtas saknes ir Kuldīgā, Rīgā un Rūjienā. Šarlote iemācījās siet Jāņu sieru, viesojoties pie kādas ASV latviešu ģimenes, kas rīkoja Jāņus vietējiem latviešiem. Tomēr recepte ar 8 l piena neiedzīvojās viņas repertuārā. Šī ir pavisam jauna recepte, ko Šarlote pielāgojusi no 2026. gada “SestDienas”, kad svinēja Jāņus Latvijas laukos un visi sieri izrādījās izpirkti! Šarlotes sieru atzinīgi novērtēja arī Stokholmas latviešu koristi, kurus viņa ar sieru cienāja oktobrī. Jo ar šo gardumu var našķoties ikvienā gadalaikā!</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Rezervē vakaru virtuvē</p>
-          <p class="cal-recipe">Īstais Jāņu siers</p>
+          <div class="cal-quick" role="group" aria-label="Datums">
+            <button type="button" class="chip" data-day="0">Šodien</button>
+            <button type="button" class="chip" data-day="1">Rīt</button>
+            <button type="button" class="chip" data-day="sat">Sestdien</button>
+            <button type="button" class="chip" data-day="sun">Svētdien</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datums</span><input type="date" name="date" required></label>
             <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Kurzemes sklandrauši Zviedrijā</h1>
       <p class="credit">Recepte: Sanita Heinberga, Jerna, un Agnese Blaubārde, Stokholma · ≈ 2 h 30 min</p>
       <div class="body"><p>Tikai viena ēdiena recepti saņēmām divreiz – un tas ir Kurzemes sklandrausis! Sklandrauša receptes iesūtīja divas īpašas Zviedrijas kurzemnieces. Savulaik ventspilniece, Sanita Heinberga tagad dzīvo Jernā (Järna) pie Sēderteljes un ir profesionāla smalkmaizīšu beķere (pastry chef). Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu. Lūk, kā viņas skaidro savas attiecības ar sklandrausi! Sanita: “Kā īstai kurzemniecei, sklandraušu gatavošana man ir goda lieta un cieņas apliecinājums Latvijas vēsturei. Sklandrausis ar savu košo krāsu man atgādina sauli — tas iemieso siltumu, gaišumu un mīlestību pret savām saknēm.” Viņa atgādina, ka sklandrausi sauc arī par dižrausi un žograusi. Agnese: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Rezervē vakaru virtuvē</p>
-          <p class="cal-recipe">Kurzemes sklandrauši Zviedrijā</p>
+          <div class="cal-quick" role="group" aria-label="Datums">
+            <button type="button" class="chip" data-day="0">Šodien</button>
+            <button type="button" class="chip" data-day="1">Rīt</button>
+            <button type="button" class="chip" data-day="sat">Sestdien</button>
+            <button type="button" class="chip" data-day="sun">Svētdien</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datums</span><input type="date" name="date" required></label>
             <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

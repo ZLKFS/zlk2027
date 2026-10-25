@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Kurländska sklandrausis i Sverige</h1>
       <p class="credit">Recept: Sanita Heinberga, Järna, och Agnese Blaubārde, Stockholm · ≈ 2 h 30 min</p>
       <div class="body"><p>Bara ett recept fick vi in två gånger – och det var den kurländska sklandrausis! Recepten skickades in av två alldeles särskilda kurländskor i Sverige. Sanita Heinberga, ursprungligen från Ventspils, bor numera i Järna utanför Södertälje och är konditor till yrket. Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem. Så här beskriver de sin relation till sklandrausis. Sanita: ”Som äkta kurländska är det en hederssak för mig att baka sklandrausis – ett sätt att visa respekt för Lettlands historia. Med sin klara färg påminner sklandrausis mig om solen – den förkroppsligar värme, ljus och kärlek till mina rötter.” Hon påminner om att sklandrausis också kallas dižrausis och žograusis. Agnese: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">När lagar vi?</button> <button type="button" class="btn" data-share>Dela</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Boka en kväll i köket</p>
-          <p class="cal-recipe">Kurländska sklandrausis i Sverige</p>
+          <div class="cal-quick" role="group" aria-label="Datum">
+            <button type="button" class="chip" data-day="0">I dag</button>
+            <button type="button" class="chip" data-day="1">I morgon</button>
+            <button type="button" class="chip" data-day="sat">Lördag</button>
+            <button type="button" class="chip" data-day="sun">Söndag</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datum</span><input type="date" name="date" required></label>
             <label><span>Tid</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Stäng</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">

@@ -39,11 +39,16 @@
       <h1 class="recipe-title">Ķūķu vakara ķūķis</h1>
       <p class="credit">Recepte: Māra Krēsliņa, Stokholma · ≈ 3 h 30 min</p>
       <div class="body"><p>Māras Krēsliņas ķūķa receptes pamatā ir 1936. gadā izdotā H. Birziņas pavārgrāmata, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Recepti viņa pielāgojusi un izveidojusi arī veģetāro variantu. Māras ķūķis ir slavens – kādā “Globālais latvietis” pārraidē folklorists Austris Grasis atzīstas, ka sava izcilā ķūķa recepti saņēmis īsziņā no Māras Krēsliņas, dodoties ar kuģi no Stokholmas uz Rīgu. Viņš ķūķi vienmēr gatavojis Vecgada vakarā, ieliekot cepeškrāsnī uz 4 stundām, – un ap pusnakti gatavs!</p></div>
-      <p class="actions"><button type="button" class="btn" data-cal>Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
-      <dialog class="cal" aria-labelledby="cal-title">
-        <form method="dialog" class="cal-form">
+      <p class="actions"><button type="button" class="btn" data-cal aria-expanded="false" aria-controls="cal">Kad gatavosim?</button> <button type="button" class="btn" data-share>Dalīties</button></p>
+      <div class="cal" id="cal" hidden>
+        <form class="cal-form">
           <p class="head" id="cal-title">Rezervē vakaru virtuvē</p>
-          <p class="cal-recipe">Ķūķu vakara ķūķis</p>
+          <div class="cal-quick" role="group" aria-label="Datums">
+            <button type="button" class="chip" data-day="0">Šodien</button>
+            <button type="button" class="chip" data-day="1">Rīt</button>
+            <button type="button" class="chip" data-day="sat">Sestdien</button>
+            <button type="button" class="chip" data-day="sun">Svētdien</button>
+          </div>
           <div class="cal-fields">
             <label><span>Datums</span><input type="date" name="date" required></label>
             <label><span>Laiks</span><input type="time" name="time" value="17:00" required></label>
@@ -55,7 +60,7 @@
             <button type="button" class="btn btn--text" data-cal-close>Aizvērt</button>
           </div>
         </form>
-      </dialog>
+      </div>
     </div>
     <div class="col col-2">
       <div class="section-head">
