@@ -56,7 +56,8 @@ if (main && stepsEl) {
   const fmt = (v) => {
     const w = Math.floor(v), f = +(v - w).toFixed(2);
     if (FR[f]) return (w ? w : "") + FR[f];
-    const r = Math.round(v * 100) / 100;
+    // Kitchen rounding: whole numbers from 10 up, one decimal between 1 and 10, two below 1.
+    const r = v >= 10 ? Math.round(v) : v >= 1 ? Math.round(v * 10) / 10 : Math.round(v * 100) / 100;
     return String(r).replace(".", DEC);
   };
   const qs = [...document.querySelectorAll(".q")];

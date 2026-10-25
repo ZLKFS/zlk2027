@@ -41,7 +41,6 @@
    "nextMonth": "Nākamais mēnesis",
    "custom": "Cits",
    "servings": "Porcijas",
-   "servShort": "porc.",
    "addCal": "Kad gatavosim?",
    "when": "Rezervē vakaru virtuvē",
    "date": "Datums",
@@ -101,7 +100,6 @@
    "nextMonth": "Nästa månad",
    "custom": "Annat",
    "servings": "Portioner",
-   "servShort": "port.",
    "addCal": "När lagar vi?",
    "when": "Boka en kväll i köket",
    "date": "Datum",
@@ -161,7 +159,6 @@
    "amount": "Amount",
    "custom": "Other",
    "servings": "Servings",
-   "servShort": "serv.",
    "addCal": "When shall we cook?",
    "when": "Book an evening in the kitchen",
    "calGo": "Add to calendar",
@@ -190,7 +187,7 @@
     "title": "Biezpiena radziņi Smiltenes gaumē",
     "credit": "Elīna Apsīte, Knīvsta",
     "intro": "Šo recepti ir veidojusi Elīna Apsīte, kas dzīvo Knīvstā, Upsalas lēnī, bet nāk no Smiltenes. Tieši Smiltenes kafejnīcās nobaudīti biezpiena radziņi, kādus, šķiet, nepazīst nekur citur Latvijā! Elīna ilgi eksperimentēja, līdz tika pie īstās bērnības garšas. Viņai garšo viss, kam pievienots biezpiens – viņasprāt, īsts Latvijas superfood. Par laimi, viņas vietējā ICA veikala plauktā tagad ir atrodams biezpiens no Polijas. Ar biezpiena radziņiem Elīna cienā zviedru draugus un kolēģus un aizved kā cienastu uz Stokholmas latviešu skolu; viņas meita Emma tos tirgojusi skolas Miķeļdienas tirdziņā. Silti radziņi vienmēr pazūd zibenīgi!",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 20 radziņiem",
     "ingredients": [
      "200 g biezpiena",
      "80 g sviesta",
@@ -218,7 +215,7 @@
     "title": "Kvarghorn på Smiltene-vis",
     "credit": "Elīna Apsīte, Knivsta",
     "intro": "Receptet kommer från Elīna Apsīte, som bor i Knivsta i Uppsala län men kommer från Smiltene. Just på kaféerna i Smiltene fanns de här kvarghornen – biezpiena radziņi – som man knappt hittar någon annanstans i Lettland! Elīna experimenterade länge innan hon fick fram den äkta barndomssmaken. Hon gillar allt som innehåller biezpiens, den lettiska kvargen – enligt henne Lettlands riktiga superfood. Som tur är finns numera polsk kvarg på hyllan i hennes lokala ICA-butik. Elīna bjuder svenska vänner och kollegor på kvarghorn och tar med dem som fika till Lettiska skolan i Stockholm; hennes dotter Emma har sålt dem på skolans Mikaelimarknad. Varma horn försvinner alltid blixtsnabbt!",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 20 horn",
     "ingredients": [
      "200 g kvarg (biezpiens, gärna polsk twaróg)",
      "80 g smör",
@@ -247,7 +244,7 @@
     "title": "Curd cheese crescents, Smiltene style",
     "credit": "Elīna Apsīte, Knivsta",
     "intro": "This recipe comes from Elīna Apsīte, who lives in Knivsta in Uppsala County but comes from Smiltene. The cafés of Smiltene served these curd cheese crescents – biezpiena radziņi – which you will hardly find anywhere else in Latvia! Elīna experimented for a long time before she found the true taste of her childhood. She loves anything with biezpiens, the Latvian curd cheese – in her view Latvia's real superfood. Luckily her local ICA now stocks curd cheese from Poland. Elīna treats Swedish friends and colleagues to the crescents and brings them to the Latvian School in Stockholm; her daughter Emma has sold them at the school's Michaelmas fair. Warm crescents always vanish in a flash!",
-    "head": "Ingredients",
+    "head": "Ingredients for about 20 crescents",
     "ingredients": [
      "200 g curd cheese (quark, ideally Polish twaróg)",
      "80 g butter",
@@ -370,7 +367,7 @@
     "title": "Paska jeb Birziņas biezpiena maisījums Māras gaumē",
     "credit": "Māra Krēsliņa, Stokholma",
     "intro": "Māra Krēsliņa ir Ņujorkā augusi Stokholmas latviete. Viņas paska nāk no 1936. gadā izdotās H. Birziņas pavārgrāmatas, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Māra to ir papildinājusi un pielāgojusi Zviedrijas apstākļiem un sauc par pasku (zviedriski Lieldienas ir påsk). Pie gatavošanas jāķeras Zaļajā Ceturtdienā!",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 8 porcijām",
     "ingredients": [
      "500 g biezpiena (ja nav, sagatavo no 1 l zviedru filmjölk vai 2 l rūgušpiena)",
      "75 g sviesta",
@@ -399,7 +396,7 @@
     "title": "Paska – Birziņas kvargdessert på Māras vis",
     "credit": "Māra Krēsliņa, Stockholm",
     "intro": "Māra Krēsliņa är en Stockholmslettiska som växte upp i New York. Hennes paska kommer ur H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har kompletterat receptet och anpassat det till svenska förhållanden, och kallar det paska – efter svenskans påsk. Man sätter igång på skärtorsdagen!",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 8 portioner",
     "ingredients": [
      "500 g kvarg (finns ingen: gör egen av 1 liter filmjölk eller 2 liter surmjölk)",
      "75 g smör",
@@ -429,7 +426,7 @@
     "title": "Paska – Birziņa's curd cheese dessert, Māra's way",
     "credit": "Māra Krēsliņa, Stockholm",
     "intro": "Māra Krēsliņa is a Stockholm Latvian who grew up in New York. Her paska comes from H. Birziņa's cookbook of 1936, which Māra's sister Zuze once copied in the library of the Latvian Gymnasium in Münster. Māra has added to the recipe and adapted it to Swedish conditions, and calls it paska – after the Swedish påsk, Easter. Work starts on Maundy Thursday!",
-    "head": "Ingredients",
+    "head": "Ingredients for about 8 servings",
     "ingredients": [
      "500 g curd cheese (if none is to be had, make your own from 1 litre of Swedish filmjölk or 2 litres of soured milk)",
      "75 g butter",
@@ -463,7 +460,7 @@
     "title": "Kesellas biezpienkūka",
     "credit": "Kristīne Dannenberga, Stokholma",
     "intro": "Šo recepti iesūtīja Kristīne Dannenberga no Stokholmas. Lūk, receptes stāsts: ”Zviedrijas maizītes man vienmēr likušās pārāk saldas un treknas, tādēļ biju ļoti priecīga, kad reiz pamanīju labu pamatrecepti kūkai, kur galvenā sastāvdaļa ir svaigsiers Kesella jeb kvarg. Līdzīgu kūku turklāt biju nogaršojusi vienā jaukā maiznīcā Saltå kvarn. Atrasto recepti esmu mazliet pamainījusi, lai garša būtu līdzīgāka latviešu biezpienmaizei. Visas sastāvdaļas nopērkamas jebkurā pārtikas veikalā.",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 10 porcijām",
     "ingredients": [
      "§Mīklai",
      "3 dl kviešu miltu",
@@ -497,7 +494,7 @@
     "title": "Kvargkaka på Kesella",
     "credit": "Kristīne Dannenberga, Stockholm",
     "intro": "Receptet skickades in av Kristīne Dannenberga från Stockholm. Så här berättar hon: ”Svenska bullar har alltid känts för söta och feta för mig, så jag blev väldigt glad när jag en gång hittade ett bra grundrecept på en kaka där huvudingrediensen är färskosten Kesella, alltså kvarg. En liknande kaka hade jag dessutom smakat på ett trevligt bageri vid Saltå kvarn. Receptet har jag ändrat lite för att smaken ska bli mer lik den lettiska biezpienmaize. Alla ingredienser finns i vilken matbutik som helst.”",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 10 portioner",
     "ingredients": [
      "§Deg",
      "3 dl vetemjöl",
@@ -532,7 +529,7 @@
     "title": "Kesella quark cake",
     "credit": "Kristīne Dannenberga, Stockholm",
     "intro": "This recipe was sent in by Kristīne Dannenberga from Stockholm. Here is its story: “Swedish buns have always seemed too sweet and too rich to me, so I was very glad when I once came across a good basic recipe for a cake whose main ingredient is the fresh cheese Kesella, that is, quark. I had also tasted a similar cake at a lovely bakery at Saltå kvarn. I have changed the recipe a little so the taste comes closer to the Latvian biezpienmaize, curd cheese cake. All the ingredients can be found in any grocery shop.”",
-    "head": "Ingredients",
+    "head": "Ingredients for about 10 servings",
     "ingredients": [
      "§Pastry",
      "3 dl plain flour",
@@ -603,7 +600,7 @@
     "title": "Īstais Jāņu siers",
     "credit": "Šarlote Cērps, Stokholma",
     "intro": "Šarlote Cērps ir stokholmiete, kuras dzimtas saknes ir Kuldīgā, Rīgā un Rūjienā. Šarlote iemācījās siet Jāņu sieru, viesojoties pie kādas ASV latviešu ģimenes, kas rīkoja Jāņus vietējiem latviešiem. Tomēr recepte ar 8 l piena neiedzīvojās viņas repertuārā. Šī ir pavisam jauna recepte, ko Šarlote pielāgojusi no 2026. gada “SestDienas”, kad svinēja Jāņus Latvijas laukos un visi sieri izrādījās izpirkti! Šarlotes sieru atzinīgi novērtēja arī Stokholmas latviešu koristi, kurus viņa ar sieru cienāja oktobrī. Jo ar šo gardumu var našķoties ikvienā gadalaikā!",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 6 porcijām",
     "ingredients": [
      "1 litrs piena (3% tauku)",
      "1 tējk. ķimeņu",
@@ -634,7 +631,7 @@
     "title": "Äkta Jāņi-ost – lettisk midsommarost",
     "credit": "Šarlote Cērps, Stockholm",
     "intro": "Šarlote Cērps är stockholmare med släktrötter i Kuldīga, Riga och Rūjiena. Hon lärde sig göra Jāņi-ost – den lettiska midsommarosten med kummin – hos en lettisk familj i USA som ordnade midsommarfirande för letterna i trakten. Receptet med 8 liter mjölk fastnade dock aldrig i hennes repertoar. Det här är ett helt nytt recept som Šarlote anpassat från tidningen ”SestDiena” 2026, när hon firade midsommar på den lettiska landsbygden och alla ostar visade sig vara slutsålda! Šarlotes ost fick också beröm av Lettiska körens sångare i Stockholm, som hon bjöd på ost i oktober. För den här godsaken kan man njuta av året runt!",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 6 portioner",
     "ingredients": [
      "1 liter mjölk (3 % fett)",
      "1 tsk kummin",
@@ -666,7 +663,7 @@
     "title": "Real Jāņi cheese – Latvian midsummer cheese",
     "credit": "Šarlote Cērps, Stockholm",
     "intro": "Šarlote Cērps is a Stockholmer with family roots in Kuldīga, Riga and Rūjiena. She learned to make Jāņi cheese – the Latvian midsummer cheese with caraway – while visiting a Latvian family in the USA who hosted the midsummer celebration for the local Latvians. The recipe with 8 litres of milk never made it into her repertoire, though. This is a brand-new recipe that Šarlote adapted from the 2026 “SestDiena” magazine, when she celebrated midsummer in the Latvian countryside and every cheese turned out to be sold out! Šarlote's cheese was also praised by the singers of the Latvian choir in Stockholm, whom she treated to it in October. Because this treat can be enjoyed in any season!",
-    "head": "Ingredients",
+    "head": "Ingredients for about 6 servings",
     "ingredients": [
      "1 litre milk (3% fat)",
      "1 tsp caraway seeds",
@@ -843,7 +840,7 @@
     "title": "Bērzgales tiramisu",
     "credit": "Sofija Ieva Otisone, Sigtuna",
     "intro": "Recepti iesūtījusi Sofija Ieva Otisone no Sigtunas. Viņas mamma nāk no Kurzemes, tētis – no Vidzemes, bet tiramisu viņa slepeni pagaršoja Bērzgalē, Rēzeknes novadā, kad bija pavisam maziņa. Kopš tās reizes tiramisu ir Sofijas mīļākais ēdiens. To viņa gatavo kopā ar mammu, un tiramisu Sofijai atgādina Latviju.",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 10 porcijām",
     "ingredients": [
      "500 g svaigā maskarpones siera",
      "400 ml saldā krējuma",
@@ -875,7 +872,7 @@
     "title": "Tiramisu från Bērzgale",
     "credit": "Sofija Ieva Otisone, Sigtuna",
     "intro": "Receptet har skickats in av Sofija Ieva Otisone från Sigtuna. Hennes mamma kommer från Kurland och pappa från Vidzeme, men tiramisun smakade hon i smyg i Bērzgale i Rēzekne kommun när hon var riktigt liten. Sedan dess är tiramisu Sofijas favoriträtt. Hon gör den tillsammans med sin mamma, och tiramisun påminner Sofija om Lettland.",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 10 portioner",
     "ingredients": [
      "500 g mascarpone",
      "400 ml vispgrädde",
@@ -908,7 +905,7 @@
     "title": "Tiramisu from Bērzgale",
     "credit": "Sofija Ieva Otisone, Sigtuna",
     "intro": "The recipe was sent in by Sofija Ieva Otisone from Sigtuna. Her mother comes from Courland and her father from Vidzeme, but she secretly tasted tiramisu in Bērzgale, in Rēzekne municipality, when she was very small. Ever since, tiramisu has been Sofija's favourite dish. She makes it with her mum, and tiramisu reminds Sofija of Latvia.",
-    "head": "Ingredients",
+    "head": "Ingredients for about 10 servings",
     "ingredients": [
      "500 g mascarpone",
      "400 ml whipping cream",
@@ -945,7 +942,7 @@
     "title": "Kurzemes sklandrauši Zviedrijā",
     "credit": "Sanita Heinberga, Jerna, un Agnese Blaubārde, Stokholma",
     "intro": "Tikai viena ēdiena recepti saņēmām divreiz – un tas ir Kurzemes sklandrausis! Sklandrauša receptes iesūtīja divas īpašas Zviedrijas kurzemnieces. Savulaik ventspilniece, Sanita Heinberga tagad dzīvo Jernā (Järna) pie Sēderteljes un ir profesionāla smalkmaizīšu beķere (pastry chef). Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu. Lūk, kā viņas skaidro savas attiecības ar sklandrausi! Sanita: “Kā īstai kurzemniecei, sklandraušu gatavošana man ir goda lieta un cieņas apliecinājums Latvijas vēsturei. Sklandrausis ar savu košo krāsu man atgādina sauli — tas iemieso siltumu, gaišumu un mīlestību pret savām saknēm.” Viņa atgādina, ka sklandrausi sauc arī par dižrausi un žograusi. Agnese: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 30 sklandraušiem",
     "ingredients": [
      "§Mīklas pamatnei:",
      "600g vidēja vai rupja maluma rudzu miltu",
@@ -991,7 +988,7 @@
     "title": "Kurländska sklandrausis i Sverige",
     "credit": "Sanita Heinberga, Järna, och Agnese Blaubārde, Stockholm",
     "intro": "Bara ett recept fick vi in två gånger – och det var den kurländska sklandrausis! Recepten skickades in av två alldeles särskilda kurländskor i Sverige. Sanita Heinberga, ursprungligen från Ventspils, bor numera i Järna utanför Södertälje och är konditor till yrket. Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem. Så här beskriver de sin relation till sklandrausis. Sanita: ”Som äkta kurländska är det en hederssak för mig att baka sklandrausis – ett sätt att visa respekt för Lettlands historia. Med sin klara färg påminner sklandrausis mig om solen – den förkroppsligar värme, ljus och kärlek till mina rötter.” Hon påminner om att sklandrausis också kallas dižrausis och žograusis. Agnese: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 30 sklandrausis",
     "ingredients": [
      "§Degbotten:",
      "600 g rågmjöl, medel- eller grovmalet",
@@ -1038,7 +1035,7 @@
     "title": "Courland sklandrausis in Sweden",
     "credit": "Sanita Heinberga, Järna, and Agnese Blaubārde, Stockholm",
     "intro": "Only one recipe reached us twice – and that was the Courland sklandrausis! The recipes were sent in by two very special Courlanders in Sweden. Sanita Heinberga, originally from Ventspils, now lives in Järna near Södertälje and is a professional pastry chef. Designer Agnese Blaubārde comes from Pāvilosta but calls Stockholm and the Latvian School in Stockholm home. Here is how they describe their relationship with sklandrausis. Sanita: “As a true Courlander, baking sklandrausis is a matter of honour for me and a mark of respect for Latvia's history. With its bright colour, sklandrausis reminds me of the sun – it embodies warmth, light and love for my roots.” She reminds us that sklandrausis is also called dižrausis and žograusis. Agnese: “I chose this recipe as a Courlander out in the world. Alsunga sklandrausis were always baked by my grandmother Ruta. For me they belong with her and with home. That taste I want to keep and pass on.”",
-    "head": "Ingredients",
+    "head": "Ingredients for about 30 sklandrauši",
     "ingredients": [
      "§Pastry base:",
      "600 g medium or coarse rye flour",
@@ -1089,7 +1086,7 @@
     "title": "Speķa pīrāgi",
     "credit": "Laila Strunke, Stokholma",
     "intro": "Stokholmietes Lailas Strunkes mamma bijusi izcila pavāre. Iespējams, Laila tieši no viņas mantojusi ēdiena gatavošanas gēnu – bet ne receptes. Mamma savas svarīgās receptes zinājusi no galvas, turklāt, laikam ejot un mainot dzīvesvietas, paputējušas arī daudzās pavārgrāmatas. Lūk, kā Laila gatavo pīrāgus, pielāgojot santa.lv recepti zviedru apstākļiem.",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 40 pīrāgiem",
     "ingredients": [
      "2,5 dl piena",
      "50 g rauga (saldām mīklām)",
@@ -1123,7 +1120,7 @@
     "title": "Speķa pīrāgi – lettiska baconpiroger",
     "credit": "Laila Strunke, Stockholm",
     "intro": "Stockholmaren Laila Strunkes mamma var en enastående kokerska. Kanske är det från henne Laila ärvt matlagningsgenen – men inte recepten. Mamman kunde sina viktiga recept utantill, och med åren och alla flyttar försvann också de många kokböckerna. Så här bakar Laila pīrāgi, med ett recept från santa.lv anpassat till svenska förhållanden.",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 40 piroger",
     "ingredients": [
      "2,5 dl mjölk",
      "50 g jäst (för söta degar)",
@@ -1158,7 +1155,7 @@
     "title": "Speķa pīrāgi – Latvian bacon buns",
     "credit": "Laila Strunke, Stockholm",
     "intro": "Stockholmer Laila Strunke's mother was an outstanding cook. Laila may well have inherited the cooking gene from her – but not the recipes. Her mother knew her important recipes by heart, and over the years and the moves the many cookbooks were lost too. Here is how Laila bakes pīrāgi, adapting a recipe from santa.lv to Swedish conditions.",
-    "head": "Ingredients",
+    "head": "Ingredients for about 40 buns",
     "ingredients": [
      "2.5 dl milk",
      "50 g fresh yeast (for sweet doughs)",
@@ -1197,7 +1194,7 @@
     "title": "Ķūķu vakara ķūķis",
     "credit": "Māra Krēsliņa, Stokholma",
     "intro": "Māras Krēsliņas ķūķa receptes pamatā ir 1936. gadā izdotā H. Birziņas pavārgrāmata, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Recepti viņa pielāgojusi un izveidojusi arī veģetāro variantu. Māras ķūķis ir slavens – kādā “Globālais latvietis” pārraidē folklorists Austris Grasis atzīstas, ka sava izcilā ķūķa recepti saņēmis īsziņā no Māras Krēsliņas, dodoties ar kuģi no Stokholmas uz Rīgu. Viņš ķūķi vienmēr gatavojis Vecgada vakarā, ieliekot cepeškrāsnī uz 4 stundām, – un ap pusnakti gatavs!",
-    "head": "Sastāvdaļas",
+    "head": "Sastāvdaļas apmēram 6 porcijām",
     "ingredients": [
      "300 g grūbu (hela korngryn)",
      "200 g žāvēta speķa (veģetārajā variantā aizvieto ar burkāniem, sīpoliem, selerijas sakni)",
@@ -1220,7 +1217,7 @@
     "title": "Ķūķis – lettisk korngrynsgryta",
     "credit": "Māra Krēsliņa, Stockholm",
     "intro": "Grunden till Māra Krēsliņas ķūķis är H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har anpassat receptet och även gjort en vegetarisk variant. Māras ķūķis är berömd – i ett avsnitt av programmet ”Globālais latvietis” erkänner folkloristen Austris Grasis att han fått receptet på sin utmärkta ķūķis via sms från Māra Krēsliņa, på väg med båten från Stockholm till Riga. Han har alltid gjort ķūķis på nyårsafton – in i ugnen i 4 timmar, och vid midnatt är den klar!",
-    "head": "Ingredienser",
+    "head": "Ingredienser till cirka 6 portioner",
     "ingredients": [
      "300 g hela korngryn",
      "200 g rökt sidfläsk (i den vegetariska varianten ersätts det med morötter, lök och rotselleri)",
@@ -1244,7 +1241,7 @@
     "title": "Ķūķis – Latvian barley stew",
     "credit": "Māra Krēsliņa, Stockholm",
     "intro": "Māra Krēsliņa's ķūķis is based on H. Birziņa's cookbook of 1936, which Māra's sister Zuze once copied in the library of the Latvian Gymnasium in Münster. Māra has adapted the recipe and made a vegetarian version too. Māra's ķūķis is famous – in an episode of the programme “Globālais latvietis”, folklorist Austris Grasis admits he received the recipe for his excellent ķūķis by text message from Māra Krēsliņa, on the ferry from Stockholm to Riga. He has always made ķūķis on New Year's Eve – four hours in the oven, and it is ready around midnight!",
-    "head": "Ingredients",
+    "head": "Ingredients for about 6 servings",
     "ingredients": [
      "300 g whole barley groats",
      "200 g smoked pork belly (in the vegetarian version replaced with carrots, onions and celeriac)",

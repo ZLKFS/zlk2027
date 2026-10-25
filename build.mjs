@@ -120,12 +120,13 @@ function headSpan(text) {
 // Amount control. A heading that states a portion count ("Sastāvdaļas 12 porcijām") gets a
 // servings scaler (6 / 12 / 24 / custom number of portions); otherwise plain multipliers.
 function multControl(t, head) {
-  const m = head.match(/(\d+)/);
+  const m = head.match(/(\d+)\s*([^\s\d(),.;:]+)/);
   const serv = m ? +m[1] : 0;
+  const unit = m ? m[2] : "";
   const half = serv % 2 === 0 ? String(serv / 2) : String(serv / 2).replace(".", ",");
   const btn = (mult, label, active) => `<button type="button" data-mult="${mult}"${active ? ' class="is-active"' : ""}>${label}</button>`;
   const labels = serv ? [half, String(serv), String(serv * 2)] : ["½×", "1×", "2×"];
-  return `<div class="mult" role="group" aria-label="${esc(serv ? t.servings : t.amount)}"${serv ? ` data-servings="${serv}"` : ""}>${btn(0.5, labels[0])}${btn(1, labels[1], true)}${btn(2, labels[2])}${btn("custom", esc(t.custom))}<label class="mult-custom" hidden><input type="text" inputmode="${serv ? "numeric" : "decimal"}" autocomplete="off" maxlength="5" aria-label="${esc(serv ? t.servings : t.amount)}">${serv ? "&nbsp;" + esc(t.servShort) : "×"}</label></div>`;
+  return `<div class="mult" role="group" aria-label="${esc(serv ? t.servings : t.amount)}"${serv ? ` data-servings="${serv}"` : ""}>${btn(0.5, labels[0])}${btn(1, labels[1], true)}${btn(2, labels[2])}${btn("custom", esc(t.custom))}<label class="mult-custom" hidden><input type="text" inputmode="${serv ? "numeric" : "decimal"}" autocomplete="off" maxlength="5" aria-label="${esc(serv ? t.servings : t.amount)}">${serv ? "&nbsp;" + esc(unit) : "×"}</label></div>`;
 }
 function ingredientList(items) {
   let i = 0;
