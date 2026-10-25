@@ -28,7 +28,7 @@
     <a href="/julijs/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/julijs/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="julijs">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Jūlijs/Juli</p>
@@ -41,22 +41,28 @@
       <div class="body"><p>Laine Lasmane Wikmark bor i Täby, men hennes familjs rötter finns både i Apriķi socken i Kurland, på landsbygden kring Sigulda och i Ukraina. Receptet Laine skickat in är mycket kort och enkelt att göra, men det har en lång och vacker historia: ”På 1960-talet tillbringade jag och mina systrar somrarna på det lettiska barnlägret i Skrubba, strax söder om Stockholm. Vi var en stor skara barn – som jag minns det omkring hundra. I köket regerade fru Šmitmanis och fru Ķesteris tillsammans med ungdomar som hjälpte till. Vi flickor var särskilt förtjusta i medhjälparna Vija, Dzintra och Astra. Hos dem kunde vi lätta våra hjärtan när det behövdes. På bordet stod nästan varje dag den här mycket enkla och goda salladen som tillbehör. Tiden gick, och på 1970-talet var jag själv medhjälpare på ett lettiskt barnläger – i Ladvik nära Vaxholm. Kökets ”drottning” var fru Sausiņš, och jag lärde mig att göra salladen. Långt senare gjorde jag den enkla salladen till min egen familj och döpte den till ”den sentimentala salladen”. Men Skrubbas kära medhjälpare kallar den fortfarande ”den lettiska salladen”!”</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>bladsallad</li>
-<li>färsk gurka</li>
-<li>salladslök</li>
-<li>dill</li>
-<li>gräddfil</li>
-<li>salt</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt">bladsallad</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt">färsk gurka</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt">salladslök</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt">dill</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt">gräddfil</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">salt</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Blanda allt i en stor skål!</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Blanda allt i en stor skål!</span></li>
       </ol>
       <div class="tips"><p class="tip">Laines tips: Sallad, dill och gräddfil är obligatoriskt. Den som vill blandar i tunt skivad gurka och salladslök.</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Skrubbas sentimentala lettiska bladsallad"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

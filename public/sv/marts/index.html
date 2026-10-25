@@ -28,7 +28,7 @@
     <a href="/marts/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/marts/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="marts">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Marts/Mars</p>
@@ -41,31 +41,37 @@
       <div class="body"><p>Māra Krēsliņa är en Stockholmslettiska som växte upp i New York. Hennes paska kommer ur H. Birziņas kokbok från 1936, som Māras syster Zuze en gång kopierade på biblioteket vid Lettiska gymnasiet i Münster. Māra har kompletterat receptet och anpassat det till svenska förhållanden, och kallar det paska – efter svenskans påsk. Man sätter igång på skärtorsdagen!</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>500 g kvarg (finns ingen: gör egen av 1 liter filmjölk eller 2 liter surmjölk)</li>
-<li>75 g smör</li>
-<li>100 g socker (1 ¼ dl)</li>
-<li>½ vaniljstång</li>
-<li>50 g hackade nötter (knappt 1 dl)</li>
-<li>½–¾ glas vispgrädde</li>
-<li>rivet citronskal</li>
-<li>korinter och sukat, så att det inte blir fadd</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="500">500</span> g kvarg (finns ingen: gör egen av 1 liter filmjölk eller 2 liter surmjölk)</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="75">75</span> g smör</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="100">100</span> g socker (1 ¼ dl)</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="0.5">½</span> vaniljstång</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="50">50</span> g hackade nötter (knappt 1 dl)</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt"><span class="q" data-base="0.5;0.75">½–¾</span> glas vispgrädde</span></label></li>
+<li><label><input type="checkbox" data-i="6"><span class="txt">rivet citronskal</span></label></li>
+<li><label><input type="checkbox" data-i="7"><span class="txt">korinter och sukat, så att det inte blir fadd</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Mal kvargen i köttkvarn och pressa den genom en sil.</li>
-        <li>Finns ingen kvarg: häll 1 liter filmjölk i en stor skål och värm i mikrovågsugn i cirka 4 minuter.</li>
-        <li>Vispa smör, socker och kryddor.</li>
-        <li>Tillsätt äggen ett i taget och vispa (det går att lägga till några extra äggulor).</li>
-        <li>Blanda med den finfördelade, silade kvargen och de grovhackade nötkärnorna.</li>
-        <li>Vänd ner vispgrädden.</li>
-        <li>Slå in massan i en duk och lägg under press, ungefär som en Jāņi-ost.</li>
-        <li>Servera som dessert, dekorerad med frukt eller bärsås.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Mal kvargen i köttkvarn och pressa den genom en sil.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Finns ingen kvarg: häll 1 liter filmjölk i en stor skål och värm i mikrovågsugn i cirka 4 minuter.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Vispa smör, socker och kryddor.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Tillsätt äggen ett i taget och vispa (det går att lägga till några extra äggulor).</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Blanda med den finfördelade, silade kvargen och de grovhackade nötkärnorna.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Vänd ner vispgrädden.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="6"><span class="num" aria-hidden="true">7</span><span class="txt">Slå in massan i en duk och lägg under press, ungefär som en Jāņi-ost.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="7"><span class="num" aria-hidden="true">8</span><span class="txt">Servera som dessert, dekorerad med frukt eller bärsås.</span></li>
       </ol>
       <div class="tips"><p class="tip">I Māras samling finns också tant Natas pasharecept, där 2 kg kvarg får sällskap av 25 äggulor och russin.</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Paska – Birziņas kvargdessert på Māras vis"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

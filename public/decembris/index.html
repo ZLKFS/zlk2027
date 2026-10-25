@@ -28,7 +28,7 @@
     <a href="/decembris/" hreflang="lv" lang="lv" data-lang="lv" class="is-active" aria-current="page">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/decembris/" hreflang="sv" lang="sv" data-lang="sv">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="decembris">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Decembris/December</p>
@@ -41,25 +41,31 @@
       <div class="body"><p>Māras Krēsliņas ķūķa receptes pamatā ir 1936. gadā izdotā H. Birziņas pavārgrāmata, ko Māras māsa Zuze savulaik nokopējusi Minsteres Latviešu Ģimnāzijas bibliotēkā. Recepti viņa pielāgojusi un izveidojusi arī veģetāro variantu. Māras ķūķis ir slavens – kādā “Globālais latvietis” pārraidē folklorists Austris Grasis atzīstas, ka sava izcilā ķūķa recepti saņēmis īsziņā no Māras Krēsliņas, dodoties ar kuģi no Stokholmas uz Rīgu. Viņš ķūķi vienmēr gatavojis Vecgada vakarā, ieliekot cepeškrāsnī uz 4 stundām, – un ap pusnakti gatavs!</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Sastāvdaļas</h2>
+      <div class="section-head">
+        <h2 class="head">Sastāvdaļas</h2>
+        <div class="mult" role="group" aria-label="Daudzums"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>300 g grūbu (hela korngryn)</li>
-<li>200 g žāvēta speķa (veģetārajā variantā aizvieto ar burkāniem, sīpoliem, selerijas sakni)</li>
-<li>75 g sīpolu</li>
-<li>2 l ūdens vai buljona (3 buljona kubiņi uz 2 l ūdens)</li>
-<li>sāls pēc garšas</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="300">300</span> g grūbu (hela korngryn)</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="200">200</span> g žāvēta speķa (veģetārajā variantā aizvieto ar burkāniem, sīpoliem, selerijas sakni)</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="75">75</span> g sīpolu</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="2">2</span> l ūdens vai buljona (3 buljona kubiņi uz 2 l ūdens)</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt">sāls pēc garšas</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Pagatavošana</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Pagatavošana</h2>
+        <button type="button" class="btn" data-cook>Sākt gatavot</button>
+      </div>
       <ol class="steps">
-        <li>Grūbas apgrauzdē pannā spilgti brūnas.</li>
-        <li>Sīki sagriež un apcep sīpolus un speķi.</li>
-        <li>Katlā vai “pīlē” pilda vairākās kārtās vispirms apgrauzdētās grūbas, tad apcepto speķi ar sīpoliem, tad atkal grūbas utt., līdz trauks pilns.</li>
-        <li>Uzlej buljonu.</li>
-        <li>Cep cepeškrāsnī apm. 3 stundas 200°C karstumā; nemaisa, bet pielej šķidrumu, ja nepieciešams.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Grūbas apgrauzdē pannā spilgti brūnas.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Sīki sagriež un apcep sīpolus un speķi.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Katlā vai “pīlē” pilda vairākās kārtās vispirms apgrauzdētās grūbas, tad apcepto speķi ar sīpoliem, tad atkal grūbas utt., līdz trauks pilns.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Uzlej buljonu.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Cep cepeškrāsnī apm. 3 stundas 200°C karstumā; nemaisa, bet pielej šķidrumu, ja nepieciešams.</span></li>
       </ol>
       <div class="tips"><p class="tip">Māra iesaka: “Kad varu, pērku speķi Latvijā, jo zviedru speķis nav ne tuvu tik labs. Nav verdziski jāpieturas pie samēriem, iznāk labi šā vai tā.”</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Ķūķu vakara ķūķis"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

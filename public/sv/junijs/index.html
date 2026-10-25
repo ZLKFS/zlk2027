@@ -28,7 +28,7 @@
     <a href="/junijs/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/junijs/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="junijs">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Jūnijs/Juni</p>
@@ -41,32 +41,38 @@
       <div class="body"><p>Šarlote Cērps är stockholmare med släktrötter i Kuldīga, Riga och Rūjiena. Hon lärde sig göra Jāņi-ost – den lettiska midsommarosten med kummin – hos en lettisk familj i USA som ordnade midsommarfirande för letterna i trakten. Receptet med 8 liter mjölk fastnade dock aldrig i hennes repertoar. Det här är ett helt nytt recept som Šarlote anpassat från tidningen ”SestDiena” 2026, när hon firade midsommar på den lettiska landsbygden och alla ostar visade sig vara slutsålda! Šarlotes ost fick också beröm av Lettiska körens sångare i Stockholm, som hon bjöd på ost i oktober. För den här godsaken kan man njuta av året runt!</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>1 liter mjölk (3 % fett)</li>
-<li>1 tsk kummin</li>
-<li>½–1 tsk chiliflakes för hetta, efter smak</li>
-<li>2–3 dl crème fraiche eller gräddfil</li>
-<li>1 ägg</li>
-<li>1 tsk salt (gärna mer om du gillar det salt)</li>
-<li>1 msk smör</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="1">1</span> liter mjölk (3 % fett)</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="1">1</span> tsk kummin</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="0.5;1">½–1</span> tsk chiliflakes för hetta, efter smak</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="2;3">2–3</span> dl crème fraiche eller gräddfil</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="1">1</span> ägg</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt"><span class="q" data-base="1">1</span> tsk salt (gärna mer om du gillar det salt)</span></label></li>
+<li><label><input type="checkbox" data-i="6"><span class="txt"><span class="q" data-base="1">1</span> msk smör</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Häll lite vatten i botten på en kastrull så att det inte bränner fast, tillsätt sedan mjölk och kryddor.</li>
-        <li>Värm till strax före kokpunkten, 80–85 °C.</li>
-        <li>Vispa under tiden ihop ägg, 1 tsk salt och crème fraiche i en skål. (Det går att använda vispgrädde och tillsätta 1 tsk ättika.)</li>
-        <li>När mjölken är varm, ta kastrullen från plattan och häll i ägg- och gräddblandningen.</li>
-        <li>Ställ tillbaka kastrullen på plattan och fortsätt värma tills mjölken skär sig och vasslen skiljer ut sig. Det går fort när temperaturen når 80 °C.</li>
-        <li>Ta kastrullen från plattan och vänta cirka 5 minuter.</li>
-        <li>Lägg en dubbelvikt silduk i en sil och sila av vasslen; låt rinna av några minuter.</li>
-        <li>Rör ner smöret i ostmassan och salta mer efter smak.</li>
-        <li>Låt rinna av i minst 30 minuter.</li>
-        <li>Pressa ur så mycket vätska som möjligt, lägg osten med silduken i ett lämpligt kärl, lägg på en tyngd och låt stå några timmar på ett svalt ställe.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Häll lite vatten i botten på en kastrull så att det inte bränner fast, tillsätt sedan mjölk och kryddor.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Värm till strax före kokpunkten, 80–85 °C.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Vispa under tiden ihop ägg, 1 tsk salt och crème fraiche i en skål. (Det går att använda vispgrädde och tillsätta 1 tsk ättika.)</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">När mjölken är varm, ta kastrullen från plattan och häll i ägg- och gräddblandningen.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Ställ tillbaka kastrullen på plattan och fortsätt värma tills mjölken skär sig och vasslen skiljer ut sig. Det går fort när temperaturen når 80 °C.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Ta kastrullen från plattan och vänta cirka 5 minuter.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="6"><span class="num" aria-hidden="true">7</span><span class="txt">Lägg en dubbelvikt silduk i en sil och sila av vasslen; låt rinna av några minuter.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="7"><span class="num" aria-hidden="true">8</span><span class="txt">Rör ner smöret i ostmassan och salta mer efter smak.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="8"><span class="num" aria-hidden="true">9</span><span class="txt">Låt rinna av i minst 30 minuter.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="9"><span class="num" aria-hidden="true">10</span><span class="txt">Pressa ur så mycket vätska som möjligt, lägg osten med silduken i ett lämpligt kärl, lägg på en tyngd och låt stå några timmar på ett svalt ställe.</span></li>
       </ol>
       <div class="tips"><p class="tip">Šarlote tipsar om att servera osten med Finn Crisp knäckebröd och rädisor. Osten väger cirka 300 g och räcker till ungefär 18 skivor Finn Crisp.</p><p class="tip">Hon föreslår också att ta vara på vasslen – som gödning till plantor, som vätska vid brödbak, till skandinaviskt messmör eller som bas i en kall grönsakssoppa eller smoothie. Men det är ett annat recept!</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Äkta Jāņi-ost – lettisk midsommarost"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

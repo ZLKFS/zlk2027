@@ -28,7 +28,7 @@
     <a href="/augusts/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/augusts/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="augusts">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Augusts/Augusti</p>
@@ -41,24 +41,30 @@
       <div class="body"><p>Den här och andra rätter som hennes mamma Benita lagade minns Laila Strunke från Stockholm: ”Mammas mat var god, men hon använde inga recept. Hon lagade på minne och smak.” Benita, född Lāce, växte upp i Ventspils; hennes föräldrar kom från Alsunga och Jūrkalne. Kanske är det just i Kurland som ordet ”kraupštīgs” – knaprig – har sitt ursprung?</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser (mängderna anpassas efter antalet gäster)</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser (mängderna anpassas efter antalet gäster)</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>benfria fläskkotletter</li>
-<li>salt och svartpeppar</li>
-<li>vetemjöl</li>
-<li>ägg</li>
-<li>ströbröd</li>
-<li>smör och olja till stekning</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt">benfria fläskkotletter</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt">salt och svartpeppar</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt">vetemjöl</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt">ägg</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt">ströbröd</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">smör och olja till stekning</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Banka ut kotletterna ordentligt på båda sidor och krydda med lite salt och svartpeppar.</li>
-        <li>Vänd varje skiva först i mjöl, sedan i uppvispat ägg och till sist i ströbröd.</li>
-        <li>Smält smör i en stekpanna, tillsätt lite olja och hetta upp. Stek kotletterna i den heta pannan på båda sidor tills de är gyllenbruna och paneringen knaprig.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Banka ut kotletterna ordentligt på båda sidor och krydda med lite salt och svartpeppar.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Vänd varje skiva först i mjöl, sedan i uppvispat ägg och till sist i ströbröd.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Smält smör i en stekpanna, tillsätt lite olja och hetta upp. Stek kotletterna i den heta pannan på båda sidor tills de är gyllenbruna och paneringen knaprig.</span></li>
       </ol>
       <div class="tips"><p class="tip">Servera med kokt mjölig potatis eller säsongens färskpotatis. Beroende på årstid väljs som tillbehör antingen stuvad surkål med lite socker eller en kall kålsallad, som görs genom att blanda färsk kål och surkål med gräddfil, kummin, salt, svartpeppar och en nypa socker.</p><p class="tip">Smaklig måltid!</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Benitas knapriga kotlett med potatis och surkål"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

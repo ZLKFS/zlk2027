@@ -8,7 +8,7 @@
    "recipe": "Recepte",
    "method": "Pagatavošana",
    "prev": "Iepriekšējais mēnesis",
-   "next": "Nākamais mēnesis",
+   "next": "Tālāk",
    "coming": "Recepte sekos",
    "read": "Lasīt recepti",
    "lang": "Valoda",
@@ -27,7 +27,18 @@
     "Decembris"
    ],
    "notfound": "Šādas lapas nav.",
-   "home": "Uz sākumu"
+   "home": "Uz sākumu",
+   "cook": "Sākt gatavot",
+   "stepOf": "{n}. solis no {m}",
+   "back": "Atpakaļ",
+   "finish": "Pabeigt",
+   "close": "Aizvērt",
+   "timer": "Taimeris",
+   "min": "min",
+   "timerDone": "Laiks!",
+   "reset": "Notīrīt atzīmes",
+   "amount": "Daudzums",
+   "nextMonth": "Nākamais mēnesis"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -37,7 +48,7 @@
    "recipe": "Recept",
    "method": "Gör så här",
    "prev": "Föregående månad",
-   "next": "Nästa månad",
+   "next": "Nästa",
    "coming": "Receptet kommer",
    "read": "Läs receptet",
    "lang": "Språk",
@@ -56,7 +67,18 @@
     "December"
    ],
    "notfound": "Sidan finns inte.",
-   "home": "Till startsidan"
+   "home": "Till startsidan",
+   "cook": "Börja laga",
+   "stepOf": "Steg {n} av {m}",
+   "back": "Tillbaka",
+   "finish": "Klart",
+   "close": "Stäng",
+   "timer": "Timer",
+   "min": "min",
+   "timerDone": "Tiden är ute!",
+   "reset": "Rensa bockar",
+   "amount": "Mängd",
+   "nextMonth": "Nästa månad"
   }
  },
  "recipes": [

@@ -28,7 +28,7 @@
     <a href="/augusts/" hreflang="lv" lang="lv" data-lang="lv" class="is-active" aria-current="page">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/augusts/" hreflang="sv" lang="sv" data-lang="sv">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="augusts">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Augusts/Augusti</p>
@@ -41,24 +41,30 @@
       <div class="body"><p>Šo un citus savas mammas Benitas gatavotos ēdienus atceras Laila Strunke no Stokholmas: “Mammas ēdiens bija garšīgs, bet viņa nelietoja receptes. Gatavoja pēc atmiņas vai garšas.” Benita, meitas uzvārdā Lāce, izauga Ventspilī; viņas vecāki nāca no Alsungas un Jūrkalnes. Varbūt tieši Kurzemē cēlies apzīmējums “kraupštīgs”?</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Sastāvdaļas (daudzumu pielāgo ēdāju skaitam)</h2>
+      <div class="section-head">
+        <h2 class="head">Sastāvdaļas (daudzumu pielāgo ēdāju skaitam)</h2>
+        <div class="mult" role="group" aria-label="Daudzums"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>cūkgaļas karbonādes šķēles bez kaula (zviedriski fläskkotlett)</li>
-<li>sāls un melnie pipari</li>
-<li>milti</li>
-<li>ola</li>
-<li>rīvmaize</li>
-<li>sviests un eļļa cepšanai</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt">cūkgaļas karbonādes šķēles bez kaula (zviedriski fläskkotlett)</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt">sāls un melnie pipari</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt">milti</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt">ola</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt">rīvmaize</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">sviests un eļļa cepšanai</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Pagatavošana</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Pagatavošana</h2>
+        <button type="button" class="btn" data-cook>Sākt gatavot</button>
+      </div>
       <ol class="steps">
-        <li>Cūkgaļas šķēles kārtīgi izklapē no abām pusēm, apkaisa ar nedaudz sāls un melnajiem pipariem.</li>
-        <li>Katru šķēli apviļā miltos, tad sakultā olā un visbeidzot rīvmaizē.</li>
-        <li>Pannā izkausē sviestu, pievieno nedaudz eļļas un uzkarsē. Karstā pannā cep karbonādes no abām pusēm, līdz tās kļūst zeltaini brūnas un apvalks ir kraukšķīgs.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Cūkgaļas šķēles kārtīgi izklapē no abām pusēm, apkaisa ar nedaudz sāls un melnajiem pipariem.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Katru šķēli apviļā miltos, tad sakultā olā un visbeidzot rīvmaizē.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Pannā izkausē sviestu, pievieno nedaudz eļļas un uzkarsē. Karstā pannā cep karbonādes no abām pusēm, līdz tās kļūst zeltaini brūnas un apvalks ir kraukšķīgs.</span></li>
       </ol>
       <div class="tips"><p class="tip">Pasniedz ar vārītiem miltainiem kartupeļiem vai sezonas jaunajiem kartupeļiem. Atkarībā no gadalaika piedevās izvēlas sautētus skābos kāpostus ar nedaudz cukura vai aukstos kāpostu salātus, kurus gatavo, sajaucot svaigus un skābētus kāpostus ar skābo krējumu, ķimenēm, sāli, melnajiem pipariem un šķipsniņu cukura.</p><p class="tip">Labu apetīti!</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Benitas „kraupštīgā” karbonāde ar kartupeļiem un skābiem kāpostiem"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

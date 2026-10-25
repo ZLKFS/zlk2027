@@ -28,7 +28,7 @@
     <a href="/julijs/" hreflang="lv" lang="lv" data-lang="lv" class="is-active" aria-current="page">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/julijs/" hreflang="sv" lang="sv" data-lang="sv">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="julijs">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Jūlijs/Juli</p>
@@ -41,22 +41,28 @@
       <div class="body"><p>Laine Lasmane Wikmark dzīvo Tēbijā (Täby), bet viņas ģimenes saknes meklējamas gan Apriķu pagastā Kurzemē, gan Siguldas laukos, gan Ukrainā. Laines iesniegtā recepte ir pavisam īsa un viegli pagatavojama, bet tai ir garš un skaists stāsts: “1960os gados ar māsām vasaras pavadījām Zviedrijas latviešu bērnu nometnē Skrubā (Skrubba), kas atrodas netālu no Stokholmas dienvidu virzienā. Bijām liels pulks bērnu – man atmiņā ap simtu. Virtuvē valdīja Šmitmaņkundze un Ķesterkundze kopā ar jauniešu izpalīgiem. Mums, meitenēm, īpaši mīļas bija izpalīdzes Vija, Dzintra un Astra. Viņām varējām izkratīt sirsniņu, ja bija vajadzība. Uz galda gandrīz katru dienu kā piedeva bija šie ļoti vienkāršie un garšīgie salāti. Laiks ritēja, un 1970os gados es biju izpalīdze latviešu bērnu nometnē – Lādvīkā, netālu no Vaksholmas. Virtuves “karaliene” bija Sausiņkundze, un es iemācījos gatavot šos salātus. Daudz vēlāk šos vienkāršos salātus gatavoju savai ģimenei un nosaucu par &quot;sentimentālajiem salātiem&quot;. Bet Skrubas mīļās izpalīdzes joprojām tos sauc par ”latviešu salātiem”!</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Sastāvdaļas</h2>
+      <div class="section-head">
+        <h2 class="head">Sastāvdaļas</h2>
+        <div class="mult" role="group" aria-label="Daudzums"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>lapu salāti</li>
-<li>svaigs gurķis</li>
-<li>lociņi</li>
-<li>dilles</li>
-<li>gräddfil, zviedru krējumotais rūgušpiens</li>
-<li>sāls</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt">lapu salāti</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt">svaigs gurķis</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt">lociņi</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt">dilles</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt">gräddfil, zviedru krējumotais rūgušpiens</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">sāls</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Pagatavošana</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Pagatavošana</h2>
+        <button type="button" class="btn" data-cook>Sākt gatavot</button>
+      </div>
       <ol class="steps">
-        <li>Visu samaisa lielā bļodā!</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Visu samaisa lielā bļodā!</span></li>
       </ol>
       <div class="tips"><p class="tip">Laines padoms: Salāti, dilles un skābais krējums ir obligāti. Ja grib, piemaisa plāni sagrieztu gurķi un lociņus.</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Skrubas sentimentālie latviešu lapu salāti"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

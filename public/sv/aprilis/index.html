@@ -28,7 +28,7 @@
     <a href="/aprilis/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/aprilis/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="aprilis">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Aprīlis/April</p>
@@ -41,38 +41,44 @@
       <div class="body"><p>Receptet skickades in av Kristīne Dannenberga från Stockholm. Så här berättar hon: ”Svenska bullar har alltid känts för söta och feta för mig, så jag blev väldigt glad när jag en gång hittade ett bra grundrecept på en kaka där huvudingrediensen är färskosten Kesella, alltså kvarg. En liknande kaka hade jag dessutom smakat på ett trevligt bageri vid Saltå kvarn. Receptet har jag ändrat lite för att smaken ska bli mer lik den lettiska biezpienmaize. Alla ingredienser finns i vilken matbutik som helst.”</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
 <li class="group">Deg</li>
-<li>3 dl vetemjöl</li>
-<li>150 g smör</li>
-<li>1 msk socker</li>
-<li>1 ägg</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="3">3</span> dl vetemjöl</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="150">150</span> g smör</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="1">1</span> msk socker</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="1">1</span> ägg</span></label></li>
 <li class="group">Fyllning</li>
-<li>4 ägg</li>
-<li>10 torkade aprikoser</li>
-<li>500 g Kesella</li>
-<li>1,5 dl russin</li>
-<li>1 dl socker</li>
-<li>1,5 msk vaniljsocker</li>
-<li>3 msk mannagryn</li>
-<li>1 msk majsstärkelse (Maizena)</li>
-<li>rivet skal av en citron</li>
-<li>florsocker att pudra över</li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="4">4</span> ägg</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt"><span class="q" data-base="10">10</span> torkade aprikoser</span></label></li>
+<li><label><input type="checkbox" data-i="6"><span class="txt"><span class="q" data-base="500">500</span> g Kesella</span></label></li>
+<li><label><input type="checkbox" data-i="7"><span class="txt"><span class="q" data-base="1.5">1,5</span> dl russin</span></label></li>
+<li><label><input type="checkbox" data-i="8"><span class="txt"><span class="q" data-base="1">1</span> dl socker</span></label></li>
+<li><label><input type="checkbox" data-i="9"><span class="txt"><span class="q" data-base="1.5">1,5</span> msk vaniljsocker</span></label></li>
+<li><label><input type="checkbox" data-i="10"><span class="txt"><span class="q" data-base="3">3</span> msk mannagryn</span></label></li>
+<li><label><input type="checkbox" data-i="11"><span class="txt"><span class="q" data-base="1">1</span> msk majsstärkelse (Maizena)</span></label></li>
+<li><label><input type="checkbox" data-i="12"><span class="txt">rivet skal av en citron</span></label></li>
+<li><label><input type="checkbox" data-i="13"><span class="txt">florsocker att pudra över</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Kör mjöl, smör och socker med knivarna i matberedaren tills det blir en smulig massa. Tillsätt ägget och fortsätt köra.</li>
-        <li>Tryck ut degen i en form med löstagbar kant, 24 cm i diameter, även upp längs kanterna. Ställ formen i frysen medan du gör fyllningen.</li>
-        <li>Separera äggulor och vitor till fyllningen. Vispa vitorna till hårt skum.</li>
-        <li>Lägg Kesella, äggulor, finhackade aprikoser, russin, citronskal, socker blandat med vaniljsocker, mannagryn och majsstärkelse i en bunke. Blanda noga med elvisp. Vänd sedan försiktigt ner äggvitorna.</li>
-        <li>Häll fyllningen i formen med degen och täck med aluminiumfolie.</li>
-        <li>Grädda i nedre delen av ugnen på 200 °C i 45 minuter. Ta bort folien och grädda ytterligare cirka 20 minuter, tills kakan fått en vacker gyllene färg.</li>
-        <li>Låt kakan svalna i formen. Pudra över florsocker före servering. Servera med varm bärsås.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Kör mjöl, smör och socker med knivarna i matberedaren tills det blir en smulig massa. Tillsätt ägget och fortsätt köra.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Tryck ut degen i en form med löstagbar kant, 24 cm i diameter, även upp längs kanterna. Ställ formen i frysen medan du gör fyllningen.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Separera äggulor och vitor till fyllningen. Vispa vitorna till hårt skum.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Lägg Kesella, äggulor, finhackade aprikoser, russin, citronskal, socker blandat med vaniljsocker, mannagryn och majsstärkelse i en bunke. Blanda noga med elvisp. Vänd sedan försiktigt ner äggvitorna.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Häll fyllningen i formen med degen och täck med aluminiumfolie.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Grädda i nedre delen av ugnen på 200 °C i 45 minuter. Ta bort folien och grädda ytterligare cirka 20 minuter, tills kakan fått en vacker gyllene färg.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="6"><span class="num" aria-hidden="true">7</span><span class="txt">Låt kakan svalna i formen. Pudra över florsocker före servering. Servera med varm bärsås.</span></li>
       </ol>
       
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Kvargkaka på Kesella"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

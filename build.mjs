@@ -103,9 +103,33 @@ ${data.recipes.map((r) => card(lang, r)).join("\n")}
   return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, altPath: base(other(lang)), image: "/img/marts.jpg", body, bodyClass: "page-home" });
 }
 
+// Leading quantity of an ingredient line ("1,5 kg …", "500-600 g …", "½ - ¾ gl. …") becomes a
+// scalable <span class="q">; everything else is left alone.
+const FRAC = { "½": 0.5, "¼": 0.25, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3 };
+const num = (s) => (FRAC[s] !== undefined ? FRAC[s] : parseFloat(s.replace(",", ".")));
+const QTY = /^(\d+(?:[,.]\d+)?|[½¼¾⅓⅔])(?:\s*[-–]\s*(\d+(?:[,.]\d+)?|[½¼¾⅓⅔]))?(?=\s*(?:[^\d\s]|$))/;
+function qtySpan(text) {
+  const m = text.match(QTY);
+  if (!m) return esc(text);
+  const base = [num(m[1]), m[2] !== undefined ? num(m[2]) : null].filter((v) => v !== null).join(";");
+  return `<span class="q" data-base="${base}">${esc(m[0])}</span>${esc(text.slice(m[0].length))}`;
+}
+function headSpan(text) {
+  return esc(text).replace(/(\d+)/, (d) => `<span class="q" data-base="${d}">${d}</span>`);
+}
 function ingredientList(items) {
+  let i = 0;
   return items
-    .map((it) => (it.startsWith("§") ? `<li class="group">${esc(it.slice(1).replace(/:$/, ""))}</li>` : `<li>${esc(it)}</li>`))
+    .map((it) =>
+      it.startsWith("§")
+        ? `<li class="group">${esc(it.slice(1).replace(/:$/, ""))}</li>`
+        : `<li><label><input type="checkbox" data-i="${i++}"><span class="txt">${qtySpan(it)}</span></label></li>`
+    )
+    .join("\n");
+}
+function stepList(steps) {
+  return steps
+    .map((s, i) => `        <li role="checkbox" aria-checked="false" tabindex="0" data-i="${i}"><span class="num" aria-hidden="true">${i + 1}</span><span class="txt">${esc(s)}</span></li>`)
     .join("\n");
 }
 
@@ -123,30 +147,37 @@ function recipePage(lang, r, i) {
       <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}</p>
       <div class="body">${c.intro.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
     </div>`;
+  const i18n = { stepOf: t.stepOf, next: t.next, back: t.back, finish: t.finish, close: t.close, timer: t.timer, min: t.min, timerDone: t.timerDone, title: c.title };
   const col2 = empty ? "" : `<div class="col col-2">
-      <h2 class="head">${esc(c.head)}</h2>
+      <div class="section-head">
+        <h2 class="head">${headSpan(c.head)}</h2>
+        <div class="mult" role="group" aria-label="${esc(t.amount)}"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
 ${ingredientList(c.ingredients)}
       </ul>
-    </div>`;
-  const col3 = empty ? "" : `<div class="col col-3">
-      <h2 class="head">${esc(t.method)}</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">${esc(t.method)}</h2>
+        <button type="button" class="btn" data-cook>${esc(t.cook)}</button>
+      </div>
       <ol class="steps">
-${c.steps.map((s) => `        <li>${esc(s)}</li>`).join("\n")}
+${stepList(c.steps)}
       </ol>
       ${c.tips.length ? `<div class="tips">${c.tips.map((p) => `<p class="tip">${esc(p)}</p>`).join("")}</div>` : ""}
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>${esc(t.reset)}</button></p>
+      <script type="application/json" id="i18n">${JSON.stringify(i18n).replace(/</g, "\\u003c")}</script>
     </div>`;
+  const col3 = "";
 
-  const body = `<main class="recipe wrap">
+  const body = `<main class="recipe wrap" data-slug="${r.slug}">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">${esc(monthLine(r.month))}</p>
   </header>
   ${r.image ? visual(r, c.title, { eager: true, sizes: "(min-width: 1200px) 1120px, 100vw" }) : ""}
-  <section class="band">
+  <section class="band${empty ? " band--plain" : ""}">
     ${col1}
     ${col2}
-    ${col3}
   </section>
   <nav class="month-nav" aria-label="${esc(t.all)}">
     <a class="prev" href="${recipeUrl(lang, prev.slug)}" rel="prev"><span class="nav-label">${esc(monthLine(prev.month))}</span><span class="nav-title">${esc(prev[lang].title)}</span></a>

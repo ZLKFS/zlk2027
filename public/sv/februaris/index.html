@@ -28,7 +28,7 @@
     <a href="/februaris/" hreflang="lv" lang="lv" data-lang="lv">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/februaris/" hreflang="sv" lang="sv" data-lang="sv" class="is-active" aria-current="page">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="februaris">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Februāris/Februari</p>
@@ -41,30 +41,36 @@
       <div class="body"><p>Valdis Dzelzkalējs, stockholmare från Ķekava, har anpassat det här receptet ur mejerikooperativet Arlas receptsamling till Lettiska skolan i Stockholm – efter skolans behov och smak. Han säger: ”Purjolökssoppan brukar alla äta – även de som har särskilda krav på maten.”</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Ingredienser till 12 portioner</h2>
+      <div class="section-head">
+        <h2 class="head">Ingredienser till <span class="q" data-base="12">12</span> portioner</h2>
+        <div class="mult" role="group" aria-label="Mängd"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>1,5 kg potatis</li>
-<li>3 stora purjolökar</li>
-<li>3 msk smör</li>
-<li>1,8 liter grönsaksbuljong, eller vatten och 4–5 buljongtärningar, helst Knorr</li>
-<li>1 liter syrad grädde som tål kokning (t.ex. crème fraiche), vanlig eller laktosfri</li>
-<li>salt och peppar efter smak</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="1.5">1,5</span> kg potatis</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="3">3</span> stora purjolökar</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="3">3</span> msk smör</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="1.8">1,8</span> liter grönsaksbuljong, eller vatten och 4–5 buljongtärningar, helst Knorr</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="1">1</span> liter syrad grädde som tål kokning (t.ex. crème fraiche), vanlig eller laktosfri</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">salt och peppar efter smak</span></label></li>
 <li class="group">Tillbehör</li>
-<li>örter (persilja, dill – det som finns) och reducerad balsamvinäger</li>
-<li>en lätt rostad skiva surdegsbröd med smör, ost eller en skiva rökt kött</li>
+<li><label><input type="checkbox" data-i="6"><span class="txt">örter (persilja, dill – det som finns) och reducerad balsamvinäger</span></label></li>
+<li><label><input type="checkbox" data-i="7"><span class="txt">en lätt rostad skiva surdegsbröd med smör, ost eller en skiva rökt kött</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Gör så här</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Gör så här</h2>
+        <button type="button" class="btn" data-cook>Börja laga</button>
+      </div>
       <ol class="steps">
-        <li>Skala och hacka potatis och purjolök.</li>
-        <li>Smält smöret i en stor gryta och fräs purjolöken.</li>
-        <li>Tillsätt potatis och buljong och koka i cirka 10 minuter, tills potatisen är mjuk.</li>
-        <li>Mixa allt till en slät soppa med stavmixer.</li>
-        <li>Tillsätt kryddor och grädden.</li>
-        <li>Koka upp.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Skala och hacka potatis och purjolök.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Smält smöret i en stor gryta och fräs purjolöken.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Tillsätt potatis och buljong och koka i cirka 10 minuter, tills potatisen är mjuk.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Mixa allt till en slät soppa med stavmixer.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Tillsätt kryddor och grädden.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Koka upp.</span></li>
       </ol>
       <div class="tips"><p class="tip">Klart!</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Rensa bockar</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"Steg {n} av {m}","next":"Nästa","back":"Tillbaka","finish":"Klart","close":"Stäng","timer":"Timer","min":"min","timerDone":"Tiden är ute!","title":"Lettiska skolans purjolökssoppa"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Alla recept">

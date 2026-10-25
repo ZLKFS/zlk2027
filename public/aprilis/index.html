@@ -28,7 +28,7 @@
     <a href="/aprilis/" hreflang="lv" lang="lv" data-lang="lv" class="is-active" aria-current="page">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/aprilis/" hreflang="sv" lang="sv" data-lang="sv">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="aprilis">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Aprīlis/April</p>
@@ -41,38 +41,44 @@
       <div class="body"><p>Šo recepti iesūtīja Kristīne Dannenberga no Stokholmas. Lūk, receptes stāsts: ”Zviedrijas maizītes man vienmēr likušās pārāk saldas un treknas, tādēļ biju ļoti priecīga, kad reiz pamanīju labu pamatrecepti kūkai, kur galvenā sastāvdaļa ir svaigsiers Kesella jeb kvarg. Līdzīgu kūku turklāt biju nogaršojusi vienā jaukā maiznīcā Saltå kvarn. Atrasto recepti esmu mazliet pamainījusi, lai garša būtu līdzīgāka latviešu biezpienmaizei. Visas sastāvdaļas nopērkamas jebkurā pārtikas veikalā.</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Sastāvdaļas</h2>
+      <div class="section-head">
+        <h2 class="head">Sastāvdaļas</h2>
+        <div class="mult" role="group" aria-label="Daudzums"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
 <li class="group">Mīklai</li>
-<li>3 dl kviešu miltu</li>
-<li>150 g sviesta</li>
-<li>1 ēdamkarote cukura</li>
-<li>1 ola</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="3">3</span> dl kviešu miltu</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="150">150</span> g sviesta</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="1">1</span> ēdamkarote cukura</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="1">1</span> ola</span></label></li>
 <li class="group">Pildījumam</li>
-<li>4 olas</li>
-<li>10 žāvētas aprikozes</li>
-<li>500 g Kesella siera</li>
-<li>1,5 dl rozīņu</li>
-<li>1 dl cukura</li>
-<li>1,5 ēdamkarote vaniļas cukura</li>
-<li>3 ēdamkarotes mannas (mannagryn)</li>
-<li>1 ēdamkarote kukurūzas cietes (Maizena)</li>
-<li>rīvēta citrona miziņa (no viena citrona)</li>
-<li>pūdercukurs pārkaisīšanai</li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="4">4</span> olas</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt"><span class="q" data-base="10">10</span> žāvētas aprikozes</span></label></li>
+<li><label><input type="checkbox" data-i="6"><span class="txt"><span class="q" data-base="500">500</span> g Kesella siera</span></label></li>
+<li><label><input type="checkbox" data-i="7"><span class="txt"><span class="q" data-base="1.5">1,5</span> dl rozīņu</span></label></li>
+<li><label><input type="checkbox" data-i="8"><span class="txt"><span class="q" data-base="1">1</span> dl cukura</span></label></li>
+<li><label><input type="checkbox" data-i="9"><span class="txt"><span class="q" data-base="1.5">1,5</span> ēdamkarote vaniļas cukura</span></label></li>
+<li><label><input type="checkbox" data-i="10"><span class="txt"><span class="q" data-base="3">3</span> ēdamkarotes mannas (mannagryn)</span></label></li>
+<li><label><input type="checkbox" data-i="11"><span class="txt"><span class="q" data-base="1">1</span> ēdamkarote kukurūzas cietes (Maizena)</span></label></li>
+<li><label><input type="checkbox" data-i="12"><span class="txt">rīvēta citrona miziņa (no viena citrona)</span></label></li>
+<li><label><input type="checkbox" data-i="13"><span class="txt">pūdercukurs pārkaisīšanai</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Pagatavošana</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Pagatavošana</h2>
+        <button type="button" class="btn" data-cook>Sākt gatavot</button>
+      </div>
       <ol class="steps">
-        <li>Virtuves kombainā ar ”nažiem” sakapā miltus kopā ar sviestu un cukuru, līdz veidojas drupataina masa. Tai pievieno olu un turpina sajaukšanu kombainā.</li>
-        <li>Mīklu ieklāj 24 cm diametra formā ar noņemamām malām, pārklājot arī malas. Kamēr gatavo pildījumu, veidni novieto saldētavā.</li>
-        <li>Pildījumam atdala olu dzeltenumus no baltumiem. Baltumus saputo stingrās putās.</li>
-        <li>Bļodā liek kesellu, olu dzeltenumus, sīki sagrieztas aprikozes, rozīnes, citrona miziņu, cukuru, kas sajaukts ar vaniļas cukuru, mannu un kukurūzas cieti. Ar mikseri visu rūpīgi samaisa. Pēc tam uzmanīgi iecilā saputotos olu baltumus.</li>
-        <li>Pildījumu lej formā ar mīklu un pārklāj ar alumīnija foliju.</li>
-        <li>Cep līdz 200 °C uzkarsētas cepeškrāsns apakšējā daļā 45 minūtes. Noņem foliju un cep vēl apmēram 20 minūtes, līdz kūka iegūst skaistu zeltainu krāsu.</li>
-        <li>Ļauj kūkai atdzist formā. Pirms pasniegšanas pārkaisa ar pūdercukuru. Pasniedz ar siltu ogu mērci.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Virtuves kombainā ar ”nažiem” sakapā miltus kopā ar sviestu un cukuru, līdz veidojas drupataina masa. Tai pievieno olu un turpina sajaukšanu kombainā.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Mīklu ieklāj 24 cm diametra formā ar noņemamām malām, pārklājot arī malas. Kamēr gatavo pildījumu, veidni novieto saldētavā.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Pildījumam atdala olu dzeltenumus no baltumiem. Baltumus saputo stingrās putās.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Bļodā liek kesellu, olu dzeltenumus, sīki sagrieztas aprikozes, rozīnes, citrona miziņu, cukuru, kas sajaukts ar vaniļas cukuru, mannu un kukurūzas cieti. Ar mikseri visu rūpīgi samaisa. Pēc tam uzmanīgi iecilā saputotos olu baltumus.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Pildījumu lej formā ar mīklu un pārklāj ar alumīnija foliju.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Cep līdz 200 °C uzkarsētas cepeškrāsns apakšējā daļā 45 minūtes. Noņem foliju un cep vēl apmēram 20 minūtes, līdz kūka iegūst skaistu zeltainu krāsu.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="6"><span class="num" aria-hidden="true">7</span><span class="txt">Ļauj kūkai atdzist formā. Pirms pasniegšanas pārkaisa ar pūdercukuru. Pasniedz ar siltu ogu mērci.</span></li>
       </ol>
       
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Kesellas biezpienkūka"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">

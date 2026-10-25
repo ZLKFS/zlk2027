@@ -28,7 +28,7 @@
     <a href="/februaris/" hreflang="lv" lang="lv" data-lang="lv" class="is-active" aria-current="page">LV</a><span class="slash" aria-hidden="true">/</span><a href="/sv/februaris/" hreflang="sv" lang="sv" data-lang="sv">SV</a>
   </nav>
 </header>
-<main class="recipe wrap">
+<main class="recipe wrap" data-slug="februaris">
   <header class="month-head">
     <p class="year">2027</p>
     <p class="month">Februāris/Februari</p>
@@ -41,30 +41,36 @@
       <div class="body"><p>Valdis Dzelzkalējs, stokholmietis no Ķekavas, šo recepti no zviedru piena kooperatīva Arla recepšu krājuma ir pielāgojis Stokholmas latviešu skolas vajadzībām un garšas izpratnei. Viņš saka: “Puravu biezzupu parasti ēd visi – arī tie, kam īpašas prasības pret ēdienu.”</p></div>
     </div>
     <div class="col col-2">
-      <h2 class="head">Sastāvdaļas 12 porcijām</h2>
+      <div class="section-head">
+        <h2 class="head">Sastāvdaļas <span class="q" data-base="12">12</span> porcijām</h2>
+        <div class="mult" role="group" aria-label="Daudzums"><button type="button" data-mult="0.5">½×</button><button type="button" data-mult="1" class="is-active">1×</button><button type="button" data-mult="2">2×</button></div>
+      </div>
       <ul class="ingredients">
-<li>1,5 kg kartupeļu</li>
-<li>3 palieli puravi</li>
-<li>3 ēdamkarotes sviesta</li>
-<li>1,8 litri dārzeņu buljona vai ūdens un 4-5 buljona kubiņi, vēlams Knorr</li>
-<li>1 litrs skābais krējums (vārāms), parastais vai bezlaktozes</li>
-<li>sāls un pipari pēc garšas</li>
+<li><label><input type="checkbox" data-i="0"><span class="txt"><span class="q" data-base="1.5">1,5</span> kg kartupeļu</span></label></li>
+<li><label><input type="checkbox" data-i="1"><span class="txt"><span class="q" data-base="3">3</span> palieli puravi</span></label></li>
+<li><label><input type="checkbox" data-i="2"><span class="txt"><span class="q" data-base="3">3</span> ēdamkarotes sviesta</span></label></li>
+<li><label><input type="checkbox" data-i="3"><span class="txt"><span class="q" data-base="1.8">1,8</span> litri dārzeņu buljona vai ūdens un 4-5 buljona kubiņi, vēlams Knorr</span></label></li>
+<li><label><input type="checkbox" data-i="4"><span class="txt"><span class="q" data-base="1">1</span> litrs skābais krējums (vārāms), parastais vai bezlaktozes</span></label></li>
+<li><label><input type="checkbox" data-i="5"><span class="txt">sāls un pipari pēc garšas</span></label></li>
 <li class="group">Piedevas</li>
-<li>zaļumi (pētersīļi, dilles – kas vien pieejams) un reducēts balzāmetiķis</li>
-<li>viegli grauzdēta šķēle ierauga maizes ar sviestu, sieru vai kādu šķēli kūpinātas gaļas</li>
+<li><label><input type="checkbox" data-i="6"><span class="txt">zaļumi (pētersīļi, dilles – kas vien pieejams) un reducēts balzāmetiķis</span></label></li>
+<li><label><input type="checkbox" data-i="7"><span class="txt">viegli grauzdēta šķēle ierauga maizes ar sviestu, sieru vai kādu šķēli kūpinātas gaļas</span></label></li>
       </ul>
-    </div>
-    <div class="col col-3">
-      <h2 class="head">Pagatavošana</h2>
+      <div class="section-head section-head--spaced">
+        <h2 class="head">Pagatavošana</h2>
+        <button type="button" class="btn" data-cook>Sākt gatavot</button>
+      </div>
       <ol class="steps">
-        <li>Nomizo kartupeļus un puravus, sasmalcina.</li>
-        <li>Lielā katlā izkausē sviestu un apcep puravus.</li>
-        <li>Pievieno kartupeļus un buljonu, vāra ap 10 min., līdz kartupeļi izvārīti.</li>
-        <li>Visu “sažļurā” ar mikseri viendabīgā masā.</li>
-        <li>Pievieno garšvielas un krējumu.</li>
-        <li>Uzvāra.</li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="0"><span class="num" aria-hidden="true">1</span><span class="txt">Nomizo kartupeļus un puravus, sasmalcina.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="1"><span class="num" aria-hidden="true">2</span><span class="txt">Lielā katlā izkausē sviestu un apcep puravus.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="2"><span class="num" aria-hidden="true">3</span><span class="txt">Pievieno kartupeļus un buljonu, vāra ap 10 min., līdz kartupeļi izvārīti.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="3"><span class="num" aria-hidden="true">4</span><span class="txt">Visu “sažļurā” ar mikseri viendabīgā masā.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="4"><span class="num" aria-hidden="true">5</span><span class="txt">Pievieno garšvielas un krējumu.</span></li>
+        <li role="checkbox" aria-checked="false" tabindex="0" data-i="5"><span class="num" aria-hidden="true">6</span><span class="txt">Uzvāra.</span></li>
       </ol>
       <div class="tips"><p class="tip">Gatavs!</p></div>
+      <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>Notīrīt atzīmes</button></p>
+      <script type="application/json" id="i18n">{"stepOf":"{n}. solis no {m}","next":"Tālāk","back":"Atpakaļ","finish":"Pabeigt","close":"Aizvērt","timer":"Taimeris","min":"min","timerDone":"Laiks!","title":"Latviešu skolas puravu biezzupa"}</script>
     </div>
   </section>
   <nav class="month-nav" aria-label="Visas receptes">
