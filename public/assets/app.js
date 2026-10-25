@@ -61,9 +61,12 @@ if (main && stepsEl) {
   };
   const qs = [...document.querySelectorAll(".q")];
   const PRESETS = [0.5, 1, 2];
+  // A recipe that states its portion count scales in servings: the custom field holds portions.
+  const BASE_SERV = +(document.querySelector(".mult")?.dataset.servings || 0);
   const customBtn = document.querySelector("[data-mult='custom']");
   const customWrap = document.querySelector(".mult-custom");
   const customInput = customWrap?.querySelector("input");
+  const customText = (m) => (BASE_SERV ? String(Math.round(m * BASE_SERV * 10) / 10) : String(m)).replace(".", ",");
   const applyMult = (m, viaCustom) => {
     if (!(m > 0)) return;
     qs.forEach((q) => {
@@ -72,14 +75,14 @@ if (main && stepsEl) {
     });
     const isCustom = viaCustom || !PRESETS.includes(m);
     document.querySelectorAll("[data-mult]").forEach((b) => b.classList.toggle("is-active", b.dataset.mult === "custom" ? isCustom : +b.dataset.mult === m));
-    if (customWrap) { customWrap.hidden = !isCustom; customBtn.hidden = isCustom; if (isCustom && customInput.value === "") customInput.value = String(m).replace(".", ","); }
+    if (customWrap) { customWrap.hidden = !isCustom; customBtn.hidden = isCustom; if (isCustom && customInput.value === "") customInput.value = customText(m); }
     store.set("mult", m);
   };
   document.querySelectorAll("[data-mult]").forEach((b) => b.addEventListener("click", () => {
     if (b.dataset.mult === "custom") { applyMult(store.get("mult", 1), true); customInput.focus(); customInput.select(); }
     else { if (customInput) customInput.value = ""; applyMult(+b.dataset.mult); }
   }));
-  customInput?.addEventListener("input", () => { const v = parseFloat(customInput.value.replace(",", ".")); if (v > 0) applyMult(v, true); });
+  customInput?.addEventListener("input", () => { const v = parseFloat(customInput.value.replace(",", ".")); if (v > 0) applyMult(BASE_SERV ? v / BASE_SERV : v, true); });
   customInput?.addEventListener("keydown", (e) => { if (e.key === "Enter") customInput.blur(); });
   const savedMult = store.get("mult", 1);
   if (savedMult !== 1) applyMult(savedMult);
