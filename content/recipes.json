@@ -1383,7 +1383,7 @@
   {
    "slug": "alsungas-sklandrausi",
    "related": 10,
-   "image": false,
+   "image": true,
    "minutes": 120,
    "lv": {
     "title": "Alsungas sklandrauši",
