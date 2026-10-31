@@ -42,12 +42,15 @@ main { flex: 1 0 auto; width: 100%; }
 
 /* top bar */
 .site-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: calc(var(--m) * 0.6); }
-.brand { display: block; line-height: 0; }
+.brand { display: block; line-height: 0; flex: none; }
 .brand img { height: 32px; width: auto; display: block; }
 .lang { display: inline-flex; gap: 2px; border: 1px solid var(--hair); border-radius: 999px; padding: 3px; align-self: center; }
 .lang a { font-size: 0.8125em; font-weight: 500; letter-spacing: 0.06em; padding: 6px 13px; border-radius: 999px; color: var(--muted); line-height: 1.2; }
 .lang a.is-active { background: var(--ink); color: var(--paper); }
 .lang .slash { display: none; }
+.head-actions { display: flex; align-items: center; gap: 10px; }
+.head-submit .short { display: none; }
+@media (max-width: 345px) { .head-submit { display: none; } }
 
 /* calendar page header: year italic, month roman, centred */
 .month-head { text-align: center; padding: clamp(40px, 6vw, 80px) 0 clamp(24px, 4vw, 48px); }
@@ -204,6 +207,9 @@ body.is-cooking { overflow: hidden; }
 .notfound .lede { font-family: var(--sans); font-style: normal; font-size: 1em; }
 
 @media (max-width: 560px) {
+  .head-submit { padding: 0.5em 0.95em; }
+  .head-submit .long { display: none; }
+  .head-submit .short { display: inline; }
   :root { --fs-date: 28px; }
   .section-head { flex-wrap: wrap; }
   .ingredients .box { width: 22px; height: 22px; }

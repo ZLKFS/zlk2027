@@ -63,9 +63,12 @@ ${fonts}
 <body class="${bodyClass || ""}">
 <header class="site-head wrap">
   <a class="brand" href="${base(lang)}" aria-label="${esc(t.name)} 2027"><img src="/assets/skat.svg" alt="" width="59" height="32"></a>
-  <nav class="lang" aria-label="${esc(t.lang)}">
-    ${LANGS.map((l) => `<a href="${urls[l]}" hreflang="${l}" lang="${l}" data-lang="${l}"${l === lang ? ' class="is-active" aria-current="page"' : ""}>${l.toUpperCase()}</a>`).join("")}
-  </nav>
+  <div class="head-actions">
+    ${data.site.submitUrl ? `<a class="btn head-submit" href="${esc(data.site.submitUrl)}" rel="noopener" aria-label="${esc(t.submit)}"><span class="long">${esc(t.submit)}</span><span class="short" aria-hidden="true">${esc(t.submitShort)}</span></a>` : ""}
+    <nav class="lang" aria-label="${esc(t.lang)}">
+      ${LANGS.map((l) => `<a href="${urls[l]}" hreflang="${l}" lang="${l}" data-lang="${l}"${l === lang ? ' class="is-active" aria-current="page"' : ""}>${l.toUpperCase()}</a>`).join("")}
+    </nav>
+  </div>
 </header>
 ${body}
 <footer class="site-foot wrap">
