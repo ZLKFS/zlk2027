@@ -57,7 +57,11 @@
    "today": "Šodien",
    "tomorrow": "Rīt",
    "saturday": "Sestdien",
-   "sunday": "Svētdien"
+   "sunday": "Svētdien",
+   "cookbook": "Digitālā pavārgrāmata",
+   "cookbookLede": "Vēl receptes, ko iesūtījuši Zviedrijas latvieši – ārpus kalendāra mēnešiem.",
+   "extra": "Pavārgrāmata",
+   "alsoTry": "Izmēģini arī"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -116,7 +120,11 @@
    "today": "I dag",
    "tomorrow": "I morgon",
    "saturday": "Lördag",
-   "sunday": "Söndag"
+   "sunday": "Söndag",
+   "cookbook": "Digital kokbok",
+   "cookbookLede": "Fler recept insända av letter i Sverige – utöver kalenderns månader.",
+   "extra": "Kokboken",
+   "alsoTry": "Prova också"
   },
   "en": {
    "name": "Latvian Calendar in Sweden",
@@ -175,7 +183,11 @@
    "today": "Today",
    "tomorrow": "Tomorrow",
    "saturday": "Saturday",
-   "sunday": "Sunday"
+   "sunday": "Sunday",
+   "cookbook": "Digital cookbook",
+   "cookbookLede": "More recipes sent in by Latvians in Sweden – beyond the calendar months.",
+   "extra": "Cookbook",
+   "alsoTry": "Also try"
   }
  },
  "recipes": [
@@ -1028,27 +1040,27 @@
    "image": false,
    "lv": {
     "title": "Kurzemes sklandrauši Zviedrijā",
-    "credit": "Sanita Heinberga, Jerna, un Agnese Blaubārde, Stokholma",
-    "intro": "Tikai viena ēdiena recepti saņēmām divreiz – un tas ir Kurzemes sklandrausis! Sklandrauša receptes iesūtīja divas īpašas Zviedrijas kurzemnieces. Savulaik ventspilniece, Sanita Heinberga tagad dzīvo Jernā (Järna) pie Sēderteljes un ir profesionāla smalkmaizīšu beķere (pastry chef). Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu. Lūk, kā viņas skaidro savas attiecības ar sklandrausi! Sanita: “Kā īstai kurzemniecei, sklandraušu gatavošana man ir goda lieta un cieņas apliecinājums Latvijas vēsturei. Sklandrausis ar savu košo krāsu man atgādina sauli — tas iemieso siltumu, gaišumu un mīlestību pret savām saknēm.” Viņa atgādina, ka sklandrausi sauc arī par dižrausi un žograusi. Agnese: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”",
+    "credit": "Sanita Heinberga, Jerna",
+    "intro": "Tikai viena ēdiena recepti saņēmām divreiz – un tas ir Kurzemes sklandrausis! Sklandrauša receptes iesūtīja divas īpašas Zviedrijas kurzemnieces. Savulaik ventspilniece, Sanita Heinberga tagad dzīvo Jernā (Järna) pie Sēderteljes un ir profesionāla smalkmaizīšu beķere (pastry chef). Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu. Lūk, kā viņas skaidro savas attiecības ar sklandrausi!\nSanita: “Kā īstai kurzemniecei, sklandraušu gatavošana man ir goda lieta un cieņas apliecinājums Latvijas vēsturei. Sklandrausis ar savu košo krāsu man atgādina sauli — tas iemieso siltumu, gaišumu un mīlestību pret savām saknēm. Sklandrausi sauc arī par dižrausi un žograusi.” Viņa atgādina, ka sklandrausis ir ES reģistrēts un ar zīmi “Garantēta tradicionālā īpatnība” aizsargāts Latvijas nacionālais ēdiens.\nAgnese: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”",
     "head": "Sastāvdaļas apmēram 30 sklandraušiem",
     "ingredients": [
      "§Mīklas pamatnei:",
      "600g vidēja vai rupja maluma rudzu miltu",
-     "50g kviešu miltu (Agnese neizmanto kviešu miltus)",
-     "60g sviesta (Agneses recepte ļauj izmantot arī cūku taukus)",
+     "50g kviešu miltu",
+     "60g sviesta",
      "250-300g ūdens",
-     "šķipsniņa sāls (Agneses receptē vesela tējkarote!)",
+     "1 tējk. sāls (pēc garšas)",
      "§Kartupeļu pildījumam:",
      "1kg kartupeļu",
-     "200g sviesta (Agneses receptē ir tikai 100 g sviesta, bet to  papildina ar 150 g pilnpiena biezpiena)",
+     "200g sviesta",
      "100g skāba krējuma",
      "2gb. olas",
-     "šķipsniņa sāls (Agneses receptē pievieno arī ķimenes!)",
+     "šķipsniņa sāls",
      "§Burkānu pildījumam:",
      "2kg burkānu",
-     "250g skāba krējuma (Agneses receptē 100 g sviesta un 4 ēdamkarotes saldā krējuma)",
+     "250g skāba krējuma",
      "2gb. olas",
-     "cukurs pēc garšas (Agneses receptē 200 g cukura – tas nav maz!)",
+     "cukurs pēc garšas",
      "šķipsniņa sāls",
      "§Pārsmērēšanai:",
      "250g skāba krējuma",
@@ -1057,44 +1069,47 @@
      "malts kanēlis vai ķimeņu sēklas pēc izvēles"
     ],
     "steps": [
-     "Siltā ūdenī pievieno sviestu un sāli, tad miltus un sajauc. Agnese iesaka ūdeni pievienot pamazām, lai nebūtu par daudz!",
+     "Siltā ūdenī pievieno sviestu un sāli, tad miltus un sajauc.",
      "Mīklu izveltnē apmēram 2mm biezumā.",
      "Izspiež apaļas formas pamatnes 10-15cm biezumā.",
      "Malas uzloka uz augšu apmēram 2 cm augstumā, veidojot “žogu”.",
      "Kartupeļus novāra un samaļ vai sarīvē viendabīgā masā. Mīcot pievieno izkausētu sviestu, krējumu, olas un sāli.",
      "Burkānus novāra un samaļ vai sarīvē viendabīgā masā. Mīcot pievieno krējumu, olas, cukuru un sāli.",
-     "Pamatnēs vispirms klāj kartupeļu masu, tam pa virsu burkānu masu. Agnese pirms cepšanas apkaisa ar ķimenēm.",
-     "Cep krāsnī augstā temperatūrā 220-250°C apm. 15-30 minūtes (vai zemākā temperatūrā 200 °C apm. 40 minūtes!), līdz mīklas pamatne kļuvusi sausa.",
-     "Gatavu sklandrausi pārziež ar skābā krējuma, olas un cukura maisījumu. Agneses receptē pēc vēlēšanās uzliek katram rausim ēdamkaroti skābā krējuma un pārkaisa ar cukuru (bez olas!).",
-     "Sanitas receptē sklandraušus pārkaisa ar kanēli vai ķimenēm pēc izvēles."
+     "Pamatnēs vispirms klāj kartupeļu masu, tam pa virsu burkānu masu.",
+     "Cep krāsnī augstā temperatūrā 220-250°C apm. 15-30 minūtes, līdz mīklas pamatne kļuvusi sausa.",
+     "Gatavu sklandrausi pārziež ar skābā krējuma, olas un cukura maisījumu.",
+     "Pārkaisa ar kanēli vai ķimenēm pēc izvēles."
     ],
     "tips": [
-     "Iesakām pārbaudīt abas receptes un veidot savus variantus!"
+     {
+      "text": "Sklandrauša gatavošana un sastāvdaļas ir stingri noteiktas ES regulā.",
+      "href": "https://eur-lex.europa.eu/legal-content/LV/TXT/HTML/?uri=CELEX:52021XC0505(02)"
+     }
     ]
    },
    "sv": {
     "title": "Kurländska sklandrausis i Sverige",
-    "credit": "Sanita Heinberga, Järna, och Agnese Blaubārde, Stockholm",
-    "intro": "Bara ett recept fick vi in två gånger – och det var den kurländska sklandrausis! Recepten skickades in av två alldeles särskilda kurländskor i Sverige. Sanita Heinberga, ursprungligen från Ventspils, bor numera i Järna utanför Södertälje och är konditor till yrket. Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem. Så här beskriver de sin relation till sklandrausis. Sanita: ”Som äkta kurländska är det en hederssak för mig att baka sklandrausis – ett sätt att visa respekt för Lettlands historia. Med sin klara färg påminner sklandrausis mig om solen – den förkroppsligar värme, ljus och kärlek till mina rötter.” Hon påminner om att sklandrausis också kallas dižrausis och žograusis. Agnese: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”",
+    "credit": "Sanita Heinberga, Järna",
+    "intro": "Bara ett recept fick vi in två gånger – och det var den kurländska sklandrausis! Recepten skickades in av två alldeles särskilda kurländskor i Sverige. Sanita Heinberga, ursprungligen från Ventspils, bor numera i Järna utanför Södertälje och är konditor till yrket. Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem. Så här beskriver de sin relation till sklandrausis!\nSanita: ”Som äkta kurländska är det en hederssak för mig att baka sklandrausis – ett sätt att visa respekt för Lettlands historia. Med sin klara färg påminner sklandrausis mig om solen – den förkroppsligar värme, ljus och kärlek till mina rötter. Sklandrausis kallas också dižrausis och žograusis.” Hon påminner om att sklandrausis är EU-registrerad och skyddad som Lettlands nationalrätt med märkningen ”Garanterad traditionell specialitet”.\nAgnese: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”",
     "head": "Ingredienser till cirka 30 sklandrausis",
     "ingredients": [
      "§Degbotten:",
      "600 g rågmjöl, medel- eller grovmalet",
-     "50 g vetemjöl (Agnese använder inget vetemjöl)",
-     "60 g smör (i Agneses recept går även ister bra)",
+     "50 g vetemjöl",
+     "60 g smör",
      "250–300 g vatten",
-     "en nypa salt (i Agneses recept en hel tesked!)",
+     "1 tsk salt (efter smak)",
      "§Potatisfyllning:",
      "1 kg potatis",
-     "200 g smör (i Agneses recept bara 100 g smör, men kompletterat med 150 g kvarg av helmjölk)",
+     "200 g smör",
      "100 g gräddfil",
      "2 ägg",
-     "en nypa salt (Agnese tillsätter även kummin!)",
+     "en nypa salt",
      "§Morotsfyllning:",
      "2 kg morötter",
-     "250 g gräddfil (i Agneses recept 100 g smör och 4 msk vispgrädde)",
+     "250 g gräddfil",
      "2 ägg",
-     "socker efter smak (i Agneses recept 200 g socker – det är inte lite!)",
+     "socker efter smak",
      "en nypa salt",
      "§Till pensling:",
      "250 g gräddfil",
@@ -1103,45 +1118,48 @@
      "malen kanel eller kummin efter önskemål"
     ],
     "steps": [
-     "Tillsätt smör och salt i varmt vatten, sedan mjölet, och blanda. Agnese tipsar om att tillsätta vattnet lite i taget, så att det inte blir för mycket!",
+     "Tillsätt smör och salt i varmt vatten, sedan mjölet, och blanda.",
      "Kavla ut degen till cirka 2 mm tjocklek.",
      "Stansa ut runda bottnar, 10–15 cm i diameter.",
      "Vik upp kanterna cirka 2 cm så att det bildas ett ”staket”.",
      "Koka potatisen och mal eller riv den till en jämn massa. Arbeta in smält smör, gräddfil, ägg och salt.",
      "Koka morötterna och mal eller riv dem till en jämn massa. Arbeta in gräddfil, ägg, socker och salt.",
-     "Bred först ut potatismassan i bottnarna och därefter morotsmassan ovanpå. Agnese strör över kummin före gräddningen.",
-     "Grädda i ugnen på hög värme, 220–250 °C, i cirka 15–30 minuter (eller på lägre värme, 200 °C, i cirka 40 minuter!), tills degbotten blivit torr.",
-     "Pensla de färdiga sklandrausis med en blandning av gräddfil, ägg och socker. I Agneses recept lägger man i stället, om man vill, en matsked gräddfil på varje kaka och strör över socker (utan ägg!).",
-     "I Sanitas recept strör man över kanel eller kummin efter önskemål."
+     "Bred först ut potatismassan i bottnarna och därefter morotsmassan ovanpå.",
+     "Grädda i ugnen på hög värme, 220–250 °C, i cirka 15–30 minuter, tills degbotten blivit torr.",
+     "Pensla de färdiga sklandrausis med en blandning av gräddfil, ägg och socker.",
+     "Strö över kanel eller kummin efter önskemål."
     ],
     "tips": [
-     "Vi rekommenderar att prova båda recepten och skapa egna varianter!"
+     {
+      "text": "Hur sklandrausis ska tillagas och vad den ska innehålla är noga fastställt i en EU-förordning.",
+      "href": "https://eur-lex.europa.eu/legal-content/SV/TXT/HTML/?uri=CELEX:52021XC0505(02)"
+     }
     ]
    },
    "minutes": 150,
    "en": {
     "title": "Courland sklandrausis in Sweden",
-    "credit": "Sanita Heinberga, Järna, and Agnese Blaubārde, Stockholm",
-    "intro": "Only one recipe reached us twice – and that was the Courland sklandrausis! The recipes were sent in by two very special Courlanders in Sweden. Sanita Heinberga, originally from Ventspils, now lives in Järna near Södertälje and is a professional pastry chef. Designer Agnese Blaubārde comes from Pāvilosta but calls Stockholm and the Latvian School in Stockholm home. Here is how they describe their relationship with sklandrausis. Sanita: “As a true Courlander, baking sklandrausis is a matter of honour for me and a mark of respect for Latvia's history. With its bright colour, sklandrausis reminds me of the sun – it embodies warmth, light and love for my roots.” She reminds us that sklandrausis is also called dižrausis and žograusis. Agnese: “I chose this recipe as a Courlander out in the world. Alsunga sklandrausis were always baked by my grandmother Ruta. For me they belong with her and with home. That taste I want to keep and pass on.”",
+    "credit": "Sanita Heinberga, Järna",
+    "intro": "Only one recipe reached us twice – and that was the Courland sklandrausis! The recipes were sent in by two very special Courlanders in Sweden. Sanita Heinberga, originally from Ventspils, now lives in Järna near Södertälje and is a professional pastry chef. Designer Agnese Blaubārde comes from Pāvilosta but calls Stockholm and the Latvian School in Stockholm home. Here is how they describe their relationship with sklandrausis!\nSanita: “As a true Courlander, baking sklandrausis is a matter of honour for me and a mark of respect for Latvia's history. With its bright colour, sklandrausis reminds me of the sun – it embodies warmth, light and love for my roots. Sklandrausis is also called dižrausis and žograusis.” She reminds us that sklandrausis is registered in the EU and protected as Latvia's national dish with the mark “Traditional Speciality Guaranteed”.\nAgnese: “I chose this recipe as a Courlander out in the world. Alsunga sklandrausis were always baked by my grandmother Ruta. For me they belong with her and with home. That taste I want to keep and pass on.”",
     "head": "Ingredients for about 30 sklandrauši",
     "ingredients": [
      "§Pastry base:",
      "600 g medium or coarse rye flour",
-     "50 g plain flour (Agnese uses no wheat flour)",
-     "60 g butter (Agnese's recipe allows lard too)",
+     "50 g plain flour",
+     "60 g butter",
      "250–300 g water",
-     "a pinch of salt (a whole teaspoon in Agnese's recipe!)",
+     "1 tsp salt (to taste)",
      "§Potato filling:",
      "1 kg potatoes",
-     "200 g butter (Agnese's recipe has only 100 g of butter, topped up with 150 g of whole-milk curd cheese)",
+     "200 g butter",
      "100 g soured cream",
      "2 eggs",
-     "a pinch of salt (Agnese adds caraway too!)",
+     "a pinch of salt",
      "§Carrot filling:",
      "2 kg carrots",
-     "250 g soured cream (in Agnese's recipe 100 g butter and 4 tbsp whipping cream)",
+     "250 g soured cream",
      "2 eggs",
-     "sugar to taste (200 g in Agnese's recipe – no small amount!)",
+     "sugar to taste",
      "a pinch of salt",
      "§For glazing:",
      "250 g soured cream",
@@ -1150,21 +1168,25 @@
      "ground cinnamon or caraway seeds, as you like"
     ],
     "steps": [
-     "Add the butter and salt to warm water, then the flour, and mix. Agnese advises adding the water little by little so there is not too much!",
+     "Add the butter and salt to warm water, then the flour, and mix.",
      "Roll the dough out to about 2 mm.",
      "Cut out round bases 10–15 cm across.",
      "Fold the edges up about 2 cm to form a “fence”.",
      "Boil the potatoes and mash or grate them smooth. Work in the melted butter, soured cream, eggs and salt.",
      "Boil the carrots and mash or grate them smooth. Work in the soured cream, eggs, sugar and salt.",
-     "Spread the potato mixture in the bases first, then the carrot mixture on top. Agnese sprinkles caraway over before baking.",
-     "Bake in a hot oven, 220–250 °C, for about 15–30 minutes (or at a lower 200 °C for about 40 minutes!), until the pastry base is dry.",
-     "Brush the finished sklandrausis with a mixture of soured cream, egg and sugar. In Agnese's recipe you may instead put a tablespoon of soured cream on each one and sprinkle with sugar (no egg!).",
-     "In Sanita's recipe the sklandrausis are sprinkled with cinnamon or caraway, as you prefer."
+     "Spread the potato mixture in the bases first, then the carrot mixture on top.",
+     "Bake in a hot oven, 220–250 °C, for about 15–30 minutes, until the pastry base is dry.",
+     "Brush the finished sklandrauši with a mixture of soured cream, egg and sugar.",
+     "Sprinkle with cinnamon or caraway, as you prefer."
     ],
     "tips": [
-     "We suggest trying both recipes and making your own versions!"
+     {
+      "text": "How sklandrausis is made and what goes into it is laid down precisely in an EU regulation.",
+      "href": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021XC0505(02)"
+     }
     ]
-   }
+   },
+   "see": "alsungas-sklandrausi"
   },
   {
    "month": 11,
@@ -1346,6 +1368,146 @@
     ],
     "tips": [
      "Māra's advice: “When I can, I buy the pork in Latvia, because Swedish pork is nowhere near as good. And Latvian barley beats the barley you buy in Sweden hands down. No need to stick slavishly to the proportions, it turns out well either way.”"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "slug": "alsungas-sklandrausi",
+   "related": 10,
+   "image": false,
+   "minutes": 120,
+   "lv": {
+    "title": "Alsungas sklandrauši",
+    "credit": "Agnese Blaubārde, Stokholma",
+    "intro": "Dizainere Agnese Blaubārde nāk no Pāvilostas, bet par mājām sauc Stokholmu un Stokholmas latviešu skolu.\nAgnese stāsta, ko viņai nozīmē sklandrausis: “Šo recepti izvēlējos kā kurzemniece pasaulē. Alsungas sklandraušus vienmēr cepa mana oma Ruta. Man tie saistās ar viņu un mājām. Šo garšu gribas saglabāt un nodot tālāk.”",
+    "head": "Sastāvdaļas apmēram 20 sklandraušiem",
+    "ingredients": [
+     "§Mīklai:",
+     "500 g rupjo rudzu miltu",
+     "1 ēdamkarote sāls",
+     "70 g cūku tauku vai sviesta",
+     "ap 200 ml ūdens",
+     "rudzu milti darba virsmas apkaisīšanai",
+     "§Kartupeļu pildījumam:",
+     "1 kg vārītu, nomizotu un sastampātu kartupeļu",
+     "150 g pilnpiena biezpiena",
+     "200 ml skābā krējuma",
+     "100 g kausēta sviesta",
+     "3 olas",
+     "šķipsniņa sāls",
+     "1 ēdamkarote ķimeņu",
+     "§Burkānu pildījumam:",
+     "12 vidēji burkāni — nomizoti, izvārīti un sasmalcināti",
+     "100 g kausēta sviesta",
+     "4 ēdamkarotes saldā krējuma",
+     "3 olas",
+     "200 g cukura",
+     "§Virskārtai:",
+     "skābs krējums",
+     "cukurs",
+     "ķimenes"
+    ],
+    "steps": [
+     "Sagatavo mīklu. Sajauc miltus, sāli un taukus vai sviestu. Pamazām pielej ūdeni un mīca, līdz mīkla ir stingra un blīva. Visu ūdeni uzreiz nelej — tā var būt par daudz.",
+     "Izveido pamatnes. Uz miltiem apkaisītas virsmas izrullē mīklu desas formā un sagriež apmēram 2 cm biezās ripās. Katru ripu izrullē plānākā aplī. Ar pirkstiem uzloka maliņas uz augšu, izveidojot nelielu groziņu. Saliek uz cepamās plāts.",
+     "Sajauc kartupeļu pildījumu. Kartupeļiem pievieno biezpienu, skābo krējumu, sviestu, olas, sāli un ķimenes. Samaisa viendabīgā masā.",
+     "Sajauc burkānu pildījumu. Burkāniem pievieno sviestu, saldo krējumu, olas un cukuru. Samaisa bieza biezeņa konsistencē.",
+     "Piepilda sklandraušus. Katrā groziņā vispirms liek kartupeļu pildījumu un izlīdzina. Virsū bagātīgi liek burkānu pildījumu. Pārkaisa ar ķimenēm.",
+     "Cep. Liek līdz 200 °C sakarsētā krāsnī un cep apmēram 40 minūtes.",
+     "Pievieno virskārtu (pēc vēlmes). Katram izceptajam sklandrausim uzliek ēdamkaroti skābā krējuma, izlīdzini un pārkaisi ar cukuru."
+    ],
+    "tips": [
+     "Agneses padoms: Ēd siltus vai atdzisušus — kā pašiem labāk garšo!"
+    ]
+   },
+   "sv": {
+    "title": "Sklandrausis från Alsunga",
+    "credit": "Agnese Blaubārde, Stockholm",
+    "intro": "Formgivaren Agnese Blaubārde kommer från Pāvilosta men kallar Stockholm och Lettiska skolan i Stockholm sitt hem.\nAgnese berättar vad sklandrausis betyder för henne: ”Jag valde det här receptet som en kurländska ute i världen. Alsungas sklandrausis bakades alltid av min oma Ruta. För mig hör de ihop med henne och med hemma. Den smaken vill jag bevara och föra vidare.”",
+    "head": "Ingredienser till cirka 20 sklandrausis",
+    "ingredients": [
+     "§Deg:",
+     "500 g grovt rågmjöl",
+     "1 msk salt",
+     "70 g ister eller smör",
+     "cirka 200 ml vatten",
+     "rågmjöl till utbakning",
+     "§Potatisfyllning:",
+     "1 kg kokt, skalad och mosad potatis",
+     "150 g kvarg av helmjölk",
+     "200 ml gräddfil",
+     "100 g smält smör",
+     "3 ägg",
+     "en nypa salt",
+     "1 msk kummin",
+     "§Morotsfyllning:",
+     "12 medelstora morötter – skalade, kokta och finfördelade",
+     "100 g smält smör",
+     "4 msk vispgrädde",
+     "3 ägg",
+     "200 g socker",
+     "§Topping:",
+     "gräddfil",
+     "socker",
+     "kummin"
+    ],
+    "steps": [
+     "Gör degen. Blanda mjöl, salt och ister eller smör. Häll i vattnet lite i taget och knåda tills degen är fast och kompakt. Häll inte i allt vatten på en gång – det kan bli för mycket.",
+     "Forma bottnarna. Rulla degen till en korv på mjölad arbetsbänk och skär den i cirka 2 cm tjocka skivor. Kavla ut varje skiva till en tunnare rund platta. Vik upp kanterna med fingrarna så att det blir en liten korg. Lägg dem på en plåt.",
+     "Blanda potatisfyllningen. Tillsätt kvarg, gräddfil, smör, ägg, salt och kummin till potatisen. Rör till en jämn massa.",
+     "Blanda morotsfyllningen. Tillsätt smör, vispgrädde, ägg och socker till morötterna. Rör till ett tjockt mos.",
+     "Fyll sklandrausis. Lägg först potatisfyllningen i varje korg och jämna till. Lägg rikligt med morotsfyllning ovanpå. Strö över kummin.",
+     "Grädda. Sätt in i ugnen förvärmd till 200 °C och grädda i cirka 40 minuter.",
+     "Lägg på toppingen (om du vill). Lägg en matsked gräddfil på varje färdig sklandrausis, jämna till och strö över socker."
+    ],
+    "tips": [
+     "Agnese tipsar: Ät dem varma eller avsvalnade – som ni tycker bäst om!"
+    ]
+   },
+   "en": {
+    "title": "Alsunga sklandrauši",
+    "credit": "Agnese Blaubārde, Stockholm",
+    "intro": "Designer Agnese Blaubārde comes from Pāvilosta but calls Stockholm and the Latvian School in Stockholm home.\nAgnese tells what sklandrausis means to her: “I chose this recipe as a Courlander out in the world. Alsunga sklandrausis were always baked by my grandmother Ruta. For me they belong with her and with home. That taste I want to keep and pass on.”",
+    "head": "Ingredients for about 20 sklandrauši",
+    "ingredients": [
+     "§Dough:",
+     "500 g coarse rye flour",
+     "1 tbsp salt",
+     "70 g lard or butter",
+     "about 200 ml water",
+     "rye flour for the work surface",
+     "§Potato filling:",
+     "1 kg boiled, peeled and mashed potatoes",
+     "150 g whole-milk curd cheese",
+     "200 ml soured cream",
+     "100 g melted butter",
+     "3 eggs",
+     "a pinch of salt",
+     "1 tbsp caraway seeds",
+     "§Carrot filling:",
+     "12 medium carrots – peeled, boiled and mashed",
+     "100 g melted butter",
+     "4 tbsp whipping cream",
+     "3 eggs",
+     "200 g sugar",
+     "§Topping:",
+     "soured cream",
+     "sugar",
+     "caraway seeds"
+    ],
+    "steps": [
+     "Make the dough. Mix the flour, salt and lard or butter. Add the water little by little and knead until the dough is firm and dense. Do not pour in all the water at once – it may be too much.",
+     "Shape the bases. On a floured surface, roll the dough into a log and cut it into slices about 2 cm thick. Roll each slice into a thinner round. Turn the edges up with your fingers to make a little basket. Place them on a baking tray.",
+     "Mix the potato filling. Add the curd cheese, soured cream, butter, eggs, salt and caraway to the potatoes. Mix until smooth.",
+     "Mix the carrot filling. Add the butter, cream, eggs and sugar to the carrots. Mix to a thick purée.",
+     "Fill the sklandrauši. Spread potato filling in each basket first and smooth it. Pile plenty of carrot filling on top. Sprinkle with caraway.",
+     "Bake. Put them in an oven heated to 200 °C and bake for about 40 minutes.",
+     "Add the topping (if you like). Put a tablespoon of soured cream on each baked sklandrausis, smooth it and sprinkle with sugar."
+    ],
+    "tips": [
+     "Agnese's tip: Eat them warm or cooled – whichever you like best!"
     ]
    }
   }

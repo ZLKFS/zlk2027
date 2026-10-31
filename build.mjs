@@ -9,6 +9,9 @@ const OUT = join(ROOT, "public");
 const ORIGIN = "https://zlk2027.latviesi.se";
 const data = JSON.parse(readFileSync(join(ROOT, "content/recipes.json"), "utf8"));
 const LANGS = ["lv", "sv", "en"];
+// Digital-cookbook recipes beyond the twelve calendar months (e.g. a second variant of a month's dish).
+const EXTRAS = data.extras || [];
+const bySlug = (slug) => [...data.recipes, ...EXTRAS].find((x) => x.slug === slug);
 // Adobe Fonts web project for Sabon LT Pro: put the kit id here (e.g. "abc1def") and the
 // stylesheet link is added to every page. Until then EB Garamond is the stand-in.
 const ADOBE_KIT = data.site.adobeKit || "";
@@ -79,7 +82,7 @@ function picture(slug, alt, { eager = false, sizes } = {}) {
 function visual(r, alt, opts) {
   return r.image
     ? `<figure class="visual">${picture(r.slug, alt, opts)}</figure>`
-    : `<div class="visual visual--empty" aria-hidden="true"><span>${pad(r.month)}</span></div>`;
+    : `<div class="visual visual--empty" aria-hidden="true"><span>${r.month ? pad(r.month) : "+"}</span></div>`;
 }
 
 function card(lang, r) {
@@ -88,7 +91,7 @@ function card(lang, r) {
   const empty = c.steps.length === 0;
   return `<a class="card${empty ? " card--coming" : ""}" href="${recipeUrl(lang, r.slug)}">
   ${visual(r, c.title, { sizes: "(min-width: 1000px) 360px, (min-width: 560px) 50vw, 100vw" })}
-  <p class="month-line">${esc(monthLine(lang, r.month))}</p>
+  <p class="month-line">${esc(r.month ? monthLine(lang, r.month) : t.extra)}</p>
   <h2 class="recipe-title">${esc(c.title)}</h2>
   <p class="credit">${esc(empty ? t.coming : c.credit)}</p>
 </a>`;
@@ -106,6 +109,15 @@ function homePage(lang) {
   <section class="grid" aria-label="${esc(t.all)}">
 ${data.recipes.map((r) => card(lang, r)).join("\n")}
   </section>
+${EXTRAS.length ? `  <section class="cookbook" aria-labelledby="cookbook-title">
+    <header class="cookbook-head">
+      <h2 class="cookbook-title" id="cookbook-title">${esc(t.cookbook)}</h2>
+      <p class="lede">${esc(t.cookbookLede)}</p>
+    </header>
+    <div class="grid">
+${EXTRAS.map((r) => card(lang, r)).join("\n")}
+    </div>
+  </section>` : ""}
 </main>`;
   return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, urls: urlsFor(null), image: "/img/marts.jpg", body, bodyClass: "page-home" });
 }
@@ -161,8 +173,10 @@ function recipePage(lang, r, i) {
   const t = data.site[lang];
   const c = r[lang];
   const path = recipeUrl(lang, r.slug);
-  const prev = data.recipes[(i + 11) % 12];
-  const next = data.recipes[(i + 1) % 12];
+  const prev = r.month ? data.recipes[(i + 11) % 12] : null;
+  const next = r.month ? data.recipes[(i + 1) % 12] : null;
+  const related = r.related ? data.recipes.find((x) => x.month === r.related) : null;
+  const see = r.see ? bySlug(r.see) : null;
   const empty = c.steps.length === 0;
   const dur = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} ${t.min}` : ""}` : `${m} ${t.min}`);
 
@@ -193,6 +207,7 @@ function recipePage(lang, r, i) {
       <h1 class="recipe-title">${esc(c.title)}</h1>
       <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}${r.minutes && !empty ? ` · ${t.about} ${dur(r.minutes)}` : ""}</p>
       <div class="body">${c.intro.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
+      ${see ? `<p class="see-also"><a href="${recipeUrl(lang, see.slug)}"><span class="nav-label">${esc(t.alsoTry)}</span> ${esc(see[lang].title)} →</a></p>` : ""}
       ${calendar}
     </div>`;
   const col2 = empty ? "" : `<div class="col col-2">
@@ -210,7 +225,7 @@ ${ingredientList(c.ingredients)}
       <ol class="steps">
 ${stepList(c.steps)}
       </ol>
-      ${c.tips.length ? `<div class="tips">${c.tips.map((p) => `<p class="tip">${esc(p)}</p>`).join("")}</div>` : ""}
+      ${c.tips.length ? `<div class="tips">${c.tips.map((p) => `<p class="tip">${typeof p === "string" ? esc(p) : `<a href="${esc(p.href)}" rel="noopener">${esc(p.text)}</a>`}</p>`).join("")}</div>` : ""}
       <p class="reset" hidden><button type="button" class="btn btn--text" data-reset>${esc(t.reset)}</button></p>
       <script type="application/json" id="i18n">${JSON.stringify(i18n).replace(/</g, "\\u003c")}</script>
     </div>`;
@@ -219,7 +234,7 @@ ${stepList(c.steps)}
   const body = `<main class="recipe wrap" data-slug="${r.slug}">
   <header class="month-head">
     <p class="year">2027</p>
-    <p class="month">${esc(monthLine(lang, r.month))}</p>
+    <p class="month">${esc(r.month ? monthLine(lang, r.month) : t.extra)}</p>
   </header>
   ${r.image ? visual(r, c.title, { eager: true, sizes: "(min-width: 1200px) 1120px, 100vw" }) : ""}
   <section class="band${empty ? " band--plain" : ""}">
@@ -227,8 +242,8 @@ ${stepList(c.steps)}
     ${col2}
   </section>
   <nav class="month-nav" aria-label="${esc(t.all)}">
-    <a class="prev" href="${recipeUrl(lang, prev.slug)}" rel="prev"><span class="nav-label">${esc(monthLine(lang, prev.month))}</span><span class="nav-title">${esc(prev[lang].title)}</span></a>
-    <a class="next" href="${recipeUrl(lang, next.slug)}" rel="next"><span class="nav-label">${esc(monthLine(lang, next.month))}</span><span class="nav-title">${esc(next[lang].title)}</span></a>
+    ${prev ? `<a class="prev" href="${recipeUrl(lang, prev.slug)}" rel="prev"><span class="nav-label">${esc(monthLine(lang, prev.month))}</span><span class="nav-title">${esc(prev[lang].title)}</span></a>
+    <a class="next" href="${recipeUrl(lang, next.slug)}" rel="next"><span class="nav-label">${esc(monthLine(lang, next.month))}</span><span class="nav-title">${esc(next[lang].title)}</span></a>` : related ? `<a class="prev" href="${recipeUrl(lang, related.slug)}"><span class="nav-label">${esc(monthLine(lang, related.month))}</span><span class="nav-title">${esc(related[lang].title)}</span></a>` : ""}
   </nav>
   <p class="all-link"><a href="${base(lang)}">${esc(t.all)}</a></p>
 </main>`;
@@ -248,7 +263,7 @@ function notFound() {
 
 // ---- write ----
 mkdirSync(join(OUT, "assets"), { recursive: true });
-for (const r of data.recipes) {
+for (const r of [...data.recipes, ...EXTRAS]) {
   for (const l of LANGS) rmSync(join(OUT, base(l), r.slug), { recursive: true, force: true });
 }
 let n = 0;
@@ -261,6 +276,12 @@ for (const lang of LANGS) {
     const d = join(dir, r.slug);
     mkdirSync(d, { recursive: true });
     writeFileSync(join(d, "index.html"), recipePage(lang, r, i));
+    n++;
+  });
+  EXTRAS.forEach((r) => {
+    const d = join(dir, r.slug);
+    mkdirSync(d, { recursive: true });
+    writeFileSync(join(d, "index.html"), recipePage(lang, r, -1));
     n++;
   });
 }
