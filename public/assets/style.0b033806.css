@@ -113,6 +113,7 @@ main { flex: 1 0 auto; width: 100%; }
 .cookbook { border-top: 0.5px solid var(--hair); }
 .cookbook-head { text-align: center; padding: clamp(40px, 6vw, 72px) 0 0; }
 .cookbook-title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 4vw, 40px); }
+.cookbook-cta { margin: 1.2em 0 clamp(16px, 3vw, 32px); }
 .tips { margin-top: 0.8em; }
 
 /* controls: text, hairline, square — nothing the calendar would not print */

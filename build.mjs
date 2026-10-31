@@ -115,6 +115,7 @@ ${EXTRAS.length ? `  <section class="cookbook" aria-labelledby="cookbook-title">
     <header class="cookbook-head">
       <h2 class="cookbook-title" id="cookbook-title">${esc(t.cookbook)}</h2>
       <p class="lede">${esc(t.cookbookLede)}</p>
+      ${data.site.submitUrl ? `<p class="cookbook-cta"><a class="btn" href="${esc(data.site.submitUrl)}" rel="noopener">${esc(t.submit)}</a></p>` : ""}
     </header>
     <div class="grid">
 ${EXTRAS.map((r) => card(lang, r)).join("\n")}

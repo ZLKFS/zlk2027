@@ -61,7 +61,8 @@
    "cookbook": "Digitālā pavārgrāmata",
    "cookbookLede": "Vēl receptes, ko iesūtījuši Zviedrijas latvieši – ārpus kalendāra mēnešiem.",
    "extra": "Pavārgrāmata",
-   "alsoTry": "Izmēģini arī"
+   "alsoTry": "Izmēģini arī",
+   "submit": "Iesūti savu recepti"
   },
   "sv": {
    "name": "Sverigeletternas kalender",
@@ -124,7 +125,8 @@
    "cookbook": "Digital kokbok",
    "cookbookLede": "Fler recept insända av letter i Sverige – utöver kalenderns månader.",
    "extra": "Kokboken",
-   "alsoTry": "Prova också"
+   "alsoTry": "Prova också",
+   "submit": "Skicka in ditt recept"
   },
   "en": {
    "name": "Latvian Calendar in Sweden",
@@ -187,8 +189,10 @@
    "cookbook": "Digital cookbook",
    "cookbookLede": "More recipes sent in by Latvians in Sweden – beyond the calendar months.",
    "extra": "Cookbook",
-   "alsoTry": "Also try"
-  }
+   "alsoTry": "Also try",
+   "submit": "Send in your recipe"
+  },
+  "submitUrl": "https://ej.uz/zlk27_receptes"
  },
  "recipes": [
   {
