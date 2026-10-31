@@ -145,9 +145,15 @@ function ingredientList(items) {
     )
     .join("\n");
 }
+// A step starting with "§" is a group heading (e.g. one of two salads); numbering runs on across groups.
 function stepList(steps) {
+  let i = 0;
   return steps
-    .map((s, i) => `        <li role="checkbox" aria-checked="false" tabindex="0" data-i="${i}"><span class="num" aria-hidden="true">${i + 1}</span><span class="txt">${esc(s)}</span></li>`)
+    .map((s) =>
+      s.startsWith("§")
+        ? `        <li class="group">${esc(s.slice(1).replace(/:$/, ""))}</li>`
+        : `        <li role="checkbox" aria-checked="false" tabindex="0" data-i="${i}"><span class="num" aria-hidden="true">${++i}</span><span class="txt">${esc(s)}</span></li>`
+    )
     .join("\n");
 }
 

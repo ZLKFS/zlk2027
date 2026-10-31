@@ -20,7 +20,7 @@ if (main && stepsEl) {
   };
   const resetRow = document.querySelector(".reset");
   const ingBoxes = [...document.querySelectorAll(".ingredients input[type=checkbox]")];
-  const stepItems = [...stepsEl.querySelectorAll("li")];
+  const stepItems = [...stepsEl.querySelectorAll("li[data-i]")];
   const steps = stepItems.map((li) => li.querySelector(".txt").textContent);
 
   // --- ingredient ticks ---
