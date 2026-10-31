@@ -21,6 +21,8 @@ const ADOBE_KIT = data.site.adobeKit || "";
 const hashOf = (file) => createHash("md5").update(readFileSync(join(ROOT, file))).digest("hex").slice(0, 8);
 const STYLE = `style.${hashOf("src/style.css")}.css`;
 const APP = `app.${hashOf("src/app.js")}.js`;
+// Paintings keep their names but carry a content version, so a replaced painting reaches everyone at once.
+const img = (file) => { const f = join(ROOT, "public/img", file); return existsSync(f) ? `/img/${file}?v=${createHash("md5").update(readFileSync(f)).digest("hex").slice(0, 8)}` : `/img/${file}`; };
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = (n) => String(n).padStart(2, "0");
@@ -76,7 +78,7 @@ ${body}
 }
 
 function picture(slug, alt, { eager = false, sizes } = {}) {
-  return `<img src="/img/${slug}.jpg" srcset="/img/${slug}-800.jpg 800w, /img/${slug}.jpg 1600w" sizes="${sizes}" width="1600" height="893" alt="${esc(alt)}"${eager ? ' fetchpriority="high"' : ' loading="lazy"'}>`;
+  return `<img src="${img(`${slug}.jpg`)}" srcset="${img(`${slug}-800.jpg`)} 800w, ${img(`${slug}.jpg`)} 1600w" sizes="${sizes}" width="1600" height="893" alt="${esc(alt)}"${eager ? ' fetchpriority="high"' : ' loading="lazy"'}>`;
 }
 
 function visual(r, alt, opts) {
@@ -119,7 +121,7 @@ ${EXTRAS.map((r) => card(lang, r)).join("\n")}
     </div>
   </section>` : ""}
 </main>`;
-  return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, urls: urlsFor(null), image: "/img/marts.jpg", body, bodyClass: "page-home" });
+  return layout({ lang, title: `${t.name} 2027`, description: t.tagline, path, urls: urlsFor(null), image: img("marts.jpg"), body, bodyClass: "page-home" });
 }
 
 // Leading quantity of an ingredient line ("1,5 kg …", "500-600 g …", "½ - ¾ gl. …") becomes a
@@ -248,7 +250,7 @@ ${stepList(c.steps)}
   <p class="all-link"><a href="${base(lang)}">${esc(t.all)}</a></p>
 </main>`;
   const description = c.intro.length > 160 ? c.intro.slice(0, 157).replace(/\s+\S*$/, "") + "…" : c.intro;
-  return layout({ lang, title: `${c.title} – ${t.short}`, description, path, urls: urlsFor(r.slug), image: r.image ? `/img/${r.slug}.jpg` : null, body, bodyClass: "page-recipe" });
+  return layout({ lang, title: `${c.title} – ${t.short}`, description, path, urls: urlsFor(r.slug), image: r.image ? img(`${r.slug}.jpg`) : null, body, bodyClass: "page-recipe" });
 }
 
 function notFound() {

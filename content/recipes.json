@@ -194,7 +194,7 @@
   {
    "month": 1,
    "slug": "janvaris",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Biezpiena radziņi Smiltenes gaumē",
     "credit": "Elīna Apsīte, Knīvsta",
@@ -470,7 +470,7 @@
   {
    "month": 4,
    "slug": "aprilis",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Kesellas biezpienkūka ar ogu mērci",
     "credit": "Kristīne Dannenberga, Stokholma",
@@ -590,7 +590,7 @@
   {
    "month": 5,
    "slug": "maijs",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Ainažu Vinetas persiešu un ebreju salāti no Sollentunas",
     "credit": "Vineta Kalniņa-Soleimani, Sollentuna",
@@ -695,7 +695,7 @@
   {
    "month": 6,
    "slug": "junijs",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Auču ātrais Jāņu siers",
     "credit": "Šarlote Cērps, Stokholma",
@@ -794,7 +794,7 @@
   {
    "month": 7,
    "slug": "julijs",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Skrubas sentimentālie latviešu lapu salāti",
     "credit": "Laine Lasmane Wikmark, Tēbija",
@@ -860,7 +860,7 @@
   {
    "month": 8,
    "slug": "augusts",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Benitas „kraupštīgā” karbonāde ar kartupeļiem un skābiem kāpostiem",
     "credit": "Laila Strunke, Stokholma",
@@ -1037,7 +1037,7 @@
   {
    "month": 10,
    "slug": "oktobris",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Kurzemes sklandrauši Zviedrijā",
     "credit": "Sanita Heinberga, Jerna",
@@ -1191,7 +1191,7 @@
   {
    "month": 11,
    "slug": "novembris",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Stokholmas speķa pīrāgi",
     "credit": "Laila Strunke, Stokholma",
@@ -1299,7 +1299,7 @@
   {
    "month": 12,
    "slug": "decembris",
-   "image": false,
+   "image": true,
    "lv": {
     "title": "Ķūķu vakara ķūķis",
     "credit": "Māra Krēsliņa, Stokholma",
