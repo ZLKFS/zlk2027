@@ -13,7 +13,7 @@ const LANGS = ["lv", "sv", "en"];
 const EXTRAS = data.extras || [];
 const bySlug = (slug) => [...data.recipes, ...EXTRAS].find((x) => x.slug === slug);
 // Adobe Fonts web project for Sabon LT Pro: put the kit id here (e.g. "abc1def") and the
-// stylesheet link is added to every page. Until then EB Garamond is the stand-in.
+// stylesheet link is added to every page. Until then Crimson Pro is the stand-in (EB Garamond draws a broken ī).
 const ADOBE_KIT = data.site.adobeKit || "";
 
 // Stylesheet and script carry a content hash in their file name, so every deploy brings the
@@ -24,6 +24,8 @@ const APP = `app.${hashOf("src/app.js")}.js`;
 // Paintings keep their names but carry a content version, so a replaced painting reaches everyone at once.
 const img = (file) => { const f = join(ROOT, "public/img", file); return existsSync(f) ? `/img/${file}?v=${createHash("md5").update(readFileSync(f)).digest("hex").slice(0, 8)}` : `/img/${file}`; };
 
+// Titles keep a dash at the end of the line, never at the start of the next one.
+const escTitle = (s) => esc(s).replace(/ – /g, "&nbsp;– ");
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = (n) => String(n).padStart(2, "0");
 const base = (lang) => (lang === "lv" ? "/" : `/${lang}/`);
@@ -36,7 +38,7 @@ function layout({ lang, title, description, path, urls, image, body, bodyClass }
   const t = data.site[lang];
   const google = ADOBE_KIT
     ? "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600"
-    : "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700";
+    : "family=Inter:ital,opsz,wght@0,14..32,400..600;1,14..32,400..600&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,700";
   const fonts = `${ADOBE_KIT ? `<link rel="stylesheet" href="https://use.typekit.net/${ADOBE_KIT}.css">\n` : ""}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?${google}&display=swap" rel="stylesheet">`;
@@ -97,7 +99,7 @@ function card(lang, r) {
   return `<a class="card${empty ? " card--coming" : ""}" href="${recipeUrl(lang, r.slug)}">
   ${visual(r, c.title, { sizes: "(min-width: 1000px) 360px, (min-width: 560px) 50vw, 100vw" })}
   <p class="month-line">${esc(r.month ? monthLine(lang, r.month) : t.extra)}</p>
-  <h2 class="recipe-title">${esc(c.title)}</h2>
+  <h2 class="recipe-title">${escTitle(c.title)}</h2>
   <p class="credit">${esc(empty ? t.coming : c.credit)}</p>
 </a>`;
 }
@@ -210,7 +212,7 @@ function recipePage(lang, r, i) {
         </form>
       </div>`;
   const col1 = `<div class="col col-1">
-      <h1 class="recipe-title">${esc(c.title)}</h1>
+      <h1 class="recipe-title">${escTitle(c.title)}</h1>
       <p class="credit">${esc(t.recipe)}: ${esc(c.credit)}${r.minutes && !empty ? ` · ${t.about} ${dur(r.minutes)}` : ""}</p>
       <div class="body">${c.intro.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       ${see ? `<p class="see-also"><a href="${recipeUrl(lang, see.slug)}"><span class="nav-label">${esc(t.alsoTry)}</span> ${esc(see[lang].title)} →</a></p>` : ""}
@@ -301,4 +303,4 @@ writeFileSync(join(OUT, "_headers"), `/assets/skat.svg\n  Cache-Control: public,
 for (const r of data.recipes) {
   if (r.image && !existsSync(join(OUT, "img", `${r.slug}.jpg`))) console.warn(`missing image: public/img/${r.slug}.jpg`);
 }
-console.log(`built ${n} pages + 404${ADOBE_KIT ? " (Adobe Fonts kit " + ADOBE_KIT + ")" : " (EB Garamond stand-in)"}`);
+console.log(`built ${n} pages + 404${ADOBE_KIT ? " (Adobe Fonts kit " + ADOBE_KIT + ")" : " (Crimson Pro stand-in)"}`);
